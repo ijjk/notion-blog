@@ -1,12 +1,12 @@
 import Link from 'next/link'
-import styles from './index.module.css'
 import Header from '../components/header'
 import ExtLink from '../components/ext-link'
+import sharedStyles from '../styles/shared.module.css'
 
 export default () => (
   <>
-    <Header />
-    <div className={styles.home}>
+    <Header titlePre='Home' />
+    <div className={sharedStyles.layout}>
       <img src='/notion-and-zeit.png' height='174' width='439' alt='ZEIT + Notion' />
       <h1>My Notion Backed Site</h1>
 
@@ -15,7 +15,7 @@ export default () => (
       </p>
 
       <p>
-        The index page (the current page) is a normal Next.js page but <Link href='[...slug]' as='/blog'>Blog</Link> and <Link href='[...slug]' as='/contact'>Contact</Link> are built from page data stored in Notion. Since this is using a <strong>private</strong> API and experimental features that could change at any time, it is only meant for demonstrating aka <strong>use at your own risk</strong>
+        The index page (the current page) is a normal Next.js page but the <Link href='/blog'>blog</Link> is built from page data stored in Notion. Since this is using a <strong>private</strong> API and experimental features that could change at any time, it is only meant for demonstrating aka <strong>use at your own risk</strong>
       </p>
     </div>
   </>

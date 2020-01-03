@@ -1,0 +1,18 @@
+.blogIndex h1 {
+  margin-bottom: 50px;
+}
+
+.noPosts {
+  text-align: center;
+}
+
+.postPreview {
+  display: block;
+  max-width: 600px;
+  margin: 10px auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+}
+
+.postPreview:last-child {
+  border-bottom: none;
+}

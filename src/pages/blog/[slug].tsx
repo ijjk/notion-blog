@@ -1,8 +1,8 @@
 import React from 'react'
-import Heading from '../components/heading'
-import components from '../components/dynamic'
+import Heading from '../../components/heading'
+import components from '../../components/dynamic'
 import ReactJSXParser from '@zeit/react-jsx-parser'
-import { textBlock } from '../lib/notion/renderers'
+import { textBlock } from '../../lib/notion/renderers'
 
 type NotionPostObject = {
   Published: 'yes' | any

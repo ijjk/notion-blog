@@ -2,11 +2,11 @@ import { Sema } from 'async-sema'
 import rpc, { values } from './rpc'
 import getTableData from './getTableData'
 import { getPostPreview } from './getPostPreview'
-import { PAGES_INDEX_ID } from './server-constants'
+import { BLOG_INDEX_ID } from './server-constants'
 
-export default async function getPagesIndex(previews = true) {
+export default async function getBlogIndex(previews = true) {
   const data = await rpc('loadPageChunk', {
-    pageId: PAGES_INDEX_ID,
+    pageId: BLOG_INDEX_ID,
     limit: 999, // TODO: figure out Notion's way of handling pagination
     cursor: { stack: [] },
     chunkNumber: 0,

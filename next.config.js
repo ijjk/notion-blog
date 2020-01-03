@@ -9,7 +9,6 @@ if (!process.env.NOTION_TOKEN) {
 
 module.exports = {
   experimental: {
-    catchAllRouting: false,
     granularChunks: true,
     css: true,
   },

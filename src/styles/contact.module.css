@@ -1,0 +1,24 @@
+.links {
+  display: block;
+  margin: 5% auto;
+  max-width: 500px;
+  text-align: center;
+}
+
+.links a {
+  width: 48px;
+  height: 48px;
+  margin: 0 10px;
+  display: inline-block;
+  transition: opacity 200ms ease;
+}
+
+.links a:hover {
+  opacity: 0.6;
+}
+
+.zeit {
+  display: block;
+  text-align: center;
+  margin-bottom: 5%;
+}
