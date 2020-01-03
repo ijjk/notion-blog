@@ -6,11 +6,13 @@ import sharedStyles from '../../styles/shared.module.css'
 
 import { getBlogLink } from '../../lib/blog-helpers'
 import { textBlock } from '../../lib/notion/renderers'
+import getNotionUsers from '../../lib/notion/getNotionUsers'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
 
 export async function unstable_getStaticProps() {
   const postsTable = await getBlogIndex()
 
+  const authorsToGet: Set<string> = new Set()
   const posts: any[] = Object.keys(postsTable)
     .map(slug => {
       const post = postsTable[slug]
@@ -21,9 +23,19 @@ export async function unstable_getStaticProps() {
       ) {
         return null
       }
+      post.Authors = post.Authors || []
+      for (const author of post.Authors) {
+        authorsToGet.add(author)
+      }
       return post
     })
     .filter(Boolean)
+
+  const { users } = await getNotionUsers([...authorsToGet])
+
+  posts.map(post => {
+    post.Authors = post.Authors.map(id => users[id].full_name)
+  })
 
   return {
     props: {
@@ -44,11 +56,12 @@ export default ({ posts = [] }) => {
         {posts.map(post => {
           return (
             <div className={blogStyles.postPreview} key={post.Slug}>
-              <Link href='/blog/[slug]' as={getBlogLink(post.Slug)}>
-                <a>
-                  <h3>{post.Page}</h3>
-                </a>
-              </Link>
+              <h3>
+                <Link href='/blog/[slug]' as={getBlogLink(post.Slug)}>
+                  <a>{post.Page}</a>
+                </Link>
+              </h3>
+              <span className='authors'>By: {post.Authors.join(' ')}</span>
               <p>
                 {post.preview.map((block, idx) =>
                   textBlock(block, true, `${post.Slug}${idx}`)

@@ -3,6 +3,10 @@ import Heading from '../../components/heading'
 import components from '../../components/dynamic'
 import ReactJSXParser from '@zeit/react-jsx-parser'
 import { textBlock } from '../../lib/notion/renderers'
+import { getBlogLink } from '../../lib/blog-helpers'
+import getBlogIndex from '../../lib/notion/getBlogIndex'
+import getPageData from '../../lib/notion/getPageData'
+import getNotionUsers from '../../lib/notion/getNotionUsers'
 
 type NotionPostObject = {
   Published: 'yes' | any
@@ -17,6 +21,34 @@ type NotionPostObject = {
       id: string | number
     }
   }[]
+}
+
+// Get the data for each blog post
+export async function unstable_getStaticProps({ params: { slug } }) {
+  // load the postsTable so that we can get the page's ID
+  const postsTable = await getBlogIndex()
+  const post = postsTable[slug]
+
+  if (!post) {
+    throw new Error(`Failed to find post for slug: ${slug}`)
+  }
+  const postData = await getPageData(post.id)
+  post.content = postData.blocks
+
+  const { users } = await getNotionUsers(post.Authors || [])
+  post.Authors = Object.keys(users).map(id => users[id].full_name)
+
+  return {
+    props: {
+      post
+    }
+  }
+}
+
+// Return our list of blog posts to prerender
+export async function unstable_getStaticPaths() {
+  const postsTable = await getBlogIndex()
+  return Object.keys(postsTable).map(slug => getBlogLink(slug))
 }
 
 const defaultImageWidth = 1440

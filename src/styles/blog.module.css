@@ -16,3 +16,12 @@
 .postPreview:last-child {
   border-bottom: none;
 }
+
+.postPreview h3 {
+  margin-bottom: 0;
+}
+
+.postPreview :global(.authors) {
+  margin-bottom: .5em;
+  display: block;
+}
