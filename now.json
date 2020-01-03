@@ -1,0 +1,10 @@
+{
+  "build": {
+    "env": {
+      "NOTION_TOKEN": "@notion-token"
+    }
+  },
+  "env": {
+    "NOTION_TOKEN": "@notion-token"
+  }
+}

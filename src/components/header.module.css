@@ -1,0 +1,13 @@
+.header {
+  display: block;
+  min-height: 64px;
+}
+
+.header ul {
+  list-style: none;
+}
+
+.header ul li {
+  display: inline-block;
+  padding: 0 10px;
+}

@@ -1,0 +1,16 @@
+.home {
+  padding: 2% 5% 5%;
+  margin: 0 auto;
+  max-width: calc(600px + 10%);
+}
+
+.home img {
+  margin: auto;
+  max-width: 98%;
+  display: block;
+  height: auto;
+}
+
+.home h1 {
+  text-align: center;
+}

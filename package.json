@@ -1,15 +1,22 @@
 {
   "name": "notion-backed-site",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "build": "next build"
   },
   "dependencies": {
+    "@zeit/react-jsx-parser": "^2.0.0",
     "next": "9.1.6",
     "react": "16.12.0",
-    "react-dom": "16.12.0"
+    "react-dom": "16.12.0",
+    "react-syntax-highlighter": "^12.2.1",
+    "spectre.css": "^0.5.8"
+  },
+  "devDependencies": {
+    "@types/node": "^13.1.2",
+    "@types/react": "^16.9.17",
+    "typescript": "^3.7.4"
   }
 }
