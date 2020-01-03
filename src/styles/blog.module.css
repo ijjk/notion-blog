@@ -7,7 +7,6 @@
 }
 
 .postPreview {
-  display: block;
   max-width: 600px;
   margin: 10px auto;
   border-bottom: 1px solid rgba(0, 0, 0, 0.8);
@@ -17,11 +16,20 @@
   border-bottom: none;
 }
 
-.postPreview h3 {
+.postPreview h3,
+.post h1 {
   margin-bottom: 0;
 }
 
-.postPreview :global(.authors) {
+.postPreview :global(.posted) {
   margin-bottom: .5em;
-  display: block;
+}
+
+.post {
+  max-width: 600px;
+  margin: 5% auto;
+}
+
+.post :global(hr) {
+  margin-bottom: 2em;
 }
