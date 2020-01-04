@@ -15,7 +15,7 @@ export default () => (
       </p>
 
       <p>
-        The index page (the current page) is a normal Next.js page but the <Link href='/blog'>blog</Link> is built from page data stored in Notion. Since this is using a <strong>private</strong> API and experimental features that could change at any time, it is only meant for demonstrating aka <strong>use at your own risk</strong>
+        The index page (the current page) is a normal Next.js page but the <Link href='/blog'><a>blog</a></Link> is built from page data stored in Notion. Since this is using a <strong>private</strong> API and experimental features that could change at any time, it is only meant for demonstrating aka <strong>use at your own risk</strong>
       </p>
     </div>
   </>
