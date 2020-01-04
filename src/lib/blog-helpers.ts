@@ -1,5 +1,5 @@
 export const getBlogLink = (slug: string) => {
-  return `/blog${!slug.startsWith('/') ? '/' : ''}${slug}`
+  return `/blog/${slug}`
 }
 
 export const getDateStr = (date) => {
