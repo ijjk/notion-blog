@@ -128,6 +128,7 @@ const RenderPost = ({ post }) => {
                   src={`${BASE_URL}/api/asset?assetUrl=${encodeURIComponent(
                     format.display_source as any
                   )}&blockId=${id}`}
+                  controls={!isImage}
                   alt={isImage ? 'An image from Notion' : undefined}
                   loop={!isImage}
                   muted={!isImage}
