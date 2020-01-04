@@ -29,7 +29,7 @@ const contacts = [
   {
     Comp: Envelope,
     alt: 'envelope icon',
-    link: 'mailto:jj@jjsweb.site?subject=Notion site',
+    link: 'mailto:jj@jjsweb.site?subject=Notion Blog',
   },
 ]
 
@@ -43,13 +43,13 @@ export default () => (
         </ExtLink>
       </div>
 
-      <h1>Contact</h1>
+      <h1 style={{ margin: 0 }}>Contact</h1>
 
       <div className={contactStyles.links}>
         {contacts.map(({ Comp, link, alt }) => {
           return (
             <ExtLink key={link} href={link} aria-label={alt}>
-              <Comp />
+              <Comp height={32} />
             </ExtLink>
           )
         })}

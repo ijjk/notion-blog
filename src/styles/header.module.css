@@ -1,10 +1,12 @@
 .header {
   display: block;
   min-height: 64px;
+  text-align: center;
 }
 
 .header ul {
   list-style: none;
+  padding: 0;
 }
 
 .header ul li {

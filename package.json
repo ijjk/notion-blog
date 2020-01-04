@@ -1,5 +1,5 @@
 {
-  "name": "notion-backed-site",
+  "name": "notion-blog",
   "version": "0.1.0",
   "scripts": {
     "dev": "next dev",
@@ -7,17 +7,23 @@
     "build": "next build",
     "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .gitignore"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "dependencies": {
     "@zeit/react-jsx-parser": "^2.0.0",
     "next": "9.1.7",
+    "prismjs": "^1.17.1",
     "react": "16.12.0",
-    "react-dom": "16.12.0",
-    "react-syntax-highlighter": "^12.2.1",
-    "spectre.css": "^0.5.8"
+    "react-dom": "16.12.0"
   },
   "devDependencies": {
     "@types/node": "^13.1.2",
     "@types/react": "^16.9.17",
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
     "prettier": "^1.19.1",
     "typescript": "^3.7.4"
   }

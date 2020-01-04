@@ -1,16 +1,20 @@
-# Notion Backed Site
+# Notion Blog
 
 This is an example Next.js project that shows Next.js' upcoming SSG (static-site generation) support using Notion's **private** API for a backend.
 
 **Note**: since it is using a private API and experimental features, use at your own risk as these things could change at any moment.
 
-**Live Example hosted on ZEIT**: https://notion-backed-site.jj4.now.sh/
+**Live Example hosted on ZEIT**: https://notion-blog.jj4.now.sh/
 
 ## Deploy Your Own
 
-Deploy your own Notion site with ZEIT Now.
+Deploy your own Notion blog with ZEIT.
 
-1. Clone this repo `git clone https://github.com/ijjk/notion-backed-site.git`
+[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/ijjk/notion-blog/tree/master/amp)
+
+or
+
+1. Clone this repo `git clone https://github.com/ijjk/notion-blog.git`
 2. Update `BLOG_INDEX_ID` in [`./src/lib/notion/server-constants.ts`](./src/lib/notion/server-constants.ts) with your id. See [here](#getting-blog-index) for how to find this value.
 3. Add your `NOTION_TOKEN` as a secret to Now `now secrets add notion-token <your-token>`
 4. Deploy with `now`

@@ -124,6 +124,7 @@ const RenderPost = ({ post }) => {
                   src={`${BASE_URL}/api/image?imgUrl=${encodeURIComponent(
                     format.display_source as any
                   )}&width=${defaultImageWidth}&cache=v2`}
+                  alt="an image loaded from notion"
                   style={{
                     width,
                     maxWidth: '100%',
@@ -176,7 +177,7 @@ const RenderPost = ({ post }) => {
                 toRender.push(
                   React.createElement(
                     components.blockquote,
-                    {},
+                    { key: id },
                     properties.title
                   )
                 )

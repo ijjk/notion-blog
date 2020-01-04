@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
-import styles from './header.module.css'
+import styles from '../styles/header.module.css'
 
 const navItems: { label: string; href?: string }[] = [
   { label: 'Home', href: '/' },
@@ -15,10 +15,10 @@ export default ({ titlePre = '' }) => {
   return (
     <header className={styles.header}>
       <Head>
-        <title>{titlePre ? `${titlePre} |` : ''} My Notion Site</title>
+        <title>{titlePre ? `${titlePre} |` : ''} My Notion Blog</title>
         <meta
           name="description"
-          content="An example Next.js site using Notion for the backend"
+          content="An example Next.js site using Notion for the blog"
         />
       </Head>
       <ul>
