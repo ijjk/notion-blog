@@ -10,7 +10,7 @@ This is an example Next.js project that shows Next.js' upcoming SSG (static-site
 
 Deploy your own Notion blog with ZEIT.
 
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/ijjk/notion-blog/tree/master/amp)
+[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/ijjk/notion-blog/tree/master)
 
 or
 
