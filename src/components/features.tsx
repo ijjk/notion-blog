@@ -17,10 +17,6 @@ const features = [
     icon: Jamstack,
   },
   {
-    text: '100 Lighthouse',
-    icon: Lighthouse,
-  },
-  {
     text: 'Always available',
     icon: Wifi,
   },
@@ -39,6 +35,10 @@ const features = [
   {
     text: 'MIT Licensed',
     icon: Scroll,
+  },
+  {
+    text: '100 Lighthouse',
+    icon: Lighthouse,
   },
 ]
 

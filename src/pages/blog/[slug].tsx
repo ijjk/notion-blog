@@ -106,7 +106,8 @@ const RenderPost = ({ post }) => {
                 toRender.push(textBlock(properties.title, false, id))
               }
               break
-            case 'image': {
+            case 'image':
+            case 'video': {
               const { format = {} } = value
               const { block_width } = format
               const baseBlockWidth = 768
@@ -118,14 +119,21 @@ const RenderPost = ({ post }) => {
                   ) / roundFactor}%`
                 : '100%'
 
+              const isImage = type === 'image'
+              const Comp = isImage ? 'img' : 'video'
+
               toRender.push(
-                <img
+                <Comp
                   key={id}
-                  src={`${BASE_URL}/api/image?imgUrl=${encodeURIComponent(
+                  src={`${BASE_URL}/api/asset?assetUrl=${encodeURIComponent(
                     format.display_source as any
-                  )}&width=${defaultImageWidth}&cache=v2`}
-                  alt="an image loaded from notion"
+                  )}&blockId=${id}`}
+                  alt={isImage ? 'An image from Notion' : undefined}
+                  loop={!isImage}
+                  muted={!isImage}
+                  autoPlay={!isImage}
                   style={{
+                    boxShadow: '0 8px 8px rgba(0, 0, 0, 0.3)',
                     width,
                     maxWidth: '100%',
                     margin: '0 auto',

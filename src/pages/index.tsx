@@ -30,30 +30,20 @@ export default () => (
       <div className="explanation">
         <p>
           This is a statically generated{' '}
-          <ExtLink href="https://nextjs.org">Next.js</ExtLink> site powered with{' '}
-          <ExtLink href="https://notion.so">Notion's</ExtLink>{' '}
-          <span className="dotted">private</span> API as the backend and
-          deployed to the super fast{' '}
-          <ExtLink href="https://zeit.co">ZEIT</ExtLink>. It leverages some
-          upcoming features in Next.js like{' '}
+          <ExtLink href="https://nextjs.org">Next.js</ExtLink> site with a{' '}
+          <ExtLink href="https://notion.so">Notion</ExtLink> powered blog that
+          is deployed with <ExtLink href="https://zeit.co">ZEIT</ExtLink>. It
+          leverages some upcoming features in Next.js like{' '}
           <ExtLink href="https://github.com/zeit/next.js/issues/9524">
             SSG support
           </ExtLink>{' '}
           and{' '}
           <ExtLink href="https://github.com/zeit/next.js/issues/8626">
             built-in CSS support
-          </ExtLink>
-        </p>
-
-        <p>
-          The index page (the current page) is a normal Next.js page but the{' '}
-          <Link href="/blog">
-            <a>blog</a>
-          </Link>{' '}
-          is built from page data stored in Notion. Since this is using a{' '}
-          unofficial API and experimental features that could change at any
-          time, it is only meant for demonstrating aka{' '}
-          <span className="dotted">use at your own risk</span>
+          </ExtLink>{' '}
+          which allow us to achieve all of the benefits listed above including
+          blazing fast speeds, great local editing experience, and always being
+          available!
         </p>
       </div>
     </div>
