@@ -21,23 +21,23 @@ const features = [
     icon: Wifi,
   },
   {
-    text: 'Incremental SSG',
-    icon: Plus,
-  },
-  {
-    text: 'Edit via Notion',
-    icon: Notion,
-  },
-  {
     text: 'Customizable',
     icon: Pencil,
+  },
+  {
+    text: 'Incremental SSG',
+    icon: Plus,
   },
   {
     text: 'MIT Licensed',
     icon: Scroll,
   },
   {
-    text: '100 Lighthouse',
+    text: 'Edit via Notion',
+    icon: Notion,
+  },
+  {
+    text: 'Great scores',
     icon: Lighthouse,
   },
 ]

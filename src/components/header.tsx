@@ -1,12 +1,14 @@
 import Link from 'next/link'
 import Head from 'next/head'
+import ExtLink from './ext-link'
 import { useRouter } from 'next/router'
 import styles from '../styles/header.module.css'
 
-const navItems: { label: string; href?: string }[] = [
-  { label: 'Home', href: '/' },
-  { label: 'Blog', href: '/blog' },
-  { label: 'Contact', href: '/contact' },
+const navItems: { label: string; page?: string; link?: string }[] = [
+  { label: 'Home', page: '/' },
+  { label: 'Blog', page: '/blog' },
+  { label: 'Contact', page: '/contact' },
+  { label: 'Source Code', link: 'https://github.com/ijjk/notion-blog' },
 ]
 
 export default ({ titlePre = '' }) => {
@@ -22,13 +24,17 @@ export default ({ titlePre = '' }) => {
         />
       </Head>
       <ul>
-        {navItems.map(({ label, href }) => (
+        {navItems.map(({ label, page, link }) => (
           <li key={label}>
-            <Link href={href}>
-              <a className={pathname === href ? 'active' : undefined}>
-                {label}
-              </a>
-            </Link>
+            {page ? (
+              <Link href={page}>
+                <a className={pathname === page ? 'active' : undefined}>
+                  {label}
+                </a>
+              </Link>
+            ) : (
+              <ExtLink href={link}>{label}</ExtLink>
+            )}
           </li>
         ))}
       </ul>

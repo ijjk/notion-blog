@@ -194,21 +194,6 @@ pre.dark[class*='language-'] {
   color: #50e3c2;
 }
 
-.page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.landing {
-  min-height: 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow-x: hidden;
-}
-
 .links {
   display: flex;
   text-align: center;
@@ -219,7 +204,7 @@ pre.dark[class*='language-'] {
 .features {
   display: flex;
   flex-wrap: wrap;
-  margin: 2rem auto;
+  margin: 4rem auto;
   width: 1040px;
   max-width: calc(100vw - var(--gap-double));
 }
@@ -256,19 +241,12 @@ pre.dark[class*='language-'] {
   max-width: 100vw;
   padding: 0 2rem;
   background: var(--bg);
-  margin: calc(2 * var(--gap-double)) auto;
+  margin: var(--gap-double) auto;
 }
 figure {
   font-size: 0.85rem;
   color: #999;
   line-height: 1.8;
-}
-
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: var(--gap-double) auto;
 }
 
 figure {
@@ -362,44 +340,6 @@ code {
   width: 130%;
   background: #fff;
   transform: skew(-20deg);
-}
-
-.page:not(.animate) .slice::after {
-  content: unset;
-}
-
-.page.animate .slice {
-  animation: fadeIn 1.8s ease-in-out forwards;
-}
-
-.page.animate .slice::after {
-  animation: slideRight 1.5s cubic-bezier(0.645, 0.045, 0.355, 1) forwards;
-  animation-delay: 0.8s;
-}
-
-.page.animate .features {
-  opacity: 0;
-  animation: fadeIn 0.5s ease-in-out forwards;
-  animation-delay: 2s;
-}
-
-.page.animate .explanation {
-  opacity: 0;
-  animation: fadeIn 0.5s ease-in-out forwards;
-  animation-delay: 2.5s;
-}
-
-.page.animate .links {
-  opacity: 0;
-  animation: fadeIn 0.5s ease-in-out forwards;
-  animation-delay: 2s;
-}
-
-.page.animate h1 .slice::after {
-  width: 105%;
-  left: -1%;
-  animation-delay: 0.5s;
-  animation-duration: 0.5s;
 }
 
 @media (max-width: 600px) {
