@@ -12,7 +12,7 @@ Deploy your own Notion site with ZEIT Now.
 
 1. Clone this repo `git clone https://github.com/ijjk/notion-backed-site.git`
 2. Update `BLOG_INDEX_ID` in [`./src/lib/notion/server-constants.ts`](./src/lib/notion/server-constants.ts) with your id. See [here](#getting-blog-index) for how to find this value.
-3. Add your `NOTION_TOKEN` as a secret to Now `now secrets add NOTION_TOKEN <your-token>`
+3. Add your `NOTION_TOKEN` as a secret to Now `now secrets add notion-token <your-token>`
 4. Deploy with `now`
 
 ## Creating your pages table
