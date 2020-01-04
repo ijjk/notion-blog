@@ -26,8 +26,9 @@
 }
 
 .post {
-  max-width: 600px;
+  max-width: calc(600px + 10%);
   margin: 5% auto;
+  padding: 0 5%;
 }
 
 .post :global(hr) {
