@@ -32,8 +32,8 @@ export default () => (
           This is a statically generated{' '}
           <ExtLink href="https://nextjs.org">Next.js</ExtLink> site powered with{' '}
           <ExtLink href="https://notion.so">Notion's</ExtLink>{' '}
-          <span style={{ borderBottom: '1px dashed black' }}>private</span> API
-          as the backend and deployed to the super fast{' '}
+          <span className="dotted">private</span> API as the backend and
+          deployed to the super fast{' '}
           <ExtLink href="https://zeit.co">ZEIT</ExtLink>. It leverages some
           upcoming features in Next.js like{' '}
           <ExtLink href="https://github.com/zeit/next.js/issues/9524">
@@ -53,7 +53,7 @@ export default () => (
           is built from page data stored in Notion. Since this is using a{' '}
           unofficial API and experimental features that could change at any
           time, it is only meant for demonstrating aka{' '}
-          <strong>use at your own risk</strong>
+          <span className="dotted">use at your own risk</span>
         </p>
       </div>
     </div>

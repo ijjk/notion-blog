@@ -412,3 +412,7 @@ code {
     font-size: 1rem;
   }
 }
+
+.dotted {
+  border-bottom: 1px dashed black;
+}
