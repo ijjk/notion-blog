@@ -136,7 +136,7 @@ const RenderPost = ({ post }) => {
                     boxShadow: '0 8px 8px rgba(0, 0, 0, 0.3)',
                     width,
                     maxWidth: '100%',
-                    margin: '0 auto',
+                    margin: '5px auto',
                     display: 'block',
                   }}
                 />
