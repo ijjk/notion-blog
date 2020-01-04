@@ -9,7 +9,6 @@ if (!process.env.NOTION_TOKEN) {
 
 module.exports = {
   experimental: {
-    granularChunks: true,
     css: true,
   },
 }
