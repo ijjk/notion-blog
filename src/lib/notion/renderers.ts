@@ -1,5 +1,4 @@
 import React from 'react'
-import { BASE_URL } from './client-constants'
 import components from '../../components/dynamic'
 
 function applyTags(tags = [], children, noPTag = false, key) {
@@ -14,10 +13,6 @@ function applyTags(tags = [], children, noPTag = false, key) {
 
     if (tagName === 'a') {
       props.href = tag[1]
-
-      if (!props.href.includes('/blog')) {
-        props.href = props.href.replace(new RegExp(BASE_URL), '') || '/'
-      }
     }
 
     child = React.createElement(components[tagName] || tagName, props, child)

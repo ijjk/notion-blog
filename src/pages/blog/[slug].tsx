@@ -8,7 +8,6 @@ import { textBlock } from '../../lib/notion/renderers'
 import getPageData from '../../lib/notion/getPageData'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
 import getNotionUsers from '../../lib/notion/getNotionUsers'
-import { BASE_URL } from '../../lib/notion/client-constants'
 import { getBlogLink, getDateStr } from '../../lib/blog-helpers'
 
 // Get the data for each blog post
@@ -39,7 +38,6 @@ export async function unstable_getStaticPaths() {
   return Object.keys(postsTable).map(slug => getBlogLink(slug))
 }
 
-const defaultImageWidth = 1440
 const listTypes = new Set(['bulleted_list', 'numbered_list'])
 
 const RenderPost = ({ post }) => {
@@ -125,7 +123,7 @@ const RenderPost = ({ post }) => {
               toRender.push(
                 <Comp
                   key={id}
-                  src={`${BASE_URL}/api/asset?assetUrl=${encodeURIComponent(
+                  src={`/api/asset?assetUrl=${encodeURIComponent(
                     format.display_source as any
                   )}&blockId=${id}`}
                   controls={!isImage}
