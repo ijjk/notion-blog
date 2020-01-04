@@ -107,9 +107,7 @@ const RenderPost = ({ post }) => {
               }
               break
             case 'image': {
-              const {
-                format = {},
-              } = value
+              const { format = {} } = value
               const { block_width } = format
               const baseBlockWidth = 768
               const roundFactor = Math.pow(10, 2)

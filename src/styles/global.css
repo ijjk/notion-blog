@@ -1,3 +1,5 @@
-html {
+#__next {
   padding: 5px;
+  position: relative;
+  min-height: 100vh;
 }

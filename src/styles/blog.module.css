@@ -27,8 +27,8 @@
 
 .post {
   max-width: calc(600px + 10%);
-  margin: 5% auto;
-  padding: 0 5%;
+  margin: 0 auto;
+  padding: 5%;
 }
 
 .post :global(hr) {

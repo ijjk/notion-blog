@@ -1,5 +1,5 @@
 .layout {
-  padding: 2% 5% 5%;
+  padding: 2% 5% 7%;
   margin: 0 auto;
   max-width: calc(600px + 10%);
 }
@@ -13,4 +13,13 @@
 
 .layout h1 {
   text-align: center;
+}
+
+.footer {
+  text-align: center;
+  padding: 10px 5%;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  right: 0;
 }
