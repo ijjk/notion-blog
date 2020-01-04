@@ -3,23 +3,21 @@ import queryCollection from './queryCollection'
 
 export default async function loadTable(collectionBlock: any, isPosts = false) {
   const { value } = collectionBlock
-  let table: any = {};
+  let table: any = {}
   const col = await queryCollection({
     collectionId: value.collection_id,
     collectionViewId: value.view_ids[0],
   })
-  const entries = values(col.recordMap.block).filter(
-    (block: any) => {
-      return block.value && block.value.parent_id === value.collection_id
-    }
-  );
+  const entries = values(col.recordMap.block).filter((block: any) => {
+    return block.value && block.value.parent_id === value.collection_id
+  })
 
   const colId = Object.keys(col.recordMap.collection)[0]
   const schema = col.recordMap.collection[colId].value.schema
   const schemaKeys = Object.keys(schema)
 
   for (const entry of entries) {
-    const props = entry.value && entry.value.properties;
+    const props = entry.value && entry.value.properties
     const row: any = {}
 
     if (!props) continue
@@ -60,9 +58,12 @@ export default async function loadTable(collectionBlock: any, isPosts = false) {
             ).getTime()
 
             // calculate offset from provided time zone
-            const timezoneOffset = new Date(
-              new Date().toLocaleString('en-US', { timeZone: type[1].time_zone })
-            ).getTime() - new Date().getTime()
+            const timezoneOffset =
+              new Date(
+                new Date().toLocaleString('en-US', {
+                  timeZone: type[1].time_zone,
+                })
+              ).getTime() - new Date().getTime()
 
             // initialize subtracting time zone offset
             val = new Date(providedDate - timezoneOffset).getTime()

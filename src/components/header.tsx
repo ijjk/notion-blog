@@ -3,10 +3,10 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import styles from './header.module.css'
 
-const navItems: { label: string, href?: string }[] = [
+const navItems: { label: string; href?: string }[] = [
   { label: 'Home', href: '/' },
   { label: 'Blog', href: '/blog' },
-  { label: 'Contact', href: '/contact' }
+  { label: 'Contact', href: '/contact' },
 ]
 
 export default ({ titlePre = '' }) => {
@@ -21,9 +21,7 @@ export default ({ titlePre = '' }) => {
         {navItems.map(({ label, href }) => (
           <li key={label}>
             <Link href={href}>
-              <a className={
-                pathname === href ? 'active' : undefined
-              }>
+              <a className={pathname === href ? 'active' : undefined}>
                 {label}
               </a>
             </Link>

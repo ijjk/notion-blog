@@ -14,31 +14,31 @@ const contacts = [
   {
     Comp: Twitter,
     alt: 'twitter icon',
-    link: 'https://twitter.com/_ijjk'
+    link: 'https://twitter.com/_ijjk',
   },
   {
     Comp: GitHub,
     alt: 'github icon',
-    link: 'https://github.com/ijjk'
+    link: 'https://github.com/ijjk',
   },
   {
     Comp: LinkedIn,
     alt: 'linkedin icon',
-    link: 'https://www.linkedin.com/in/jj-kasper-0b5392166/'
+    link: 'https://www.linkedin.com/in/jj-kasper-0b5392166/',
   },
   {
     Comp: Envelope,
     alt: 'envelope icon',
-    link: 'mailto:jj@jjsweb.site?subject=Notion site'
-  }
+    link: 'mailto:jj@jjsweb.site?subject=Notion site',
+  },
 ]
 
 export default () => (
   <>
-    <Header titlePre='Contact' />
+    <Header titlePre="Contact" />
     <div className={sharedStyles.layout}>
       <div className={contactStyles.zeit}>
-        <ExtLink href='https://zeit.co' aria-label='ZEIT logo'>
+        <ExtLink href="https://zeit.co" aria-label="ZEIT logo">
           <ZEIT />
         </ExtLink>
       </div>

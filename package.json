@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "next dev",
     "start": "next start",
-    "build": "next build"
+    "build": "next build",
+    "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .gitignore"
   },
   "dependencies": {
     "@zeit/react-jsx-parser": "^2.0.0",
@@ -17,6 +18,7 @@
   "devDependencies": {
     "@types/node": "^13.1.2",
     "@types/react": "^16.9.17",
+    "prettier": "^1.19.1",
     "typescript": "^3.7.4"
   }
 }

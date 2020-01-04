@@ -3,7 +3,7 @@ if (!process.env.NOTION_TOKEN) {
   // NOTION_TOKEN being populated
   throw new Error(
     `NOTION_TOKEN is missing from env, this will result in an error\n` +
-    `Make sure to provide one before starting Next.js`
+      `Make sure to provide one before starting Next.js`
   )
 }
 

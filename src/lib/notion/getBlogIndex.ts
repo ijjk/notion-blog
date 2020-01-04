@@ -10,7 +10,7 @@ export default async function getBlogIndex(previews = true) {
     limit: 999, // TODO: figure out Notion's way of handling pagination
     cursor: { stack: [] },
     chunkNumber: 0,
-    verticalColumns: false
+    verticalColumns: false,
   })
 
   // Parse table with posts

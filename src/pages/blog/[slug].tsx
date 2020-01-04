@@ -28,8 +28,8 @@ export async function unstable_getStaticProps({ params: { slug } }) {
 
   return {
     props: {
-      post
-    }
+      post,
+    },
   }
 }
 
@@ -52,8 +52,8 @@ const RenderPost = ({ post }) => {
       <Header titlePre={post.Page} />
       <div className={blogStyles.post}>
         <h1>{post.Page}</h1>
-        <div className='authors'>By: {post.Authors.join(' ')}</div>
-        <div className='posted'>Posted: {getDateStr(post.Date)}</div>
+        <div className="authors">By: {post.Authors.join(' ')}</div>
+        <div className="posted">Posted: {getDateStr(post.Date)}</div>
 
         <hr />
 
@@ -108,7 +108,7 @@ const RenderPost = ({ post }) => {
               break
             case 'image': {
               const {
-                format = {} as NonNullable<typeof value['format']>
+                format = {},
               } = value
               const { block_width } = format
               const baseBlockWidth = 768
@@ -130,7 +130,7 @@ const RenderPost = ({ post }) => {
                     width,
                     maxWidth: '100%',
                     margin: '0 auto',
-                    display: 'block'
+                    display: 'block',
                   }}
                 />
               )
@@ -157,10 +157,6 @@ const RenderPost = ({ post }) => {
                       key={id}
                       jsx={content}
                       components={components}
-                      bindings={{
-                        isRowType: (_: any, idx: number) => idx > 0,
-                        isHeadType: (_: any, idx: number) => idx === 0
-                      }}
                       componentsOnly={false}
                       renderInpost={false}
                       allowUnknownElements={true}
@@ -169,7 +165,7 @@ const RenderPost = ({ post }) => {
                   )
                 } else {
                   toRender.push(
-                    <components.Code key={id} language={(language || '')}>
+                    <components.Code key={id} language={language || ''}>
                       {content}
                     </components.Code>
                   )

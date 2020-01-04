@@ -1,11 +1,7 @@
-import { loadPageChunk } from './getPageData';
-import { values } from './rpc';
+import { loadPageChunk } from './getPageData'
+import { values } from './rpc'
 
-const nonPreviewTypes = new Set([
-  'editor',
-  'page',
-  'collection_view'
-])
+const nonPreviewTypes = new Set(['editor', 'page', 'collection_view'])
 
 export async function getPostPreview(pageId: string) {
   let blocks
@@ -21,9 +17,11 @@ export async function getPostPreview(pageId: string) {
     }
   }
 
-  blocks = blocks.splice(0, dividerIndex)
-    .filter(({ value: {type, properties} }: any) =>
-      !nonPreviewTypes.has(type) && properties
+  blocks = blocks
+    .splice(0, dividerIndex)
+    .filter(
+      ({ value: { type, properties } }: any) =>
+        !nonPreviewTypes.has(type) && properties
     )
     .map((block: any) => block.value.properties.title)
 

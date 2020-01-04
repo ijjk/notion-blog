@@ -9,29 +9,29 @@ export default function queryCollection({
   const {
     limit = 999, // TODO: figure out Notion's way of handling pagination
     loadContentCover = true,
-    type = "table",
-    userLocale = "en",
+    type = 'table',
+    userLocale = 'en',
     // we use America/Phoenix since it doesn't do daylight savings and
     // we can't use UTC here
-    userTimeZone = "America/Phoenix"
-  } = loader;
+    userTimeZone = 'America/Phoenix',
+  } = loader
 
   const {
     aggregate = [
       {
-        aggregation_type: "count",
-        id: "count",
-        property: "title",
-        type: "title",
-        view_type: "table"
-      }
+        aggregation_type: 'count',
+        id: 'count',
+        property: 'title',
+        type: 'title',
+        view_type: 'table',
+      },
     ],
     filter = [],
-    filter_operator = "and",
-    sort = []
-  } = query;
+    filter_operator = 'and',
+    sort = [],
+  } = query
 
-  return rpc("queryCollection", {
+  return rpc('queryCollection', {
     collectionId,
     collectionViewId,
     loader: {
@@ -39,13 +39,13 @@ export default function queryCollection({
       loadContentCover,
       type,
       userLocale,
-      userTimeZone
+      userTimeZone,
     },
     query: {
       aggregate,
       filter,
       filter_operator,
-      sort
-    }
-  });
+      sort,
+    },
+  })
 }

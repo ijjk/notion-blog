@@ -1,4 +1,4 @@
-import { NextApiRequest, NextApiResponse } from "next"
+import { NextApiRequest, NextApiResponse } from 'next'
 
 export function setHeaders(req: NextApiRequest, res: NextApiResponse): boolean {
   // set SPR/CORS headers
@@ -25,6 +25,6 @@ export function handleError(res: NextApiResponse, error: string | Error) {
   console.error(error)
   res.status(500).json({
     status: 'error',
-    message: 'an error occurred processing request'
+    message: 'an error occurred processing request',
   })
 }

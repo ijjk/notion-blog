@@ -17,10 +17,7 @@ export async function unstable_getStaticProps() {
     .map(slug => {
       const post = postsTable[slug]
       // remove draft posts in production
-      if (
-        process.env.NODE_ENV === 'production' &&
-        post.Published !== 'Yes'
-      ) {
+      if (process.env.NODE_ENV === 'production' && post.Published !== 'Yes') {
         return null
       }
       post.Authors = post.Authors || []
@@ -39,15 +36,15 @@ export async function unstable_getStaticProps() {
 
   return {
     props: {
-      posts
-    }
+      posts,
+    },
   }
 }
 
 export default ({ posts = [] }) => {
   return (
     <>
-      <Header titlePre='Blog' />
+      <Header titlePre="Blog" />
       <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
         <h1>My Notion Blog</h1>
         {posts.length === 0 && (
@@ -57,12 +54,12 @@ export default ({ posts = [] }) => {
           return (
             <div className={blogStyles.postPreview} key={post.Slug}>
               <h3>
-                <Link href='/blog/[slug]' as={getBlogLink(post.Slug)}>
+                <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
                   <a>{post.Page}</a>
                 </Link>
               </h3>
-              <div className='authors'>By: {post.Authors.join(' ')}</div>
-              <div className='posted'>Posted: {getDateStr(post.Date)}</div>
+              <div className="authors">By: {post.Authors.join(' ')}</div>
+              <div className="posted">Posted: {getDateStr(post.Date)}</div>
               <p>
                 {post.preview.map((block, idx) =>
                   textBlock(block, true, `${post.Slug}${idx}`)

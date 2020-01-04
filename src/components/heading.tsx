@@ -7,7 +7,7 @@ const collectText = (el, acc = []) => {
   return acc.join('').trim()
 }
 
-export default ({ children: component, id }: { children: any, id?: any }) => {
+export default ({ children: component, id }: { children: any; id?: any }) => {
   const children = component.props.children || ''
   let text = children
 
@@ -19,6 +19,8 @@ export default ({ children: component, id }: { children: any, id?: any }) => {
   }
 
   return (
-    <a href={`#${id}`} id={id} style={{ color: 'inherit'}}>{component}</a>
+    <a href={`#${id}`} id={id} style={{ color: 'inherit' }}>
+      {component}
+    </a>
   )
 }

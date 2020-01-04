@@ -16,8 +16,8 @@ export default async function getNotionImage(
     method: 'GET',
     headers: {
       cookie: `token_v2=${NOTION_TOKEN}`,
-      accept: 'image/webp,image/apng,image/*,*/*;q=0.8'
-    }
+      accept: 'image/webp,image/apng,image/*,*/*;q=0.8',
+    },
   })
 
   if (imageRes.ok) {

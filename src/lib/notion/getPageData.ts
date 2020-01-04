@@ -17,13 +17,13 @@ export function loadPageChunk({
   limit = 100,
   cursor = { stack: [] },
   chunkNumber = 0,
-  verticalColumns = false
+  verticalColumns = false,
 }: any) {
   return rpc('loadPageChunk', {
     pageId,
     limit,
     cursor,
     chunkNumber,
-    verticalColumns
+    verticalColumns,
   })
 }
