@@ -16,6 +16,10 @@ export default ({ titlePre = '' }) => {
     <header className={styles.header}>
       <Head>
         <title>{titlePre ? `${titlePre} |` : ''} My Notion Site</title>
+        <meta
+          name="description"
+          content="An example Next.js site using Notion for the backend"
+        />
       </Head>
       <ul>
         {navItems.map(({ label, href }) => (
