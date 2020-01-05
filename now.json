@@ -1,10 +1,12 @@
 {
   "build": {
     "env": {
-      "NOTION_TOKEN": "@notion-token"
+      "NOTION_TOKEN": "@notion-token",
+      "BLOG_INDEX_ID": "@blog-index-id"
     }
   },
   "env": {
-    "NOTION_TOKEN": "@notion-token"
+    "NOTION_TOKEN": "@notion-token",
+    "BLOG_INDEX_ID": "@blog-index-id"
   }
 }
