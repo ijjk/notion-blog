@@ -1,60 +1,6 @@
 export default props => (
   <svg width={128} height={128} viewBox="0 0 128 128" {...props}>
     <defs>
-      <linearGradient
-        x1="62.531%"
-        y1="13.086%"
-        x2="24.779%"
-        y2="100.996%"
-        id="prefix__i"
-      >
-        <stop stopColor="#262626" stopOpacity={0.1} offset="0%" />
-        <stop stopColor="#262626" stopOpacity={0} offset="100%" />
-      </linearGradient>
-      <linearGradient
-        x1="36.626%"
-        y1="20.358%"
-        x2="64.01%"
-        y2="100.652%"
-        id="prefix__g"
-      >
-        <stop stopColor="#FFF" stopOpacity={0.1} offset="0%" />
-        <stop stopColor="#FFF" stopOpacity={0} offset="100%" />
-      </linearGradient>
-      <linearGradient
-        x1="68.935%"
-        y1="65.756%"
-        x2="31.065%"
-        y2="35.799%"
-        id="prefix__h"
-      >
-        <stop stopColor="#262626" stopOpacity={0.1} offset="0%" />
-        <stop stopColor="#262626" stopOpacity={0} offset="100%" />
-      </linearGradient>
-      <linearGradient
-        x1="49.994%"
-        y1=".226%"
-        x2="49.994%"
-        y2="99.725%"
-        id="prefix__c"
-      >
-        <stop stopColor="#212121" stopOpacity={0.04} offset="0%" />
-        <stop stopColor="#212121" stopOpacity={0} offset="66%" />
-      </linearGradient>
-      <linearGradient x1="0%" y1="50%" y2="50%" id="prefix__j">
-        <stop stopColor="#262626" stopOpacity={0.1} offset="0%" />
-        <stop stopColor="#262626" stopOpacity={0} offset="100%" />
-      </linearGradient>
-      <linearGradient
-        x1="49.994%"
-        y1=".226%"
-        x2="49.994%"
-        y2="99.725%"
-        id="prefix__n"
-      >
-        <stop stopColor="#212121" stopOpacity={0.04} offset="0%" />
-        <stop stopColor="#212121" stopOpacity={0} offset="66%" />
-      </linearGradient>
       <path
         d="M15.833 0H0v16.667h15.833c4.6 0 8.334-3.734 8.334-8.334S20.433 0 15.833 0z"
         id="prefix__o"
@@ -71,47 +17,12 @@ export default props => (
         d="M28.333 8.333h-4.05C22.567 3.475 17.942 0 12.5 0 5.6 0 0 5.6 0 12.5S5.6 25 12.5 25h15.833c4.6 0 8.334-3.733 8.334-8.333s-3.734-8.334-8.334-8.334z"
         id="prefix__l"
       />
-      <radialGradient
-        cx="14.489%"
-        cy="14.584%"
-        fx="14.489%"
-        fy="14.584%"
-        r="99.973%"
-        id="prefix__k"
-      >
-        <stop stopColor="#FFF" stopOpacity={0.1} offset="0%" />
-        <stop stopColor="#FFF" stopOpacity={0} offset="100%" />
-      </radialGradient>
-      <radialGradient
-        cx="10.128%"
-        cy="14.269%"
-        fx="10.128%"
-        fy="14.269%"
-        r="144.566%"
-        gradientTransform="matrix(.68182 0 0 1 .032 0)"
-        id="prefix__f"
-      >
-        <stop stopColor="#FFF" stopOpacity={0.1} offset="0%" />
-        <stop stopColor="#FFF" stopOpacity={0} offset="100%" />
-      </radialGradient>
-      <radialGradient
-        cx="10.128%"
-        cy="14.269%"
-        fx="10.128%"
-        fy="14.269%"
-        r="144.566%"
-        gradientTransform="matrix(.68182 0 0 1 .032 0)"
-        id="prefix__q"
-      >
-        <stop stopColor="#FFF" stopOpacity={0.1} offset="0%" />
-        <stop stopColor="#FFF" stopOpacity={0} offset="100%" />
-      </radialGradient>
     </defs>
     <g fill="none" fillRule="evenodd">
       <path d="M0 0h128v128H0z" />
       <g transform="translate(5.333 5.333)">
         <circle
-          fill="#0535C1"
+          fill="#4C4C4C"
           fillRule="nonzero"
           cx={58.667}
           cy={58.667}
@@ -145,12 +56,6 @@ export default props => (
               </mask>
               <g mask="url(#prefix__e)">
                 <g transform="translate(-2.167 -9.389)">
-                  <image
-                    opacity={0.1}
-                    width={15.167}
-                    height={23.111}
-                    xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAgCAYAAAD9oDOIAAAABGdBTUEAALGN5fIAKQAAA7ZJREFUSA2dlttvEkEYxdnlWqhQoEWrlRq1xqQv+qLP9f82fdamvmhjVBJbSnrjUtoCheWy/s6ERagsBSc5+WZnvzl75sxtrcDfYg2rXvTeuMOKF7123+gR2Nvb26FOpxNrt9uheDxuq0ez2XSXlpa6VDuFQqFHHIB7yUVqQRhuNBpZy7LyrutmiBHaA7Zt93i+5vksEonUer1eA3J9ROS+JcgbK5VKJej8EpIdCD4Q3xHf0rbN+01icjAYhLvdbn9jY8Mpl8t9X0ZeiNReX1+PO46zBdEOz+/BK7AJngq0PyZmg8GgjVpnbW2tl06n+7VaTVb8Y4dRmsvlYpDmUfgGVVvEVZITQzwQIVBbkvcRIPJeLBZz8F2qJ4hFGmD4YUIaPENVnpgEIaAJU04MLAP5nQNpMED5FapbKJ7w2ChNJpPkWB6xhi1VmiwzkUSR6yNSn0HpCqNxQQXiy2q12qF9pNYordfrLh7ZTEaaxOckyMM4MEuLqKIPBPl4lCgMIL8ElVAo1Gi1WlpyhtiQ8mBlMhl1kH+anCdAdTMSolc85VIdIt8FN1KLDU3PBo9UvgZIULK8vWuBR6ooYptc2SPFXUgvwuFwrVKpGBtGpHNaAIcpxgpqEqENUsa602w2eyO1455pKG08LZN0QnIdaPeMJoD6eFFfrYg8/V7T5xF1KZ+YCJevSf45+DWME7NK23iR2jBkWn4P6ZtkwrSCrAmlh4eHUlYn4YSvl6m3gZ9SXmkarDCIKtJPH5pQqudFLQig1Cimb5QJM0pHEyVGlQVWgclHodan/C/2+/3SysrKzfjwleT+hwVaWtq6LxTxNXKX1BCTMO8qINXSaLX7UlgR51APTiVdYBXA4+qUakJeB63b29v+VNIFLND+b0J6DH5AekbsTCOlfa5VoKXWhagKcUHQlaO7zJfUs0DJdL4ADhgvOkMb4Ihd+BXyIy5NqZ7YpuMdzCrgZL+mUTvsCvLxLSvCFjgF38FPVFaHtrk6EPwKPK6DiiZRChzUyEMN+xaUeN4nfuJm+U2eVJsbYCYpyV04rkg+h+Caeoq6ZrsE9njeBV+Y8YtisTgaiZ+n9OFM4+YkyE/5egqxTnrN9B74iO97iUSixJUt5aN7SgvXt4ydsSkI10mUym/Ud0W4vLx8fHBwIEK1j8pMUrKs1dVVG3UxPNMxp4n5DPYhLE0jFPMsT/XejUajbf5MdFjo2giisMyQK36E6mTOP1VmFPPzxvsIHluQO/f9T81Dqu/dzZt1cAf+AMymEnybyIybAAAAAElFTkSuQmCC"
-                  />
                   <path
                     d="M2.167 2.167l5.857 18.496C9.98 18.698 13 15.99 13 13 13 7.02 8.147 2.167 2.167 2.167z"
                     fill="#E1E1E1"
@@ -187,7 +92,7 @@ export default props => (
           transform="translate(72.778 33.889)"
         />
         <path
-          fill="#FFF176"
+          fill="#f2f2f2"
           fillRule="nonzero"
           d="M42.667 24.667h30.667v26.667H42.667z"
         />
@@ -198,12 +103,12 @@ export default props => (
         />
         <path
           d="M80 48.667h5.333v10.666H32V48.667h5.333V27.333L58.667 14 80 27.333v21.334zm-10.667 0V33.245L58.667 26.58 48 33.245v15.422h21.333z"
-          fill="#F4481E"
+          fill="#727272"
           fillRule="nonzero"
         />
         <path
           d="M29.631 109.656l9.036-60.99h40l9.035 60.99c-8.561 4.886-18.472 7.677-29.035 7.677-10.563 0-20.474-2.791-29.036-7.677zM70.61 67.067l-25.094 8.154-3.05 20.585L73.38 85.76l-2.77-18.694z"
-          fill="#F4481E"
+          fill=""
           fillRule="nonzero"
         />
         <path
@@ -262,12 +167,6 @@ export default props => (
               </mask>
               <g mask="url(#prefix__p)">
                 <g transform="translate(-2.5 -10.833)">
-                  <image
-                    opacity={0.1}
-                    width={17.5}
-                    height={26.667}
-                    xlinkHref="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAgCAYAAAD9oDOIAAAABGdBTUEAALGN5fIAKQAAA7ZJREFUSA2dlttvEkEYxdnlWqhQoEWrlRq1xqQv+qLP9f82fdamvmhjVBJbSnrjUtoCheWy/s6ERagsBSc5+WZnvzl75sxtrcDfYg2rXvTeuMOKF7123+gR2Nvb26FOpxNrt9uheDxuq0ez2XSXlpa6VDuFQqFHHIB7yUVqQRhuNBpZy7LyrutmiBHaA7Zt93i+5vksEonUer1eA3J9ROS+JcgbK5VKJej8EpIdCD4Q3xHf0rbN+01icjAYhLvdbn9jY8Mpl8t9X0ZeiNReX1+PO46zBdEOz+/BK7AJngq0PyZmg8GgjVpnbW2tl06n+7VaTVb8Y4dRmsvlYpDmUfgGVVvEVZITQzwQIVBbkvcRIPJeLBZz8F2qJ4hFGmD4YUIaPENVnpgEIaAJU04MLAP5nQNpMED5FapbKJ7w2ChNJpPkWB6xhi1VmiwzkUSR6yNSn0HpCqNxQQXiy2q12qF9pNYordfrLh7ZTEaaxOckyMM4MEuLqKIPBPl4lCgMIL8ElVAo1Gi1WlpyhtiQ8mBlMhl1kH+anCdAdTMSolc85VIdIt8FN1KLDU3PBo9UvgZIULK8vWuBR6ooYptc2SPFXUgvwuFwrVKpGBtGpHNaAIcpxgpqEqENUsa602w2eyO1455pKG08LZN0QnIdaPeMJoD6eFFfrYg8/V7T5xF1KZ+YCJevSf45+DWME7NK23iR2jBkWn4P6ZtkwrSCrAmlh4eHUlYn4YSvl6m3gZ9SXmkarDCIKtJPH5pQqudFLQig1Cimb5QJM0pHEyVGlQVWgclHodan/C/2+/3SysrKzfjwleT+hwVaWtq6LxTxNXKX1BCTMO8qINXSaLX7UlgR51APTiVdYBXA4+qUakJeB63b29v+VNIFLND+b0J6DH5AekbsTCOlfa5VoKXWhagKcUHQlaO7zJfUs0DJdL4ADhgvOkMb4Ihd+BXyIy5NqZ7YpuMdzCrgZL+mUTvsCvLxLSvCFjgF38FPVFaHtrk6EPwKPK6DiiZRChzUyEMN+xaUeN4nfuJm+U2eVJsbYCYpyV04rkg+h+Caeoq6ZrsE9njeBV+Y8YtisTgaiZ+n9OFM4+YkyE/5egqxTnrN9B74iO97iUSixJUt5aN7SgvXt4ydsSkI10mUym/Ud0W4vLx8fHBwIEK1j8pMUrKs1dVVG3UxPNMxp4n5DPYhLE0jFPMsT/XejUajbf5MdFjo2giisMyQK36E6mTOP1VmFPPzxvsIHluQO/f9T81Dqu/dzZt1cAf+AMymEnybyIybAAAAAElFTkSuQmCC"
-                  />
                   <path
                     d="M2.5 2.5l6.758 21.342C11.517 21.575 15 18.45 15 15 15 8.1 9.4 2.5 2.5 2.5z"
                     fill="#E1E1E1"
