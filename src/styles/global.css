@@ -205,7 +205,7 @@ pre.dark[class*='language-'] {
   display: flex;
   flex-wrap: wrap;
   margin: 4rem auto;
-  width: 1040px;
+  width: 920px;
   max-width: calc(100vw - var(--gap-double));
 }
 
@@ -241,7 +241,7 @@ pre.dark[class*='language-'] {
   max-width: 100vw;
   padding: 0 2rem;
   background: var(--bg);
-  margin: var(--gap-double) auto;
+  margin: var(--gap-half) auto;
 }
 figure {
   font-size: 0.85rem;
@@ -257,6 +257,9 @@ figure {
 a {
   color: #0070f3;
   text-decoration: none;
+}
+a:hover {
+  color: #3291FF;
 }
 
 .links {
@@ -344,11 +347,12 @@ code {
 
 @media (max-width: 600px) {
   .explanation {
-    padding: 0 1rem;
+    padding: 0 1rem 4rem;
   }
 
   h2 {
-    font-size: 1rem;
+    font-size: .95rem;
+    letter-spacing: 0;
   }
 }
 

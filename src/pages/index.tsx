@@ -17,14 +17,6 @@ export default () => (
       />
       <h1>My Notion Blog</h1>
       <h2>Blazing Fast Notion Blog with Next.js' SSG</h2>
-      <div className="links">
-        <ExtLink
-          aria-label="Source code"
-          href="https://github.com/ijjk/notion-blog"
-        >
-          <GitHub height={40} />
-        </ExtLink>
-      </div>
 
       <Features />
 
