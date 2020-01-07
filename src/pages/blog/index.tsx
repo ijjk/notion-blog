@@ -4,7 +4,7 @@ import Header from '../../components/header'
 import blogStyles from '../../styles/blog.module.css'
 import sharedStyles from '../../styles/shared.module.css'
 
-import { getBlogLink, getDateStr } from '../../lib/blog-helpers'
+import { getBlogLink, getDateStr, postIsReady } from '../../lib/blog-helpers'
 import { textBlock } from '../../lib/notion/renderers'
 import getNotionUsers from '../../lib/notion/getNotionUsers'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
@@ -17,7 +17,7 @@ export async function unstable_getStaticProps() {
     .map(slug => {
       const post = postsTable[slug]
       // remove draft posts in production
-      if (process.env.NODE_ENV === 'production' && post.Published !== 'Yes') {
+      if (!postIsReady(post)) {
         return null
       }
       post.Authors = post.Authors || []
@@ -61,7 +61,7 @@ export default ({ posts = [] }) => {
               <div className="authors">By: {post.Authors.join(' ')}</div>
               <div className="posted">Posted: {getDateStr(post.Date)}</div>
               <p>
-                {post.preview.map((block, idx) =>
+                {(post.preview || []).map((block, idx) =>
                   textBlock(block, true, `${post.Slug}${idx}`)
                 )}
               </p>

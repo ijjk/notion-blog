@@ -9,3 +9,7 @@ export const getDateStr = date => {
     year: 'numeric',
   })
 }
+
+export const postIsReady = (post: any) => {
+  return process.env.NODE_ENV !== 'production' || post.Published === 'Yes'
+}

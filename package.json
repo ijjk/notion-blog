@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "next dev",
     "start": "next start",
-    "build": "next build",
+    "build": "next build && node .next/serverless/scripts/build-rss.js",
     "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .gitignore"
   },
   "husky": {

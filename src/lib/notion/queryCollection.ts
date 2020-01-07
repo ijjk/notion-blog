@@ -11,8 +11,6 @@ export default function queryCollection({
     loadContentCover = true,
     type = 'table',
     userLocale = 'en',
-    // we use America/Phoenix since it doesn't do daylight savings and
-    // we can't use UTC here
     userTimeZone = 'America/Phoenix',
   } = loader
 

@@ -1,4 +1,17 @@
+const fs = require('fs')
+const path = require('path')
 const { NODE_ENV, NOTION_TOKEN, BLOG_INDEX_ID } = process.env
+
+try {
+  fs.unlinkSync(path.resolve('.blog_index_data'))
+} catch (_) {
+  /* non fatal */
+}
+try {
+  fs.unlinkSync(path.resolve('.blog_index_data_previews'))
+} catch (_) {
+  /* non fatal */
+}
 
 const warnOrError =
   NODE_ENV !== 'production'
@@ -26,7 +39,22 @@ if (!BLOG_INDEX_ID) {
 }
 
 module.exports = {
+  target: 'experimental-serverless-trace',
+
   experimental: {
     css: true,
+  },
+
+  webpack(cfg, { dev, isServer }) {
+    // only compile build-rss in production server build
+    if (dev || !isServer) return cfg
+
+    const originalEntry = cfg.entry
+    cfg.entry = async () => {
+      const entries = { ...(await originalEntry()) }
+      entries['./scripts/build-rss.js'] = './src/lib/build-rss.ts'
+      return entries
+    }
+    return cfg
   },
 }
