@@ -1,13 +1,6 @@
 export default props => (
   <svg
-    viewBox="0 0 120 126"
-    style={{
-      width: 30,
-      height: 30,
-      flexShrink: 0,
-      backfaceVisibility: 'hidden',
-      marginRight: 10,
-    }}
+    viewBox="-5 0 120 130"
     className="prefix__notionLogo"
     display="block"
     fill="inherit"

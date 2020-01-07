@@ -4,7 +4,7 @@ import Wifi from './svgs/wifi'
 import Lighthouse from './svgs/lighthouse'
 import Plus from './svgs/plus'
 import Notion from './svgs/notion'
-import Pencil from './svgs/pencil'
+import Edit from './svgs/edit'
 import Scroll from './svgs/scroll'
 
 const features = [
@@ -22,7 +22,7 @@ const features = [
   },
   {
     text: 'Customizable',
-    icon: Pencil,
+    icon: Edit,
   },
   {
     text: 'Incremental SSG',
