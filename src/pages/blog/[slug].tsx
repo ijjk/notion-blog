@@ -1,4 +1,5 @@
 import React from 'react'
+import Head from 'next/head'
 import Header from '../../components/header'
 import Heading from '../../components/heading'
 import components from '../../components/dynamic'
@@ -17,7 +18,13 @@ export async function unstable_getStaticProps({ params: { slug } }) {
   const post = postsTable[slug]
 
   if (!post) {
-    throw new Error(`Failed to find post for slug: ${slug}`)
+    console.log(`Failed to find post for slug: ${slug}`)
+    return {
+      props: {
+        redirect: '/blog',
+      },
+      revalidate: 5,
+    }
   }
   const postData = await getPageData(post.id)
   post.content = postData.blocks
@@ -40,10 +47,21 @@ export async function unstable_getStaticPaths() {
 
 const listTypes = new Set(['bulleted_list', 'numbered_list'])
 
-const RenderPost = ({ post }) => {
+const RenderPost = ({ post, redirect }) => {
   let listTagName: string | null = null
   let listLastId: string | null = null
   let listChildren: React.ReactElement[] = []
+
+  if (redirect) {
+    return (
+      <>
+        <Head>
+          <meta name="robots" content="noindex" />
+          <meta httpEquiv="refresh" content={`0;url=${redirect}`} />
+        </Head>
+      </>
+    )
+  }
 
   return (
     <>
