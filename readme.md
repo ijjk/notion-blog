@@ -49,6 +49,8 @@ or
 2. Add your `NOTION_TOKEN` and `BLOG_INDEX_ID` as a secret to Now `now secrets add notion-token <token> && now secrets add blog-index-id <blog-index>`. See [here](#getting-blog-index) for how to find these values
 3. Deploy with `now`
 
+Note: if redeploying with `now` locally and you haven't made any changes to the application's source and only edited in Notion you will need use `now -f` to bypass build de-duping
+
 ## Running locally
 
 To run the project locally you need to follow steps 1 and 2 of [deploying](#deploy-your-own) and then follow the below steps
