@@ -29,6 +29,14 @@ To get your blog index value, open Notion and Navigate to the Notion page with t
 
 To get your Notion token, open Notion and look for the `token_v2` cookie.
 
+## Creating Blog Posts
+
+1. In Notion click new on the table to add a new row
+2. Fill in the Page name, slug, Date, and Authors
+3. At the top of the content area add the content you want to show as a preview (keep this under 2 paragraphs)
+4. Add a divider block under your preview content
+5. Add the rest of your content under the divier block
+
 ## Deploy Your Own
 
 Deploy your own Notion blog with ZEIT.
