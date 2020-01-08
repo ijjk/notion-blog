@@ -23,3 +23,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+.blog_index_data
+.blog_index_data_previews
