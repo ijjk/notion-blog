@@ -259,7 +259,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #3291FF;
+  color: #3291ff;
 }
 
 .links {
@@ -351,11 +351,29 @@ code {
   }
 
   h2 {
-    font-size: .95rem;
+    font-size: 0.95rem;
     letter-spacing: 0;
   }
 }
 
 .dotted {
   border-bottom: 1px dashed black;
+}
+
+footer {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+footer img {
+  display: block;
+  margin: 0.5rem auto;
+}
+
+footer span:nth-child(3) {
+  color: #777777;
+}
+
+footer span:nth-child(3) a {
+  color: inherit;
 }
