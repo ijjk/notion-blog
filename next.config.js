@@ -41,10 +41,6 @@ if (!BLOG_INDEX_ID) {
 module.exports = {
   target: 'experimental-serverless-trace',
 
-  experimental: {
-    css: true,
-  },
-
   webpack(cfg, { dev, isServer }) {
     // only compile build-rss in production server build
     if (dev || !isServer) return cfg

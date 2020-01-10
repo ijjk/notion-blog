@@ -36,6 +36,7 @@ export async function unstable_getStaticProps({ params: { slug } }) {
     props: {
       post,
     },
+    revalidate: 10,
   }
 }
 
