@@ -1,6 +1,6 @@
 .links {
   display: block;
-  margin: 5% auto;
+  margin: 1rem auto;
   max-width: 500px;
   text-align: center;
 }
@@ -20,5 +20,5 @@
 .zeit {
   display: block;
   text-align: center;
-  margin: 5% 0;
+  margin: 1rem 0;
 }

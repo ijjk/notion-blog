@@ -38,7 +38,8 @@ export default async function getBlogIndex(previews = true) {
       console.error(
         `\nFailed to load Notion posts, did you configure your Notion table as an inline table according to https://github.com/ijjk/notion-blog#creating-your-pages-table\n`
       )
-      throw err
+      console.error(err)
+      postsTable = {}
     }
 
     // only get 10 most recent post's previews

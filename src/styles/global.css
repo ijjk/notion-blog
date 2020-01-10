@@ -37,9 +37,6 @@ body {
   color: var(--fg);
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 
   background-image: radial-gradient(#ddd 1px, transparent 1px),
     radial-gradient(#ddd 1px, transparent 1px);

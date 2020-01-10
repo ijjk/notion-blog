@@ -68,13 +68,13 @@ const RenderPost = ({ post, redirect }) => {
     <>
       <Header titlePre={post.Page} />
       <div className={blogStyles.post}>
-        <h1>{post.Page}</h1>
+        <h1>{post.Page || ''}</h1>
         <div className="authors">By: {post.Authors.join(' ')}</div>
         <div className="posted">Posted: {getDateStr(post.Date)}</div>
 
         <hr />
 
-        {post.content.map((block, blockIdx) => {
+        {(post.content || []).map((block, blockIdx) => {
           const { value } = block
           const { type, properties, id } = value
           const isLast = blockIdx === post.content.length - 1
