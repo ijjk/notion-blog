@@ -4,7 +4,7 @@ This is an example Next.js project that shows Next.js' upcoming SSG (static-site
 
 **Note**: since it is using a private API and experimental features, use at your own risk as these things could change at any moment.
 
-**Live Example hosted on ZEIT**: https://notion-blog.jj4.now.sh/
+**Live Example hosted on ZEIT**: https://notion-blog.now.sh/
 
 ## Creating your pages table
 
