@@ -8,7 +8,7 @@ This is an example Next.js project that shows Next.js' upcoming SSG (static-site
 
 ## Getting started
 
-To view the steps to setup Notion to work with this example view the post at https://notion-blog.now.sh/blog/my-first-post or follow the steps below
+To view the steps to setup Notion to work with this example view the post at https://notion-blog.now.sh/blog/my-first-post or follow the steps below.
 
 ## Creating your pages table
 
