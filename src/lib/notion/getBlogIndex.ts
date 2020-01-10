@@ -19,20 +19,28 @@ export default async function getBlogIndex(previews = true) {
   }
 
   if (!postsTable) {
-    const data = await rpc('loadPageChunk', {
-      pageId: BLOG_INDEX_ID,
-      limit: 999, // TODO: figure out Notion's way of handling pagination
-      cursor: { stack: [] },
-      chunkNumber: 0,
-      verticalColumns: false,
-    })
+    try {
+      const data = await rpc('loadPageChunk', {
+        pageId: BLOG_INDEX_ID,
+        limit: 999, // TODO: figure out Notion's way of handling pagination
+        cursor: { stack: [] },
+        chunkNumber: 0,
+        verticalColumns: false,
+      })
 
-    // Parse table with posts
-    const tableBlock = values(data.recordMap.block).find(
-      (block: any) => block.value.type === 'collection_view'
-    )
+      // Parse table with posts
+      const tableBlock = values(data.recordMap.block).find(
+        (block: any) => block.value.type === 'collection_view'
+      )
 
-    postsTable = await getTableData(tableBlock, true)
+      postsTable = await getTableData(tableBlock, true)
+    } catch (err) {
+      console.error(
+        `\nFailed to load Notion posts, did you configure your Notion table as an inline table according to https://github.com/ijjk/notion-blog#creating-your-pages-table\n`
+      )
+      throw err
+    }
+
     // only get 10 most recent post's previews
     const postsKeys = Object.keys(postsTable).splice(0, 10)
 
