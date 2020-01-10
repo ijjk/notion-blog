@@ -22,6 +22,7 @@ export default ({ titlePre = '' }) => {
           name="description"
           content="An example Next.js site using Notion for the blog"
         />
+        <meta property="og:image" content="/og-image.png" />
       </Head>
       <ul>
         {navItems.map(({ label, page, link }) => (
