@@ -6,9 +6,13 @@ This is an example Next.js project that shows Next.js' upcoming SSG (static-site
 
 **Live Example hosted on ZEIT**: https://notion-blog.now.sh/
 
+## Getting started
+
+To view the steps to setup Notion to work with this example view the post at https://notion-blog.now.sh/blog/my-first-post or follow the steps below
+
 ## Creating your pages table
 
-To create your pages table you need to create a new page in Notion and add a table to that page.
+To create your pages table you need to create a new page in Notion and add a table as an **inline table** to that page. Make sure it is an inline table or querying the data won't work correctly
 
 The table should have the following properties:
 
@@ -46,7 +50,7 @@ Deploy your own Notion blog with ZEIT.
 or
 
 1. Clone this repo `git clone https://github.com/ijjk/notion-blog.git`
-2. Add your `NOTION_TOKEN` and `BLOG_INDEX_ID` as a secret to Now `now secrets add notion-token <token> && now secrets add blog-index-id <blog-index>`. See [here](#getting-blog-index) for how to find these values
+2. Add your `NOTION_TOKEN` and `BLOG_INDEX_ID` as a secret to Now `now secrets add notion-token <token> && now secrets add blog-index-id <blog-index>`. See [here](#getting-blog-index-and-token) for how to find these values
 3. Deploy with `now`
 
 Note: if redeploying with `now` locally and you haven't made any changes to the application's source and only edited in Notion you will need use `now -f` to bypass build de-duping
