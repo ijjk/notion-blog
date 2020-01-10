@@ -25,6 +25,10 @@
   margin-bottom: 0;
 }
 
+.post h1 {
+  margin-top: 0;
+}
+
 .postPreview :global(.posted) {
   margin-bottom: 0.5em;
 }
