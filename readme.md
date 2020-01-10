@@ -39,7 +39,7 @@ To get your Notion token, open Notion and look for the `token_v2` cookie.
 2. Fill in the Page name, slug, Date, and Authors
 3. At the top of the content area add the content you want to show as a preview (keep this under 2 paragraphs)
 4. Add a divider block under your preview content
-5. Add the rest of your content under the divier block
+5. Add the rest of your content under the divider block
 
 ## Deploy Your Own
 
