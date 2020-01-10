@@ -47,6 +47,19 @@ export default () => (
           blazing fast speeds, great local editing experience, and always being
           available!
         </p>
+
+        <p>
+          To see how to get started setting up the structure for your Notion
+          blog see{' '}
+          <Link href="/blog/[slug]" as="/blog/my-first-post">
+            <a>this blog post</a>
+          </Link>{' '}
+          or the instructions in{' '}
+          <ExtLink href="https://github.com/ijjk/notion-blog#creating-your-pages-table">
+            the readme here
+          </ExtLink>
+          .
+        </p>
       </div>
     </div>
   </>

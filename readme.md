@@ -12,7 +12,7 @@ To view the steps to setup Notion to work with this example view the post at htt
 
 ## Creating your pages table
 
-To create your pages table you need to create a new page in Notion and add a table as an **inline table** to that page. Make sure it is an inline table or querying the data won't work correctly
+To create your pages table you need to create a new page in Notion and add a table as an **inline table not a full page table** to that page. Make sure it is an inline table or querying the data won't work correctly
 
 The table should have the following properties:
 
