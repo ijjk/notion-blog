@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@zeit/react-jsx-parser": "^2.0.0",
+    "github-slugger": "^1.2.1",
     "next": "^9.1.8-canary.11",
     "prismjs": "^1.17.1",
     "react": "16.12.0",

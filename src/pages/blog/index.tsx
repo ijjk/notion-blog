@@ -59,9 +59,15 @@ export default ({ posts = [] }) => {
                   <a>{post.Page}</a>
                 </Link>
               </h3>
-              <div className="authors">By: {post.Authors.join(' ')}</div>
-              <div className="posted">Posted: {getDateStr(post.Date)}</div>
+              {post.Authors.length > 0 && (
+                <div className="authors">By: {post.Authors.join(' ')}</div>
+              )}
+              {post.Date && (
+                <div className="posted">Posted: {getDateStr(post.Date)}</div>
+              )}
               <p>
+                {(!post.preview || post.preview.length === 0) &&
+                  'No preview available'}
                 {(post.preview || []).map((block, idx) =>
                   textBlock(block, true, `${post.Slug}${idx}`)
                 )}

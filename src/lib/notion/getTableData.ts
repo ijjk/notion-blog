@@ -1,7 +1,10 @@
 import { values } from './rpc'
 import queryCollection from './queryCollection'
+import Slugger from 'github-slugger'
 
 export default async function loadTable(collectionBlock: any, isPosts = false) {
+  const slugger = new Slugger()
+
   const { value } = collectionBlock
   let table: any = {}
   const col = await queryCollection({
@@ -52,9 +55,12 @@ export default async function loadTable(collectionBlock: any, isPosts = false) {
             // start_time: 07:00
             // time_zone: Europe/Berlin, America/Los_Angeles
 
+            if (!type[1].start_date) {
+              break
+            }
             // initial with provided date
             const providedDate = new Date(
-              type[1].start_date + ' ' + type[1].start_time
+              type[1].start_date + ' ' + (type[1].start_time || '')
             ).getTime()
 
             // calculate offset from provided time zone
@@ -79,6 +85,9 @@ export default async function loadTable(collectionBlock: any, isPosts = false) {
       }
       row[schema[key].name] = val || null
     })
+
+    // auto-generate slug from title
+    row.Slug = row.Slug || slugger.slug(row.Page || '')
 
     const key = row.Slug
     if (isPosts && !key) continue

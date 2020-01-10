@@ -69,10 +69,18 @@ const RenderPost = ({ post, redirect }) => {
       <Header titlePre={post.Page} />
       <div className={blogStyles.post}>
         <h1>{post.Page || ''}</h1>
-        <div className="authors">By: {post.Authors.join(' ')}</div>
-        <div className="posted">Posted: {getDateStr(post.Date)}</div>
+        {post.Authors.length > 0 && (
+          <div className="authors">By: {post.Authors.join(' ')}</div>
+        )}
+        {post.Date && (
+          <div className="posted">Posted: {getDateStr(post.Date)}</div>
+        )}
 
         <hr />
+
+        {(!post.content || post.content.length === 0) && (
+          <p>This post has no content</p>
+        )}
 
         {(post.content || []).map((block, blockIdx) => {
           const { value } = block
