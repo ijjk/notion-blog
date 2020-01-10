@@ -150,13 +150,7 @@ const RenderPost = ({ post, redirect }) => {
                   loop={!isImage}
                   muted={!isImage}
                   autoPlay={!isImage}
-                  style={{
-                    boxShadow: '0 8px 8px rgba(0, 0, 0, 0.3)',
-                    width,
-                    maxWidth: '100%',
-                    margin: '5px auto',
-                    display: 'block',
-                  }}
+                  style={{ width }}
                 />
               )
               break
