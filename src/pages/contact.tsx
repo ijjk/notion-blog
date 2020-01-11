@@ -4,7 +4,6 @@ import ExtLink from '../components/ext-link'
 import sharedStyles from '../styles/shared.module.css'
 import contactStyles from '../styles/contact.module.css'
 
-import ZEIT from '../components/svgs/zeit'
 import GitHub from '../components/svgs/github'
 import Twitter from '../components/svgs/twitter'
 import Envelope from '../components/svgs/envelope'
@@ -37,13 +36,16 @@ export default () => (
   <>
     <Header titlePre="Contact" />
     <div className={sharedStyles.layout}>
-      <div className={contactStyles.zeit}>
-        <ExtLink href="https://zeit.co" aria-label="ZEIT logo">
-          <ZEIT />
-        </ExtLink>
+      <div className={contactStyles.avatar}>
+        <img src="/avatar.png" alt="avatar with letters JJ" height={60} />
       </div>
 
-      <h1 style={{ margin: 0 }}>Contact</h1>
+      <h1 style={{ marginTop: 0 }}>Contact</h1>
+
+      <div className={contactStyles.name}>
+        JJ Kasper - Next.js Engineer @{' '}
+        <ExtLink href="https://zeit.co">ZEIT</ExtLink>
+      </div>
 
       <div className={contactStyles.links}>
         {contacts.map(({ Comp, link, alt }) => {

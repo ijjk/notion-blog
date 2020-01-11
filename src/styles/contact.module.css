@@ -17,8 +17,20 @@
   opacity: 0.6;
 }
 
-.zeit {
+.avatar {
   display: block;
   text-align: center;
   margin: 1rem 0;
+}
+
+.avatar img {
+  height: 120px;
+}
+
+.name {
+  text-align: center;
+}
+
+.name a {
+  color: inherit;
 }
