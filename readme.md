@@ -28,7 +28,7 @@ To view the steps to setup Notion to work with this example view the post at htt
 The table should have the following properties:
 
 - `Page`: this the blog post's page
-- `Slug`: this is the blog post's slug relative to `/blog` (make sure it doesn't start with a `/`), it should be a text property
+- `Slug`: this is the blog post's slug relative to `/blog`, it should be a text property
 - `Published`: this filters blog posts in **production**, it should be a checkbox property
 - `Date`: this is when the blog post appears as posted, it should be a date property
 - `Authors`: this is a list of Notion users that wrote the post, it should be a person property

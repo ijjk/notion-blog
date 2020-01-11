@@ -1,6 +1,7 @@
 import { values } from './rpc'
-import queryCollection from './queryCollection'
 import Slugger from 'github-slugger'
+import queryCollection from './queryCollection'
+import { normalizeSlug } from '../blog-helpers'
 
 export default async function loadTable(collectionBlock: any, isPosts = false) {
   const slugger = new Slugger()
@@ -87,7 +88,7 @@ export default async function loadTable(collectionBlock: any, isPosts = false) {
     })
 
     // auto-generate slug from title
-    row.Slug = row.Slug || slugger.slug(row.Page || '')
+    row.Slug = normalizeSlug(row.Slug || slugger.slug(row.Page || ''))
 
     const key = row.Slug
     if (isPosts && !key) continue
