@@ -56,9 +56,9 @@ export default () => (
           </Link>{' '}
           or the instructions in{' '}
           <ExtLink href="https://github.com/ijjk/notion-blog#creating-your-pages-table">
-            the readme here
-          </ExtLink>
-          .
+            the readme
+          </ExtLink>{' '}
+          for using the <b>automated</b> script .
         </p>
       </div>
     </div>

@@ -1,6 +1,9 @@
 const fs = require('fs')
 const path = require('path')
-const { NODE_ENV, NOTION_TOKEN, BLOG_INDEX_ID } = process.env
+const {
+  NOTION_TOKEN,
+  BLOG_INDEX_ID,
+} = require('./src/lib/notion/server-constants')
 
 try {
   fs.unlinkSync(path.resolve('.blog_index_data'))
@@ -14,7 +17,7 @@ try {
 }
 
 const warnOrError =
-  NODE_ENV !== 'production'
+  process.env.NODE_ENV !== 'production'
     ? console.warn
     : msg => {
         throw new Error(msg)

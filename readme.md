@@ -6,13 +6,24 @@ This is an example Next.js project that shows Next.js' upcoming SSG (static-site
 
 **Live Example hosted on ZEIT**: https://notion-blog.now.sh/
 
-## Getting started
+## Getting Started
 
 To view the steps to setup Notion to work with this example view the post at https://notion-blog.now.sh/blog/my-first-post or follow the steps below.
 
-## Creating your pages table
+## Creating Your Pages Table
 
-To create your pages table you need to create a new page in Notion and add a table as an **inline table not a full page table** to that page. Make sure it is an inline table or querying the data won't work correctly
+### Using the Pre-Configured Script
+
+1. Create a blank page in Notion
+2. Clone this repo `git clone https://github.com/ijjk/notion-blog.git`
+3. Install dependencies `cd notion-blog && yarn`
+4. Run script to create table `NOTION_TOKEN='token' BLOG_INDEX_ID='new-page-id' node scripts/create-table.js` See [here](#getting-blog-index-and-token) for finding the id for the new page
+
+### Manually Creating the Table
+
+1. Create a blank page in Notion
+2. Create a **inline** table on that page, don't use a full page table as it requires querying differently
+3. Add the below fields to the table
 
 The table should have the following properties:
 
@@ -55,7 +66,7 @@ or
 
 Note: if redeploying with `now` locally and you haven't made any changes to the application's source and only edited in Notion you will need use `now -f` to bypass build de-duping
 
-## Running locally
+## Running Locally
 
 To run the project locally you need to follow steps 1 and 2 of [deploying](#deploy-your-own) and then follow the below steps
 
