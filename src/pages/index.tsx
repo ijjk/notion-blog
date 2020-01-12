@@ -49,16 +49,13 @@ export default () => (
         </p>
 
         <p>
-          To see how to get started setting up the structure for your Notion
-          blog see{' '}
-          <Link href="/blog/[slug]" as="/blog/my-first-post">
-            <a>this blog post</a>
-          </Link>{' '}
-          or the instructions in{' '}
-          <ExtLink href="https://github.com/ijjk/notion-blog#creating-your-pages-table">
-            the readme
+          After creating a new page in Notion and supplying the page id under
+          `BLOG_INDEX_ID` as mentioned{' '}
+          <ExtLink href="https://github.com/ijjk/notion-blog#running-locally">
+            in the readme
           </ExtLink>{' '}
-          for using the automated script.
+          your table will be auto created the first time you visit `/blog` if
+          one doesn't already exist.
         </p>
       </div>
     </div>
