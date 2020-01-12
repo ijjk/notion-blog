@@ -1,5 +1,6 @@
 import { Sema } from 'async-sema'
 import rpc, { values } from './rpc'
+import createTable from './createTable'
 import getTableData from './getTableData'
 import { getPostPreview } from './getPostPreview'
 import { readFile, writeFile } from '../fs-helpers'
@@ -35,11 +36,19 @@ export default async function getBlogIndex(previews = true) {
 
       postsTable = await getTableData(tableBlock, true)
     } catch (err) {
-      console.error(
-        `\nFailed to load Notion posts, did you configure your Notion table as an inline table according to https://github.com/ijjk/notion-blog#creating-your-pages-table\n`
+      console.warn(
+        `Failed to load Notion posts, attempting to auto create table`
       )
-      console.error(err)
-      postsTable = {}
+      try {
+        await createTable()
+        console.log(`Successfully created table in Notion`)
+      } catch (err) {
+        console.error(
+          `Auto creating table failed, make sure you created a blank page and site the id with BLOG_INDEX_ID in your environment`,
+          err
+        )
+      }
+      return {}
     }
 
     // only get 10 most recent post's previews

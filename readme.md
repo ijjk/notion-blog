@@ -10,7 +10,7 @@ This is an example Next.js project that shows Next.js' upcoming SSG (static-site
 
 To view the steps to setup Notion to work with this example view the post at https://notion-blog.now.sh/blog/my-first-post or follow the steps below.
 
-## Creating Your Pages Table
+## Creating Your Pages Table (this is auto-run if a table isn't detected when first visiting the blog)
 
 ### Using the Pre-Configured Script
 
