@@ -49,13 +49,14 @@ export default () => (
         </p>
 
         <p>
-          After creating a new page in Notion and supplying the page id under
-          `BLOG_INDEX_ID` as mentioned{' '}
-          <ExtLink href="https://github.com/ijjk/notion-blog#running-locally">
-            in the readme
+          Get started by creating a new page in Notion and clicking the deploy
+          button below. After you supply your token and the blog index id (the
+          page's id in Notion) we will automatically create the table for you!
+          See{' '}
+          <ExtLink href="https://github.com/ijjk/notion-blog#getting-blog-index-and-token">
+            here in the readme
           </ExtLink>{' '}
-          your table will be auto created the first time you visit `/blog` if
-          one doesn't already exist.
+          for finding the new page's id.
         </p>
       </div>
     </div>
