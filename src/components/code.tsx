@@ -4,16 +4,23 @@ import 'prismjs/components/prism-jsx'
 const Code = ({ children, language = 'javascript' }) => {
   return (
     <>
-      <code
-        dangerouslySetInnerHTML={{
-          __html: Prism.highlight(
-            children,
-            Prism.languages[language.toLowerCase()]
-          ),
-        }}
-      />
+      <pre>
+        <code
+          dangerouslySetInnerHTML={{
+            __html: Prism.highlight(
+              children,
+              Prism.languages[language.toLowerCase()] ||
+                Prism.languages.javascript
+            ),
+          }}
+        />
+      </pre>
 
       <style jsx>{`
+        pre {
+          tab-size: 2;
+        }
+
         code {
           display: block;
           padding: 0.8rem;
