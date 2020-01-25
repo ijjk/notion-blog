@@ -15,6 +15,11 @@ const normalizeId = id => {
   )}-${id.substr(20)}`
 }
 
+// when local build use env file
+if (process.env.NODE_ENV == 'development') {
+  require('dotenv').config()
+}
+
 const NOTION_TOKEN = process.env.NOTION_TOKEN
 const BLOG_INDEX_ID = normalizeId(process.env.BLOG_INDEX_ID)
 const API_ENDPOINT = 'https://www.notion.so/api/v3'
