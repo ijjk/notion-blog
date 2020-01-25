@@ -9,3 +9,11 @@
 .layout h2 {
   text-align: center;
 }
+
+.textLink a {
+  color: #000;
+}
+
+.textLink a:hover {
+  color: #000;
+}

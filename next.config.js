@@ -56,4 +56,8 @@ module.exports = {
     }
     return cfg
   },
+
+  devIndicators: {
+    autoPrerender: false,
+  },
 }
