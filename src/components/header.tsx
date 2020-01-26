@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import styles from '../styles/header.module.css'
 
-const ogImageUrl = 'https://notion-blog.now.sh/og-image.png'
+const ogImageUrl = 'https://notion-blog.now.sh/og-image.jpeg'
 
 export default ({ titlePre = '' }) => {
   const { pathname } = useRouter()

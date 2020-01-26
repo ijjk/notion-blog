@@ -6,7 +6,6 @@ import ExtLink from '../components/ext-link'
 import GitHub from '../components/svgs/github'
 import Twitter from '../components/svgs/twitter'
 import Envelope from '../components/svgs/envelope'
-import LinkedIn from '../components/svgs/linkedin'
 
 const contacts = [
   {
