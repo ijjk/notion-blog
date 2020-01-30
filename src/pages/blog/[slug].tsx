@@ -51,7 +51,14 @@ const listTypes = new Set(['bulleted_list', 'numbered_list'])
 const RenderPost = ({ post, redirect }) => {
   let listTagName: string | null = null
   let listLastId: string | null = null
-  let listChildren: React.ReactElement[] = []
+  let listMap: {
+    [id: string]: {
+      key: string
+      isNested?: boolean
+      nested: string[]
+      children: React.ReactFragment
+    }
+  } = {}
 
   if (redirect) {
     return (
@@ -84,7 +91,7 @@ const RenderPost = ({ post, redirect }) => {
 
         {(post.content || []).map((block, blockIdx) => {
           const { value } = block
-          const { type, properties, id } = value
+          const { type, properties, id, parent_id } = value
           const isLast = blockIdx === post.content.length - 1
           const isList = listTypes.has(type)
           let toRender = []
@@ -92,13 +99,17 @@ const RenderPost = ({ post, redirect }) => {
           if (isList) {
             listTagName = components[type === 'bulleted_list' ? 'ul' : 'ol']
             listLastId = `list${id}`
-            listChildren.push(
-              React.createElement(
-                components.li || 'li',
-                { key: id } as any,
-                textBlock(properties.title, true, id)
-              )
-            )
+
+            listMap[id] = {
+              key: id,
+              nested: [],
+              children: textBlock(properties.title, true, id),
+            }
+
+            if (listMap[parent_id]) {
+              listMap[id].isNested = true
+              listMap[parent_id].nested.push(id)
+            }
           }
 
           if (listTagName && (isLast || !isList)) {
@@ -106,10 +117,29 @@ const RenderPost = ({ post, redirect }) => {
               React.createElement(
                 listTagName,
                 { key: listLastId! },
-                ...listChildren
+                Object.keys(listMap).map(itemId => {
+                  if (listMap[itemId].isNested) return null
+
+                  const createEl = item =>
+                    React.createElement(
+                      components.li || 'ul',
+                      { key: item.key },
+                      item.children,
+                      item.nested.length > 0
+                        ? React.createElement(
+                            components.ul || 'ul',
+                            { key: item + 'sub-list' },
+                            item.nested.map(nestedId =>
+                              createEl(listMap[nestedId])
+                            )
+                          )
+                        : null
+                    )
+                  return createEl(listMap[itemId])
+                })
               )
             )
-            listChildren = []
+            listMap = {}
             listLastId = null
             listTagName = null
           }
