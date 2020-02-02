@@ -8,10 +8,10 @@ import { BLOG_INDEX_ID, BLOG_INDEX_CACHE } from './server-constants'
 
 export default async function getBlogIndex(previews = true) {
   let postsTable: any = null
-  const isProd = process.env.NODE_ENV === 'production'
+  const useCache = process.env.USE_CACHE === 'true'
   const cacheFile = `${BLOG_INDEX_CACHE}${previews ? '_previews' : ''}`
 
-  if (isProd) {
+  if (useCache) {
     try {
       postsTable = JSON.parse(await readFile(cacheFile, 'utf8'))
     } catch (_) {
@@ -77,7 +77,7 @@ export default async function getBlogIndex(previews = true) {
       )
     }
 
-    if (isProd) {
+    if (useCache) {
       writeFile(cacheFile, JSON.stringify(postsTable), 'utf8').catch(() => {})
     }
   }

@@ -9,6 +9,7 @@ import { postIsReady, getBlogLink } from './blog-helpers'
 
 // must use weird syntax to bypass auto replacing of NODE_ENV
 process.env['NODE' + '_ENV'] = 'production'
+process.env.USE_CACHE = 'true'
 
 // constants
 const NOW = new Date().toJSON()
