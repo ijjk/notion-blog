@@ -2,7 +2,7 @@
   "name": "notion-blog",
   "version": "0.1.0",
   "scripts": {
-    "dev": "next dev",
+    "dev": "env-cmd -f .env next dev",
     "start": "next start",
     "build": "next build && node .next/serverless/scripts/build-rss.js",
     "format": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md,mdx,css,html,yml,yaml,scss,sass}\" --ignore-path .gitignore"
