@@ -28,6 +28,7 @@ const Code = ({ children, language = 'javascript' }) => {
           background: #f5f5f5;
           font-size: 0.75rem;
           border-radius: var(--radius);
+          overflow: auto;
         }
       `}</style>
     </>
