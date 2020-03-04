@@ -42,6 +42,21 @@
   display: block;
 }
 
+.post :global(.callout) {
+  padding: 16px 16px 16px 12px;
+  display: flex;
+  width: 100%;
+  border-radius: 3px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  background: rgba(235, 236, 237, 0.6);
+}
+
+.post :global(.callout .text) {
+  margin-left: 8px;
+}
+
 .postPreview :global(.posted) {
   margin-bottom: 0.5em;
 }
