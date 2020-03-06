@@ -1,5 +1,6 @@
-import React from 'react'
 import Head from 'next/head'
+import fetch from 'node-fetch'
+import React, { CSSProperties } from 'react'
 import Header from '../../components/header'
 import Heading from '../../components/heading'
 import components from '../../components/dynamic'
@@ -28,6 +29,27 @@ export async function unstable_getStaticProps({ params: { slug } }) {
   }
   const postData = await getPageData(post.id)
   post.content = postData.blocks
+
+  for (let i = 0; i < postData.blocks.length; i++) {
+    const { value } = postData.blocks[i]
+    const { type, properties } = value
+    if (type == 'tweet') {
+      const src = properties.source[0][0]
+      // parse id from https://twitter.com/_ijjk/status/TWEET_ID format
+      const tweetId = src.split('/')[5].split('?')[0]
+      if (!tweetId) continue
+
+      try {
+        const res = await fetch(
+          `https://api.twitter.com/1/statuses/oembed.json?id=${tweetId}`
+        )
+        const json = await res.json()
+        properties.html = json.html
+      } catch (_) {
+        console.log(`Failed to get tweet embed for ${src}`)
+      }
+    }
+  }
 
   const { users } = await getNotionUsers(post.Authors || [])
   post.Authors = Object.keys(users).map(id => users[id].full_name)
@@ -162,9 +184,15 @@ const RenderPost = ({ post, redirect }) => {
               }
               break
             case 'image':
-            case 'video': {
+            case 'video':
+            case 'embed': {
               const { format = {} } = value
-              const { block_width } = format
+              const {
+                block_width,
+                block_height,
+                display_source,
+                block_aspect_ratio,
+              } = format
               const baseBlockWidth = 768
               const roundFactor = Math.pow(10, 2)
               // calculate percentages
@@ -172,24 +200,71 @@ const RenderPost = ({ post, redirect }) => {
                 ? `${Math.round(
                     (block_width / baseBlockWidth) * 100 * roundFactor
                   ) / roundFactor}%`
-                : '100%'
+                : block_height || '100%'
 
               const isImage = type === 'image'
               const Comp = isImage ? 'img' : 'video'
+              const useWrapper = block_aspect_ratio && !block_height
+              const childStyle: CSSProperties = useWrapper
+                ? {
+                    width: '100%',
+                    height: '100%',
+                    border: 'none',
+                    position: 'absolute',
+                    top: 0,
+                  }
+                : {
+                    width,
+                    border: 'none',
+                    height: block_height,
+                    display: 'block',
+                    maxWidth: '100%',
+                  }
+
+              let child = null
+
+              if (!isImage && !value.file_ids) {
+                // external resource use iframe
+                child = (
+                  <iframe
+                    style={childStyle}
+                    src={display_source}
+                    className={!useWrapper ? 'asset-wrapper' : undefined}
+                  />
+                )
+              } else {
+                // notion resource
+                child = (
+                  <Comp
+                    key={id}
+                    src={`/api/asset?assetUrl=${encodeURIComponent(
+                      display_source as any
+                    )}&blockId=${id}`}
+                    controls={!isImage}
+                    alt={`An ${isImage ? 'image' : 'video'} from Notion`}
+                    loop={!isImage}
+                    muted={!isImage}
+                    autoPlay={!isImage}
+                    style={childStyle}
+                  />
+                )
+              }
 
               toRender.push(
-                <Comp
-                  key={id}
-                  src={`/api/asset?assetUrl=${encodeURIComponent(
-                    format.display_source as any
-                  )}&blockId=${id}`}
-                  controls={!isImage}
-                  alt={isImage ? 'An image from Notion' : undefined}
-                  loop={!isImage}
-                  muted={!isImage}
-                  autoPlay={!isImage}
-                  style={{ width }}
-                />
+                useWrapper ? (
+                  <div
+                    style={{
+                      paddingTop: `${Math.round(block_aspect_ratio * 100)}%`,
+                      position: 'relative',
+                    }}
+                    className="asset-wrapper"
+                    key={id}
+                  >
+                    {child}
+                  </div>
+                ) : (
+                  child
+                )
               )
               break
             }
@@ -253,6 +328,17 @@ const RenderPost = ({ post, redirect }) => {
                   </div>
                 </div>
               )
+              break
+            }
+            case 'tweet': {
+              if (properties.html) {
+                toRender.push(
+                  <div
+                    dangerouslySetInnerHTML={{ __html: properties.html }}
+                    key={id}
+                  />
+                )
+              }
               break
             }
             default:
