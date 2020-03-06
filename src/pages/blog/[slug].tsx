@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import fetch from 'node-fetch'
-import React, { CSSProperties } from 'react'
 import Header from '../../components/header'
 import Heading from '../../components/heading'
 import components from '../../components/dynamic'
@@ -8,6 +7,7 @@ import ReactJSXParser from '@zeit/react-jsx-parser'
 import blogStyles from '../../styles/blog.module.css'
 import { textBlock } from '../../lib/notion/renderers'
 import getPageData from '../../lib/notion/getPageData'
+import React, { CSSProperties, useEffect } from 'react'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
 import getNotionUsers from '../../lib/notion/getNotionUsers'
 import { getBlogLink, getDateStr } from '../../lib/blog-helpers'
@@ -44,7 +44,8 @@ export async function unstable_getStaticProps({ params: { slug } }) {
           `https://api.twitter.com/1/statuses/oembed.json?id=${tweetId}`
         )
         const json = await res.json()
-        properties.html = json.html
+        properties.html = json.html.split('<script')[0]
+        post.hasTweet = true
       } catch (_) {
         console.log(`Failed to get tweet embed for ${src}`)
       }
@@ -81,6 +82,22 @@ const RenderPost = ({ post, redirect }) => {
       children: React.ReactFragment
     }
   } = {}
+
+  useEffect(() => {
+    const twitterSrc = 'https://platform.twitter.com/widgets.js'
+    // make sure to initialize any new widgets loading on
+    // client navigation
+    if (post.hasTweet) {
+      if ((window as any)?.twttr?.widgets) {
+        ;(window as any).twttr.widgets.load()
+      } else if (!document.querySelector(`script[src="${twitterSrc}"]`)) {
+        const script = document.createElement('script')
+        script.async = true
+        script.src = twitterSrc
+        document.querySelector('body').appendChild(script)
+      }
+    }
+  }, [])
 
   if (redirect) {
     return (
@@ -229,6 +246,7 @@ const RenderPost = ({ post, redirect }) => {
                   <iframe
                     style={childStyle}
                     src={display_source}
+                    key={!useWrapper ? id : undefined}
                     className={!useWrapper ? 'asset-wrapper' : undefined}
                   />
                 )
@@ -236,7 +254,7 @@ const RenderPost = ({ post, redirect }) => {
                 // notion resource
                 child = (
                   <Comp
-                    key={id}
+                    key={!useWrapper ? id : undefined}
                     src={`/api/asset?assetUrl=${encodeURIComponent(
                       display_source as any
                     )}&blockId=${id}`}
