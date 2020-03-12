@@ -10,8 +10,8 @@ export const getDateStr = date => {
   })
 }
 
-export const postIsReady = (post: any) => {
-  return process.env.NODE_ENV !== 'production' || post.Published === 'Yes'
+export const postIsPublished = (post: any) => {
+  return post.Published === 'Yes'
 }
 
 export const normalizeSlug = slug => {

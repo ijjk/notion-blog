@@ -4,12 +4,16 @@ import Header from '../../components/header'
 import blogStyles from '../../styles/blog.module.css'
 import sharedStyles from '../../styles/shared.module.css'
 
-import { getBlogLink, getDateStr, postIsReady } from '../../lib/blog-helpers'
+import {
+  getBlogLink,
+  getDateStr,
+  postIsPublished,
+} from '../../lib/blog-helpers'
 import { textBlock } from '../../lib/notion/renderers'
 import getNotionUsers from '../../lib/notion/getNotionUsers'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
 
-export async function unstable_getStaticProps() {
+export async function getStaticProps({ preview }) {
   const postsTable = await getBlogIndex()
 
   const authorsToGet: Set<string> = new Set()
@@ -17,7 +21,7 @@ export async function unstable_getStaticProps() {
     .map(slug => {
       const post = postsTable[slug]
       // remove draft posts in production
-      if (!postIsReady(post)) {
+      if (!preview && !postIsPublished(post)) {
         return null
       }
       post.Authors = post.Authors || []
@@ -36,16 +40,28 @@ export async function unstable_getStaticProps() {
 
   return {
     props: {
+      preview: preview || false,
       posts,
     },
     revalidate: 10,
   }
 }
 
-export default ({ posts = [] }) => {
+export default ({ posts = [], preview }) => {
   return (
     <>
       <Header titlePre="Blog" />
+      {preview && (
+        <div className={blogStyles.previewAlertContainer}>
+          <div className={blogStyles.previewAlert}>
+            <b>Note:</b>
+            {` `}Viewing in preview mode{' '}
+            <Link href={`/api/clear-preview`}>
+              <button className={blogStyles.escapePreview}>Exit Preview</button>
+            </Link>
+          </div>
+        </div>
+      )}
       <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
         <h1>My Notion Blog</h1>
         {posts.length === 0 && (
@@ -56,7 +72,12 @@ export default ({ posts = [] }) => {
             <div className={blogStyles.postPreview} key={post.Slug}>
               <h3>
                 <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
-                  <a>{post.Page}</a>
+                  <div className={blogStyles.titleContainer}>
+                    {!post.Published && (
+                      <span className={blogStyles.draftBadge}>Draft</span>
+                    )}
+                    <a>{post.Page}</a>
+                  </div>
                 </Link>
               </h3>
               {post.Authors.length > 0 && (
