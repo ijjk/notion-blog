@@ -5,7 +5,7 @@ import { renderToStaticMarkup } from 'react-dom/server'
 import { textBlock } from './notion/renderers'
 import getBlogIndex from './notion/getBlogIndex'
 import getNotionUsers from './notion/getNotionUsers'
-import { postIsReady, getBlogLink } from './blog-helpers'
+import { postIsPublished, getBlogLink } from './blog-helpers'
 
 // must use weird syntax to bypass auto replacing of NODE_ENV
 process.env['NODE' + '_ENV'] = 'production'
@@ -77,7 +77,7 @@ async function main() {
   const blogPosts = Object.keys(postsTable)
     .map(slug => {
       const post = postsTable[slug]
-      if (!postIsReady(post)) return
+      if (!postIsPublished(post)) return
 
       post.authors = post.Authors || []
 
