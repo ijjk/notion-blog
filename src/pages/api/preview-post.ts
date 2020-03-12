@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import getPageData from '../../lib/notion/getPageData'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
+import { getBlogLink } from '../../lib/blog-helpers'
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (typeof req.query.token !== 'string') {
@@ -15,6 +16,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   }
   const postsTable = await getBlogIndex()
   const post = postsTable[req.query.slug]
+
   if (!post) {
     console.log(`Failed to find post for slug: ${req.query.slug}`)
     return {
@@ -24,6 +26,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       revalidate: 5,
     }
   }
+
   const postData = await getPageData(post.id)
 
   if (!postData) {
@@ -31,6 +34,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   }
 
   res.setPreviewData({})
-  res.writeHead(307, { Location: `/blog/${post.slug}` })
+  res.writeHead(307, { Location: getBlogLink(post.Slug) })
   res.end()
 }

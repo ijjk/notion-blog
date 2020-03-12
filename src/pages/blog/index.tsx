@@ -48,15 +48,6 @@ export async function getStaticProps({ preview }) {
 }
 
 export default ({ posts = [], preview }) => {
-  const handleSyncProduction = async () => {
-    await fetch(
-      `https://api.zeit.co/v1/integrations/deploy/${process.env.DEPLOY_TOKEN}`,
-      {
-        method: 'POST',
-      }
-    )
-  }
-
   return (
     <>
       <Header titlePre="Blog" />

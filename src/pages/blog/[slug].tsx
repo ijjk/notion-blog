@@ -1,7 +1,6 @@
-import Head from 'next/head'
 import Link from 'next/link'
-import { useRouter, Router } from 'next/router'
 import fetch from 'node-fetch'
+import { useRouter } from 'next/router'
 import Header from '../../components/header'
 import Heading from '../../components/heading'
 import components from '../../components/dynamic'
@@ -121,7 +120,7 @@ const RenderPost = ({ post, redirect, preview }) => {
 
   // If the page is not yet generated, this will be displayed
   // initially until getStaticProps() finishes running
-  if (router.isFallback && preview) {
+  if (router.isFallback) {
     return <div>Loading...</div>
   }
 
@@ -130,7 +129,9 @@ const RenderPost = ({ post, redirect, preview }) => {
   if (!post) {
     return (
       <div className={blogStyles.post}>
-        <p>Woops! didn't find that post, redirecting you back to the index</p>
+        <p>
+          Woops! didn't find that post, redirecting you back to the blog index
+        </p>
       </div>
     )
   }
