@@ -15,7 +15,7 @@
   "dependencies": {
     "@zeit/react-jsx-parser": "^2.0.0",
     "github-slugger": "^1.2.1",
-    "next": "^9.3.0",
+    "next": "^9.3.2",
     "prismjs": "^1.17.1",
     "react": "16.12.0",
     "react-dom": "16.12.0"
