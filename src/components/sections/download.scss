@@ -1,0 +1,41 @@
+.download {
+  p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 50px;
+  }
+  &_link {
+    max-width: 620px;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    grid-gap: 30px;
+    img.appicon {
+      border-radius: 30px;
+      border: 1px solid white;
+    }
+    &_store {
+      display: grid;
+      grid-template-rows: 65px 1fr;
+      grid-gap: 15px;
+      &_img {
+        div {
+          display: flex;
+          img {
+            height: 65px;
+            margin-right: 20px;
+          }
+        }
+      }
+      &_legal {
+        font-size: 0.7rem;
+        color: white;
+        line-height: 1.2;
+        letter-spacing: 0;
+      }
+    }
+  }
+}

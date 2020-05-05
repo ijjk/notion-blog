@@ -1,0 +1,25 @@
+.howtouse_card {
+  .column.is-three-fifths {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+  }
+  &_number {
+    font-weight: bold;
+    font-size: 30px;
+    color: #32487b;
+    margin-right: 20px;
+  }
+  &_content {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+  }
+  &_text {
+    h3 {
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.card_normal {
+  display: block;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: 30px;
+
+  &_number,
+  &_title {
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  &_img {
+    margin-bottom: 30px;
+    border-radius: 20px;
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+    background-color: #f0f0f0;
+  }
+  &_number {
+    color: #32487b;
+    font-size: 30px;
+  }
+  &_description {
+    font-size: 1rem;
+  }
+
+  &:nth-of-type(2) {
+    margin-top: 45px;
+  }
+
+  &:nth-of-type(3) {
+    margin-top: 90px;
+  }
+}

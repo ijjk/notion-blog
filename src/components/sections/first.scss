@@ -1,0 +1,45 @@
+.section_first {
+  position: relative;
+  height: calc(100vh + 100px);
+  background-color: hsl(199, 84%, 68%);
+
+  &_message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(50%);
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      line-height: 1.8;
+      margin: 0;
+
+      color: white;
+      text-shadow: 0px 3px 50px hsl(222, 59, 48);
+    }
+  }
+
+  &_download {
+    margin-top: 100px;
+    &_text {
+      margin-bottom: 20px;
+      text-align: center;
+      display: flex;
+      p {
+        font-size: 1.7rem;
+        font-weight: bold;
+        color: white;
+        margin: 0;
+      }
+    }
+    &_icon {
+      display: flex;
+      img {
+        height: 65px;
+        min-height: 65px;
+        width: initial;
+        margin-right: 20px;
+      }
+    }
+  }
+}

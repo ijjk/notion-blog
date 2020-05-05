@@ -1,0 +1,17 @@
+.keypoint_card {
+  position: relative;
+  padding-left: 40px;
+  margin-top: 10px;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 25px;
+    content: '●';
+    color: #32487b;
+  }
+
+  h3 {
+    margin-bottom: 20px;
+  }
+}
