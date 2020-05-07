@@ -7,15 +7,24 @@
     margin-bottom: 50px;
   }
   &_link {
-    max-width: 620px;
+    max-width: 535px;
     margin-left: auto;
     margin-right: auto;
     display: grid;
     grid-template-columns: 120px 1fr;
     grid-gap: 30px;
+    @media screen and (max-width: 769px) {
+      grid-template-columns: 1fr;
+    }
     img.appicon {
+      @media screen and (max-width: 769px) {
+        width: 120px;
+        height: 120px;
+      }
       border-radius: 30px;
       border: 1px solid white;
+      margin-left: auto;
+      margin-right: auto;
     }
     &_store {
       display: grid;
@@ -24,9 +33,21 @@
       &_img {
         div {
           display: flex;
+          @media screen and (max-width: 769px) {
+            justify-content: center;
+          }
           img {
-            height: 65px;
+            height: 60px;
+            min-height: 60px;
+            @media screen and (max-width: 769px) {
+              height: 53px;
+              min-height: 53px;
+            }
+            width: initial;
             margin-right: 20px;
+            &:last-of-type {
+              margin-right: 0px;
+            }
           }
         }
       }

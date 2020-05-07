@@ -5,6 +5,11 @@
   flex-shrink: 1;
   padding: 30px;
 
+  @media screen and (max-width: 769px) {
+    padding: 0px;
+    padding-bottom: 50px;
+  }
+
   &_number,
   &_title {
     font-weight: bold;
@@ -26,11 +31,13 @@
     font-size: 1rem;
   }
 
-  &:nth-of-type(2) {
-    margin-top: 45px;
-  }
+  @media screen and (min-width: 769px) {
+    &:nth-of-type(2) {
+      margin-top: 45px;
+    }
 
-  &:nth-of-type(3) {
-    margin-top: 90px;
+    &:nth-of-type(3) {
+      margin-top: 90px;
+    }
   }
 }

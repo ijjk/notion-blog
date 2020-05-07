@@ -40,7 +40,6 @@ if (!BLOG_INDEX_ID) {
       `Make sure to provide one before starting Next.js`
   )
 }
-
 module.exports = {
   target: 'experimental-serverless-trace',
 
@@ -60,3 +59,12 @@ module.exports = {
     return cfg
   },
 }
+
+const withReactSvg = require('next-react-svg')
+
+module.exports = withReactSvg({
+  include: path.resolve(__dirname, 'src/assets/svgs'),
+  webpack(config, options) {
+    return config
+  },
+})

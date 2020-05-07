@@ -1,0 +1,80 @@
+.howtouse_card {
+  .grid {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 300px;
+    grid-gap: 100px;
+    margin-bottom: 50px;
+
+    @media screen and (max-width: 769px) {
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+      margin-bottom: 50px;
+      padding-bottom: 50px;
+      border-bottom: 1px solid #eaeaea;
+      .element {
+        &:nth-of-type(0) {
+          order: 1;
+        }
+      }
+    }
+  }
+  &:last-child {
+    .grid {
+      border-bottom: none;
+    }
+  }
+  &:nth-child(even) {
+    .grid {
+      grid-template-columns: 1fr 300px;
+      @media screen and (max-width: 769px) {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+        margin-bottom: 100px;
+      }
+    }
+    .element {
+      &:nth-of-type(1) {
+        order: 2;
+        @media screen and (max-width: 769px) {
+          order: initial;
+        }
+      }
+    }
+  }
+
+  .element.is-three-fifths {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 769px) {
+      height: initial;
+    }
+  }
+  &_number {
+    font-weight: bold;
+    font-size: 30px;
+    color: #32487b;
+    margin-right: 20px;
+  }
+  &_image {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    @media screen and (max-width: 769px) {
+      width: 100%;
+      height: 300px;
+    }
+  }
+  &_content {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+  }
+  &_text {
+    h3 {
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+  }
+}

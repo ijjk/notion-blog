@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:400,700');
+@import '~bulma/bulma.sass';
+
+body {
+  margin: 0rem;
+  font-family: Noto Sans JP, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Helvetica Neue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol, Noto Color Emoji;
+  font-weight: normal;
+  word-wrap: break-word;
+  font-kerning: normal;
+  box-sizing: border-box;
+  font-feature-settings: 'palt' 1;
+  letter-spacing: 0.11em;
+
+  overflow-x: hidden;
+}
+
+section {
+  position: relative;
+  color: #3b3b3b;
+  &.separate {
+    padding-bottom: 140px;
+    &::before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      content: '';
+      border-style: solid;
+      border-width: 0 0 80px 100vw;
+      border-color: transparent transparent #fff transparent;
+    }
+    &.gray::before {
+      border-color: transparent transparent #f8f8f8 transparent;
+    }
+    &.reverse::before {
+      border-width: 80px 0 0 100vw;
+      border-color: transparent transparent transparent #fff;
+    }
+  }
+  .container {
+    max-width: 1200px;
+  }
+  p.h2_description {
+    position: relative;
+    text-align: center;
+    margin-bottom: 25px;
+    z-index: 1;
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      bottom: 0px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 130px;
+      height: 25px;
+      background: linear-gradient(transparent 50%, yellow 50%);
+    }
+  }
+  h2 {
+    position: relative;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 70px;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 0px;
+      width: 115px;
+      height: 5px;
+      border-radius: 3px;
+      background-color: #03abd8;
+    }
+
+    @media screen and (max-width: 769px) {
+      text-align: center;
+      &:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &.center {
+      text-align: center;
+      &:after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    &.title_dark {
+      color: white;
+      &:after {
+        background-color: white;
+        opacity: 0.5;
+      }
+    }
+  }
+  p {
+    line-height: 1.8;
+  }
+  .a-title {
+    color: #03abd8;
+    font-size: 1.6rem;
+    font-weight: bold;
+    @media screen and (max-width: 769px) {
+      font-size: 1.3rem;
+    }
+  }
+}
