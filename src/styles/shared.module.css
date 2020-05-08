@@ -1,3 +1,12 @@
+.layout {
+  max-width: 730px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 50px;
+  padding-bottom: 150px;
+  margin: auto;
+}
+
 .layout img {
   margin: auto;
   max-width: 98%;

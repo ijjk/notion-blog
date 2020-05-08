@@ -5,13 +5,15 @@ import Header from '../../components/header'
 import Heading from '../../components/heading'
 import components from '../../components/dynamic'
 import ReactJSXParser from '@zeit/react-jsx-parser'
-import blogStyles from '../../styles/blog.module.css'
+import blogStyles from '../../styles/blog.module.scss'
 import { textBlock } from '../../lib/notion/renderers'
 import getPageData from '../../lib/notion/getPageData'
 import React, { CSSProperties, useEffect } from 'react'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
 import getNotionUsers from '../../lib/notion/getNotionUsers'
 import { getBlogLink, getDateStr } from '../../lib/blog-helpers'
+
+import Title from '../../components/primary/title'
 
 // Get the data for each blog post
 export async function getStaticProps({ params: { slug }, preview }) {
@@ -138,7 +140,22 @@ const RenderPost = ({ post, redirect, preview }) => {
 
   return (
     <>
-      <Header titlePre={post.Page} />
+      <Title
+        title={post.Page || ''}
+        description={getDateStr(post.Date)}
+        imgSrc={
+          post.Thumbnail
+            ? `/api/asset?assetUrl=${encodeURIComponent(
+                post.Thumbnail as any
+              )}&blockId=${post.id}`
+            : ''
+        }
+        category={
+          <Link href="/news/">
+            <a>ニュース</a>
+          </Link>
+        }
+      />
       {preview && (
         <div className={blogStyles.previewAlertContainer}>
           <div className={blogStyles.previewAlert}>
@@ -151,16 +168,6 @@ const RenderPost = ({ post, redirect, preview }) => {
         </div>
       )}
       <div className={blogStyles.post}>
-        <h1>{post.Page || ''}</h1>
-        {post.Authors.length > 0 && (
-          <div className="authors">By: {post.Authors.join(' ')}</div>
-        )}
-        {post.Date && (
-          <div className="posted">Posted: {getDateStr(post.Date)}</div>
-        )}
-
-        <hr />
-
         {(!post.content || post.content.length === 0) && (
           <p>This post has no content</p>
         )}
@@ -407,6 +414,12 @@ const RenderPost = ({ post, redirect, preview }) => {
           }
           return toRender
         })}
+
+        {post.Authors.length > 0 && (
+          <div className={blogStyles.authors}>
+            編集者: {post.Authors.join(' ')}
+          </div>
+        )}
       </div>
     </>
   )

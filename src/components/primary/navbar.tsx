@@ -33,7 +33,11 @@ class Nav extends React.Component<{}, IState> {
       <nav
         role="navigation"
         aria-label="main navigation"
-        className={`navbar is-info is-spaced ${style.navbar}`}
+        className={
+          this.state.isToggleOn
+            ? `navbar is-info is-spaced ${style.navbar} ${style.active}`
+            : `navbar is-info is-spaced ${style.navbar}`
+        }
         style={{
           letterSpacing: '0',
           borderBottom: 'solid 1px white',
@@ -64,7 +68,9 @@ class Nav extends React.Component<{}, IState> {
           <div
             id="navbar_menu"
             className={
-              this.state.isToggleOn ? 'navbar-menu is-active' : 'navbar-menu'
+              this.state.isToggleOn
+                ? `${style.mobile} navbar-menu is-active`
+                : `navbar-menu`
             }
           >
             <div className="navbar-end">

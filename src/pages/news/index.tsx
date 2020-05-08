@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Header from '../../components/header'
 
-import blogStyles from '../../styles/blog.module.css'
+import blogStyles from '../../styles/blog.module.scss'
 import sharedStyles from '../../styles/shared.module.css'
 
 import {
@@ -12,6 +12,8 @@ import {
 import { textBlock } from '../../lib/notion/renderers'
 import getNotionUsers from '../../lib/notion/getNotionUsers'
 import getBlogIndex from '../../lib/notion/getBlogIndex'
+
+import Title from '../../components/primary/title'
 
 export async function getStaticProps({ preview }) {
   const postsTable = await getBlogIndex()
@@ -50,7 +52,7 @@ export async function getStaticProps({ preview }) {
 export default ({ posts = [], preview }) => {
   return (
     <>
-      <Header titlePre="Blog" />
+      <Title title="ニュース" description imgSrc category />
       {preview && (
         <div className={blogStyles.previewAlertContainer}>
           <div className={blogStyles.previewAlert}>

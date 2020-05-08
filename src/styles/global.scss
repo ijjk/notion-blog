@@ -20,7 +20,7 @@ section {
   position: relative;
   color: #3b3b3b;
   &.separate {
-    padding-bottom: 140px;
+    padding-bottom: 120px;
     &::before {
       position: absolute;
       bottom: 0;
@@ -29,8 +29,12 @@ section {
       height: 0;
       content: '';
       border-style: solid;
-      border-width: 0 0 80px 100vw;
+      border-width: 0 0 60px 100vw;
       border-color: transparent transparent #fff transparent;
+
+      @media screen and (max-width: 769px) {
+        border-width: 0 0 40px 100vw;
+      }
     }
     &.gray::before {
       border-color: transparent transparent #f8f8f8 transparent;

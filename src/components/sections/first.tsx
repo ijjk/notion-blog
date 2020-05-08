@@ -1,28 +1,44 @@
+import Link from 'next/link'
+
+import style from './first.module.scss'
+
 export default () => {
   return (
-    <section className="section_first separate">
-      <div className="section_first_message">
+    <section className={`${style.section_first} separate`}>
+      <div className={`${style.section_first_message}`}>
         <div className="container">
-          <div className="section_first_message_content">
+          <div className={`${style.section_first_message_content}`}>
             <h1>
-              もう、
+              <span>もう、</span>
               <br />
-              カサを持ち歩かない
+              <span>カサを持ち歩かない</span>
               <br />
-              生活を。
+              <span>生活を。</span>
             </h1>
-            <div className="section_first_download">
-              <div className="section_first_download_text">
-                <p>今すぐダウンロード!</p>
+            {/* <div className={`${style.section_first_download}`}>
+              <div className={`${style.section_first_download_text}`}>
+                <p>
+                  <span>今すぐダウンロード!</span>
+                </p>
               </div>
-              <div className="section_first_download_icon">
+              <div className={`${style.section_first_download_icon}`}>
                 <img src="/assets/appstore.svg" height="65px" />
                 <img src="/assets/playstore.svg" height="65px" />
+              </div>
+            </div> */}
+
+            <div className={`${style.note}`}>
+              <div className={`${style.note_message}`}>
+                現在クラウドファウンディング実施中!
+              </div>
+              <div className={`${style.note_button}`}>
+                <Link href="/">今すぐチェック!</Link>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <div className={style.background}></div>
     </section>
   )
 }

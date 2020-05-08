@@ -1,33 +1,44 @@
 .navbar {
-  background-color: #69c7f2 !important;
+  background-color: transparent !important;
   letter-spacing: 0;
   background-color: transparent;
   border-bottom: solid 1px white;
   transition: all 1s ease;
+  backdrop-filter: blur(8px);
+
+  &.active {
+    background-color: rgba(105, 199, 242, 1) !important;
+  }
+
   .navbar-item {
     transition: 1s;
   }
   .navbar_item:hover {
-    background-color: white;
+    background: none;
   }
   &_brand {
     @media screen and (max-width: 1024px) {
-      background-color: #69c7f2;
+      background-color: initial;
     }
   }
   &_link {
     letter-spacing: 0.1rem;
     font-weight: bold;
-    color: rgb(60, 60, 60);
+    color: white;
 
     @media screen and (min-width: 1024px) {
-      color: white;
+      text-shadow: 0px 3px 20px black;
     }
   }
 }
 
 .logo {
   &:hover {
-    background-color: #69c7f2;
+    background-color: transparent !important;
   }
+}
+
+.mobile {
+  background-color: rgba(105, 199, 242, 1) !important;
+  color: white;
 }
