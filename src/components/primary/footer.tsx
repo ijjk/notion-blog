@@ -62,22 +62,30 @@ export default () => (
             <div className={`${style.footer_company_links}`}>
               <div className={`icon ${style.footer_company_links_icon}`}>
                 <Link href="/">
-                  <img src="/assets/twitter-brands.svg" />
+                  <a>
+                    <img src="/assets/twitter-brands.svg" />
+                  </a>
                 </Link>
               </div>
               <div className={`icon ${style.footer_company_links_icon}`}>
                 <Link href="/">
-                  <img src="/assets/line-brands.svg" />
+                  <a>
+                    <img src="/assets/line-brands.svg" />
+                  </a>
                 </Link>
               </div>
               <div className={`icon ${style.footer_company_links_icon}`}>
                 <Link href="/">
-                  <img src="/assets/facebook-brands.svg" />
+                  <a>
+                    <img src="/assets/facebook-brands.svg" />
+                  </a>
                 </Link>
               </div>
               <div className={`icon ${style.footer_company_links_icon}`}>
                 <Link href="/">
-                  <img src="/assets/instagram-brands.svg" />
+                  <a>
+                    <img src="/assets/instagram-brands.svg" />
+                  </a>
                 </Link>
               </div>
             </div>

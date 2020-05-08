@@ -8,9 +8,11 @@ import '../components/cards/index_keypoint.scss'
 
 import ExtLink from '../components/ext-link'
 import Footer from '../components/primary/footer'
+import Navbar from '../components/primary/navbar'
 
 export default ({ Component, pageProps }) => (
   <>
+    <Navbar />
     <Component {...pageProps} />
     <Footer />
   </>

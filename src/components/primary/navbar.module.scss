@@ -1,0 +1,33 @@
+.navbar {
+  background-color: #69c7f2 !important;
+  letter-spacing: 0;
+  background-color: transparent;
+  border-bottom: solid 1px white;
+  transition: all 1s ease;
+  .navbar-item {
+    transition: 1s;
+  }
+  .navbar_item:hover {
+    background-color: white;
+  }
+  &_brand {
+    @media screen and (max-width: 1024px) {
+      background-color: #69c7f2;
+    }
+  }
+  &_link {
+    letter-spacing: 0.1rem;
+    font-weight: bold;
+    color: rgb(60, 60, 60);
+
+    @media screen and (min-width: 1024px) {
+      color: white;
+    }
+  }
+}
+
+.logo {
+  &:hover {
+    background-color: #69c7f2;
+  }
+}

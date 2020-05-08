@@ -21,7 +21,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     console.log(`Failed to find post for slug: ${req.query.slug}`)
     return {
       props: {
-        redirect: '/blog',
+        redirect: '/news',
       },
       revalidate: 5,
     }

@@ -1,7 +1,9 @@
+import style from './index_usecase.module.scss'
+
 export default ({ title, imgSrc }) => {
   return (
     <>
-      <div style={{ width: '100%', padding: '0 15px' }}>
+      <div className={style.card} style={{ width: '100%', padding: '0 15px' }}>
         <img
           style={{
             width: '100%',
