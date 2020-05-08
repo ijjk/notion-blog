@@ -13,9 +13,8 @@
     }
   },
   "dependencies": {
-    "@inabagumi/next-images": "^1.1.0",
+    "@svgr/webpack": "^5.4.0",
     "@zeit/react-jsx-parser": "^2.0.0",
-    "babel-plugin-inline-react-svg": "^1.1.1",
     "bulma": "^0.8.2",
     "github-slugger": "^1.2.1",
     "next": "^9.3.2",

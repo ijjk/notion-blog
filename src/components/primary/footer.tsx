@@ -1,6 +1,5 @@
 import style from './footer.module.scss'
-
-import Icon from '../../assets/svgs/icon.svg'
+import Link from 'next/link'
 
 //利用可能エリア
 const Links = [
@@ -53,21 +52,33 @@ export default () => (
       <div className={style.footer_company}>
         <div className="columns">
           <div className={`column is-half`}>
-            <Icon className={`${style.footer_company_logo}`} />
+            <img
+              src="/assets/icon.svg"
+              className={`${style.footer_company_logo}`}
+              alt=""
+            />
           </div>
           <div className="column">
             <div className={`${style.footer_company_links}`}>
-              <div class={`icon ${style.footer_company_links_icon}`}>
-                <Twitter />
+              <div className={`icon ${style.footer_company_links_icon}`}>
+                <Link href="/">
+                  <img src="/assets/twitter-brands.svg" />
+                </Link>
               </div>
-              <div class={`icon ${style.footer_company_links_icon}`}>
-                <LINE />
+              <div className={`icon ${style.footer_company_links_icon}`}>
+                <Link href="/">
+                  <img src="/assets/line-brands.svg" />
+                </Link>
               </div>
-              <div class={`icon ${style.footer_company_links_icon}`}>
-                <Facebook />
+              <div className={`icon ${style.footer_company_links_icon}`}>
+                <Link href="/">
+                  <img src="/assets/facebook-brands.svg" />
+                </Link>
               </div>
-              <div class={`icon ${style.footer_company_links_icon}`}>
-                <Instagram />
+              <div className={`icon ${style.footer_company_links_icon}`}>
+                <Link href="/">
+                  <img src="/assets/instagram-brands.svg" />
+                </Link>
               </div>
             </div>
           </div>

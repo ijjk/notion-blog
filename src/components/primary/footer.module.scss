@@ -4,8 +4,8 @@ $color2: #32497b;
 
 .footer {
   background-color: $color2;
-  padding-top: 50px;
-  padding-bottom: 100px;
+  padding-top: 25px;
+  padding-bottom: 50px;
 
   &_container {
     max-width: 1200px !important;
@@ -45,18 +45,18 @@ $color2: #32497b;
     &_links {
       display: flex;
       justify-content: flex-end;
-      a {
+      &_icon {
         margin-right: 10px;
         &:last-of-type {
           margin-right: 0;
         }
-      }
-      svg {
-        height: 30px;
-        color: rgba($color: white, $alpha: 0.5);
-        transition: 0.5s;
-        &:hover {
-          color: white;
+        img {
+          height: 30px;
+          color: rgba($color: white, $alpha: 0.5);
+          transition: 0.5s;
+          &:hover {
+            color: white;
+          }
         }
       }
     }
