@@ -5,6 +5,9 @@
   border-bottom: solid 1px white;
   transition: all 1s ease;
   backdrop-filter: blur(8px);
+  position: absolute;
+  top: 0;
+  width: 100%;
 
   &.active {
     background-color: rgba(105, 199, 242, 1) !important;

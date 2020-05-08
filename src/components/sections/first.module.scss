@@ -2,10 +2,6 @@
   position: relative;
   height: calc(100vh + 0px);
   background-color: rgba(105, 199, 242, 0.2) !important;
-  margin-top: -85px;
-  @media screen and (max-width: 1024px) {
-    margin-top: -52px;
-  }
   &_message {
     position: absolute;
     top: 50%;
@@ -120,16 +116,18 @@
     text-align: left;
   }
   &_button {
-    padding: 5px 5px;
     border-radius: 5px;
-    border: 2px solid #3b3b3b;
     font-weight: bold;
     font-size: 0.9rem;
     margin-left: 15px;
     word-break: keep-all;
     a {
+      border-radius: 5px;
+      padding: 5px 8px;
       text-decoration: none;
       color: #3b3b3b;
+      border: 2px solid #3b3b3b;
+      display: block;
     }
   }
 }

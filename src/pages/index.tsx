@@ -65,7 +65,10 @@ export default () => (
         </div>
       </div>
     </section>
-    <section className="section_right" style={{ backgroundColor: '#f8f8f8' }}>
+    <section
+      className="section_right"
+      style={{ backgroundColor: '#f8f8f8', paddingBottom: '20px' }}
+    >
       <div className="grid">
         <div
           className="section_right_region_map"
@@ -87,9 +90,17 @@ export default () => (
         </div>
       </div>
     </section>
+    <iframe
+      src="https://ikasa-test.info/kasa_share_spot_corporate/index.html"
+      style={{ width: '100%', height: '500px' }}
+    ></iframe>
     <section
       className="section_normal separate reverse"
-      style={{ backgroundColor: '#f8f8f8', marginTop: '-100px' }}
+      style={{
+        backgroundColor: '#f8f8f8',
+        paddingTop: '50px',
+        marginTop: '-5px',
+      }}
     >
       <div className="container">
         <h2>様々なシーンで使えます！</h2>

@@ -32,7 +32,9 @@ export default () => {
                 現在クラウドファウンディング実施中!
               </div>
               <div className={`${style.note_button}`}>
-                <Link href="/">今すぐチェック!</Link>
+                <Link href="/">
+                  <a>今すぐチェック!</a>
+                </Link>
               </div>
             </div>
           </div>

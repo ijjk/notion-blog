@@ -1,6 +1,6 @@
 .title {
   background-color: rgb(105, 199, 242);
-  height: 350px;
+  height: 410px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -8,12 +8,17 @@
   padding-bottom: 0px !important;
   z-index: 1;
   overflow: hidden;
+  padding-top: 85px;
+  @media screen and (max-width: 1024px) {
+    padding-top: 52px;
+  }
 }
 .background {
   background-position: center bottom;
-  height: 350px;
+  height: 410px;
   width: 100%;
   position: absolute;
+  top: 0;
   z-index: -1;
   opacity: 0.3;
   filter: blur(5px);
