@@ -1,0 +1,64 @@
+$corpColor: #6bc8f2;
+$color1: #00abd8;
+$color2: #32497b;
+
+.footer {
+  background-color: $color2;
+  padding-top: 50px;
+  padding-bottom: 100px;
+
+  &_container {
+    max-width: 1200px !important;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  &_links {
+    color: white;
+    padding-bottom: 25px;
+    border-bottom: 1px solid rgba($color: white, $alpha: 0.1);
+    a {
+      position: relative;
+      color: white;
+      transition: 0.5s all ease;
+      &:hover {
+        color: white;
+        opacity: 0.3;
+      }
+    }
+    &_title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    &_list {
+      margin-left: 10px;
+      &_column {
+        margin-bottom: 10px;
+      }
+    }
+  }
+  &_company {
+    padding-top: 25px;
+    &_logo {
+      height: 30px;
+    }
+    &_links {
+      display: flex;
+      justify-content: flex-end;
+      a {
+        margin-right: 10px;
+        &:last-of-type {
+          margin-right: 0;
+        }
+      }
+      svg {
+        height: 30px;
+        color: rgba($color: white, $alpha: 0.5);
+        transition: 0.5s;
+        &:hover {
+          color: white;
+        }
+      }
+    }
+  }
+}

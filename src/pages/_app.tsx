@@ -7,9 +7,11 @@ import '../components/cards/index_howtouse.scss'
 import '../components/cards/index_keypoint.scss'
 
 import ExtLink from '../components/ext-link'
+import Footer from '../components/primary/footer'
 
 export default ({ Component, pageProps }) => (
   <>
     <Component {...pageProps} />
+    <Footer />
   </>
 )

@@ -60,11 +60,10 @@ module.exports = {
   },
 }
 
-const withReactSvg = require('next-react-svg')
+const withImages = require('@inabagumi/next-images')
 
-module.exports = withReactSvg({
-  include: path.resolve(__dirname, 'src/assets/svgs'),
-  webpack(config, options) {
-    return config
+module.exports = withImages({
+  svgrOptions: {
+    svgo: false,
   },
 })
