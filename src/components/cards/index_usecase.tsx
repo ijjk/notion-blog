@@ -7,7 +7,7 @@ export default ({ title, imgSrc }) => {
         <img
           style={{
             width: '100%',
-            height: '200px',
+            height: '250px',
             backgroundColor: 'black',
             borderRadius: '15px',
             objectFit: 'cover',

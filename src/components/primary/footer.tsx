@@ -4,23 +4,15 @@ import Link from 'next/link'
 //利用可能エリア
 const Links = [
   {
+    title: 'アイカサ',
+    link: [{ title: 'サスティナビリティ', to: '/sustainability/' }],
+  },
+  {
     title: '会社情報',
     link: [
-      { title: 'サスティナビリティ', to: '/sustainability/' },
-      { title: 'サスティナビリティ', to: '/sustainability/' },
+      { title: '企業情報', to: '/company/' },
+      { title: 'ニュース', to: '/news/' },
     ],
-  },
-  {
-    title: '会社情報',
-    link: [{ title: 'サスティナビリティ', to: '/sustainability/' }],
-  },
-  {
-    title: '会社情報',
-    link: [{ title: 'サスティナビリティ', to: '/sustainability/' }],
-  },
-  {
-    title: '会社情報',
-    link: [{ title: 'サスティナビリティ', to: '/sustainability/' }],
   },
 ]
 
@@ -32,7 +24,7 @@ export default () => (
           var region = data.link.map((data, index) => {
             return (
               <li className={style.footer_links_list_column} key={index}>
-                {data.title}
+                <Link href={data.to}>{data.title}</Link>
               </li>
             )
           })

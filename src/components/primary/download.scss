@@ -13,6 +13,14 @@
     display: grid;
     grid-template-columns: 120px 1fr;
     grid-gap: 30px;
+
+    // ストア配信まで変更中↓
+
+    max-width: 120px;
+    grid-template-columns: 120px;
+
+    // ここまで
+
     @media screen and (max-width: 769px) {
       grid-template-columns: 1fr;
     }

@@ -1,0 +1,70 @@
+.page {
+  max-width: 730px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 50px;
+  padding-bottom: 150px;
+  margin: auto;
+  img {
+    height: auto !important;
+    min-width: calc(100% + 30px);
+    transform: translateX(-15px);
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  h1 {
+    margin-top: 0px;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.3rem;
+  }
+  a {
+    word-wrap: break-word;
+    letter-spacing: 0.05rem;
+    transition-duration: 0.5s;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  p {
+    margin-bottom: 20px;
+    line-height: 2;
+  }
+  table {
+    width: calc(100% + 30px);
+    margin-left: -15px;
+  }
+  table thead th {
+    text-align: left;
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+  }
+  table td,
+  table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+  }
+  li {
+    margin-bottom: 0.5rem;
+    line-height: 2;
+    &:last-of-type {
+      margin-bottom: 1rem;
+    }
+  }
+}

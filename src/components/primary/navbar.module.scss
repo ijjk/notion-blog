@@ -36,7 +36,8 @@
 }
 
 .logo {
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: transparent !important;
   }
 }
