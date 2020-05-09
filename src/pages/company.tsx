@@ -1,10 +1,11 @@
 import Title from '../components/primary/title'
 import style from '../styles/page.module.scss'
 
+import Message from '../components/sections/message'
 export default () => (
   <>
     <Title title="企業情報" description imgSrc category />
-    <div className={style.page}>
+    <div className={style.page} style={{ paddingBottom: 0 }}>
       <h2>アイカサの世界観</h2>
       <p>
         急な雨で傘を購入したことはありませんか？
@@ -32,7 +33,9 @@ export default () => (
         <br />
         より安くより便利に届けて移動を快適にしたい。
       </p>
-      <hr />
+    </div>
+    <Message />
+    <div className={style.page}>
       <div style={{ textAlign: 'center' }}>
         <h2>Mission</h2>
         <p>雨の日を快適にハッピーに</p>

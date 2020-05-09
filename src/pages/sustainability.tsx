@@ -1,10 +1,12 @@
 import Title from '../components/primary/title'
 import style from '../styles/page.module.scss'
 
+import Message from '../components/sections/message'
+
 export default () => (
   <>
     <Title title="サスティナビリティ" description="🌍+❤️" imgSrc category />
-    <div className={style.page}>
+    <div className={style.page} style={{ paddingBottom: 0 }}>
       <h2>溢れる使い捨て傘</h2>
       <p>
         現在国内で約8000万本消費されているビニール傘。
@@ -28,5 +30,6 @@ export default () => (
         <br />
       </p>
     </div>
+    <Message />
   </>
 )

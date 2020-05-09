@@ -8,7 +8,7 @@ const links = [
   { href: '/sustainability', title: 'サスティナビリティ' },
   { href: '/news', title: 'ニュース' },
   { href: 'a', title: '法人様向け案内' },
-  { href: 'a', title: 'お問い合わせ' },
+  { href: '/contact', title: 'お問い合わせ' },
 ]
 
 interface IState {
@@ -48,7 +48,7 @@ class Nav extends React.Component<{}, IState> {
           <div className={`navbar-brand ${style.navbar_brand}`}>
             <Link href="/">
               <a className={`navbar-item ${style.logo}`}>
-                <img src="/assets/icon.svg" style={{ height: '30px' }} />
+                <img src="/assets/icon.svg" style={{ height: '25px' }} />
               </a>
             </Link>
 

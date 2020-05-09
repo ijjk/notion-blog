@@ -1,61 +1,127 @@
-import Header from '../components/header'
-import ExtLink from '../components/ext-link'
+import Title from '../components/primary/title'
+import style from '../styles/page.module.scss'
 
-import sharedStyles from '../styles/shared.module.css'
-import contactStyles from '../styles/contact.module.css'
-
-import GitHub from '../components/svgs/github'
-import Twitter from '../components/svgs/twitter'
-import Envelope from '../components/svgs/envelope'
-import LinkedIn from '../components/svgs/linkedin'
-
-const contacts = [
-  {
-    Comp: Twitter,
-    alt: 'twitter icon',
-    link: 'https://twitter.com/_ijjk',
-  },
-  {
-    Comp: GitHub,
-    alt: 'github icon',
-    link: 'https://github.com/ijjk',
-  },
-  {
-    Comp: LinkedIn,
-    alt: 'linkedin icon',
-    link: 'https://www.linkedin.com/in/jj-kasper-0b5392166/',
-  },
-  {
-    Comp: Envelope,
-    alt: 'envelope icon',
-    link: 'mailto:jj@jjsweb.site?subject=Notion Blog',
-  },
-]
+import Message from '../components/sections/message'
 
 export default () => (
   <>
-    <Header titlePre="Contact" />
-    <div className={sharedStyles.layout}>
-      <div className={contactStyles.avatar}>
-        <img src="/avatar.png" alt="avatar with letters JJ" height={60} />
+    <Title title="お問い合わせ" description="🌍+❤️" imgSrc category />
+    <div className={style.page}>
+      <p>
+        アイカサに興味を持っていただき、誠にありがとうございます。
+        <br />
+        私たちは、新しいことが大好きです。
+        <br />
+        様々な提携希望、ここにスポットを置いて欲しい、取材したい等、大歓迎です！
+        <br />
+        下記のお問い合わせよりお待ちしております。
+      </p>
+      <hr />
+
+      <h3>メールアドレス</h3>
+      <p>
+        アイカサに関するお問い合わせは、下記のメールアドレスよりお願いいたします。
+      </p>
+      <div
+        style={{
+          width: '100%',
+          padding: '10px',
+          border: '2px solid whitesmoke',
+          textAlign: 'center',
+          borderRadius: '10px',
+          marginTop: '20px',
+        }}
+      >
+        info@i-kasa.com
       </div>
 
-      <h1 style={{ marginTop: 0 }}>Contact</h1>
-
-      <div className={contactStyles.name}>
-        JJ Kasper - Next.js Engineer @{' '}
-        <ExtLink href="https://zeit.co">ZEIT</ExtLink>
-      </div>
-
-      <div className={contactStyles.links}>
-        {contacts.map(({ Comp, link, alt }) => {
-          return (
-            <ExtLink key={link} href={link} aria-label={alt}>
-              <Comp height={32} />
-            </ExtLink>
-          )
-        })}
-      </div>
+      {/* <form>
+        <div className="field">
+          <label className="label">お問い合わせ種別</label>
+          <div className="control">
+            <div className="select">
+              <select style={{ width: '100%' }}>
+                <option>未選択</option>
+                <option>取材</option>
+                <option>提携</option>
+                <option>その他</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: '1fr 1fr',
+            gap: '10px',
+          }}
+        >
+          <div className="field">
+            <label className="label">お名前 (性)</label>
+            <div className="control">
+              <input className="input" type="text" placeholder="" />
+            </div>
+          </div>
+          <div className="field">
+            <label className="label">お名前 (名)</label>
+            <div className="control">
+              <input className="input" type="text" placeholder="" />
+            </div>
+          </div>
+        </div>
+        <div className="field">
+          <label className="label">会社名</label>
+          <div className="control">
+            <input
+              className="input"
+              type="text"
+              placeholder="株式会社Narture Innovation Group"
+            />
+          </div>
+        </div>
+        <div className="field">
+          <label className="label">メールアドレス</label>
+          <div className="control">
+            <input className="input" type="text" placeholder="" />
+          </div>
+        </div>
+        <div className="field">
+          <label className="label">電話番号</label>
+          <div className="control">
+            <input className="input" type="text" placeholder="" />
+          </div>
+        </div>
+        <div className="field">
+          <label className="label">住所(都道府県)</label>
+          <div className="control">
+            <input className="input" type="text" placeholder="東京都" />
+          </div>
+        </div>
+        <div className="field">
+          <label className="label">住所(都道府県以降)</label>
+          <div className="control">
+            <input
+              className="input"
+              type="text"
+              placeholder="渋谷区●-●-● ●●ビル2階"
+            />
+          </div>
+        </div>
+        <hr />
+        <div className="field">
+          <label className="label">お問い合わせ内容</label>
+          <div className="control">
+            <textarea className="textarea" placeholder=""></textarea>
+          </div>
+        </div>
+        <button
+          type="submit"
+          className="button is-primary is-fullwidth"
+          style={{ fontWeight: 'bold', marginTop: '50px' }}
+        >
+          送信
+        </button>
+      </form> */}
     </div>
   </>
 )

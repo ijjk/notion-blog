@@ -32,9 +32,9 @@ export default () => {
                 現在クラウドファウンディング実施中!
               </div>
               <div className={`${style.note_button}`}>
-                <Link href="/">
-                  <a>今すぐチェック!</a>
-                </Link>
+                <a href="https://www.makuake.com/project/i-kasa/">
+                  今すぐチェック!
+                </a>
               </div>
             </div>
           </div>

@@ -1,4 +1,5 @@
 import style from './footer.module.scss'
+import ExtLink from '../../components/ext-link'
 import Link from 'next/link'
 
 //利用可能エリア
@@ -53,32 +54,32 @@ export default () => (
           <div className="column">
             <div className={`${style.footer_company_links}`}>
               <div className={`icon ${style.footer_company_links_icon}`}>
-                <Link href="/">
+                <ExtLink href="https://twitter.com/ikasa1111">
                   <a>
                     <img src="/assets/twitter-brands.svg" />
                   </a>
-                </Link>
+                </ExtLink>
               </div>
               <div className={`icon ${style.footer_company_links_icon}`}>
-                <Link href="/">
+                <ExtLink href="https://liff.i-kasa.com/login?prevurl=https://lin.ee/q43e0fr&no=1">
                   <a>
                     <img src="/assets/line-brands.svg" />
                   </a>
-                </Link>
+                </ExtLink>
               </div>
               <div className={`icon ${style.footer_company_links_icon}`}>
-                <Link href="/">
+                <ExtLink href="https://www.facebook.com/iKasaJapan/">
                   <a>
                     <img src="/assets/facebook-brands.svg" />
                   </a>
-                </Link>
+                </ExtLink>
               </div>
               <div className={`icon ${style.footer_company_links_icon}`}>
-                <Link href="/">
+                <ExtLink href="https://instagram.com/ikasa1111">
                   <a>
                     <img src="/assets/instagram-brands.svg" />
                   </a>
-                </Link>
+                </ExtLink>
               </div>
             </div>
           </div>

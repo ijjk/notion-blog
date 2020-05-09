@@ -10,7 +10,11 @@ export default ({ title, description, imgSrc, category }) => {
       </div>
       <div
         className={style.background}
-        style={{ backgroundImage: `url(${imgSrc})` }}
+        style={{
+          backgroundImage: `url(${
+            imgSrc == '' ? imgSrc : '/assets/ikasa_background.png'
+          })`,
+        }}
       ></div>
     </section>
   )

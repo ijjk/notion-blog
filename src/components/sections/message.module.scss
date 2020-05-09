@@ -1,0 +1,16 @@
+.message {
+  background-image: url('/assets/message_background.png');
+  background-size: 100%;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  &_content {
+    padding: 230px 0;
+    text-align: center;
+    @media screen and (max-width: 1024px) {
+      padding: 100px 0;
+    }
+    p {
+      line-height: 2;
+    }
+  }
+}

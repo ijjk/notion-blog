@@ -3,7 +3,7 @@
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 50px;
-  padding-bottom: 150px;
+  padding-bottom: 200px;
   margin: auto;
   img {
     height: auto !important;
@@ -66,5 +66,9 @@
     &:last-of-type {
       margin-bottom: 1rem;
     }
+  }
+  textarea,
+  input {
+    box-shadow: none;
   }
 }
