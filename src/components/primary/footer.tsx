@@ -9,10 +9,24 @@ const Links = [
     link: [{ title: 'サスティナビリティ', to: '/sustainability/' }],
   },
   {
-    title: '会社情報',
+    title: '企業様向け',
+    link: [
+      {
+        title: 'オフィスプラン導入ご検討の方',
+        to: 'https://peraichi.com/landing_pages/view/t5sxy',
+      },
+      {
+        title: 'スポンサーご検討の方',
+        to: 'https://peraichi.com/landing_pages/view/hjtyl',
+      },
+    ],
+  },
+  {
+    title: '企業情報',
     link: [
       { title: '企業情報', to: '/company/' },
       { title: 'ニュース', to: '/news/' },
+      { title: 'お問い合わせ', to: '/contact/' },
     ],
   },
 ]

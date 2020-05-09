@@ -5,9 +5,8 @@ import { withRouter } from 'next/router'
 import style from './navbar.module.scss'
 
 const links = [
-  { href: '/sustainability', title: 'サスティナビリティ' },
+  { href: '/sustainability', title: 'サスティナビリティについて' },
   { href: '/news', title: 'ニュース' },
-  { href: 'a', title: '法人様向け案内' },
   { href: '/contact', title: 'お問い合わせ' },
 ]
 
