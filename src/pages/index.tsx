@@ -15,20 +15,12 @@ import UsecaseCard from '../components/cards/index_usecase'
 
 //利用可能エリア
 const regions = [
-  { name: '関東', regions: ['東京', '神奈川', '千葉', '埼玉', '茨城'] },
   {
-    name: '近畿',
-    regions: ['大阪', '京都', '奈良', '兵庫'],
-  },
-  {
-    name: '中国',
-    regions: ['三重', '岡山'],
-  },
-  {
-    name: '東海',
-    regions: ['三重', '愛知'],
+    name: '関東',
+    regions: ['東京', '神奈川', '千葉', '埼玉', '茨城'],
   },
   { name: '九州', regions: ['福岡'] },
+  { name: '中国・四国', regions: ['岡山'] },
 ]
 
 export default () => (
@@ -139,7 +131,8 @@ export default () => (
         <HowToUseCard
           number="04"
           title="カサをスポットに返す"
-          description="ご自由にカサをお使いください！"
+          description="目的の場所についたら、近くのアイカサスポットでカサをかえしましょう!
+お近くにアイカサスポットがあれば、カサを持って歩かなくても大丈夫!"
           imgSrc="/assets/return.png"
         />
       </div>

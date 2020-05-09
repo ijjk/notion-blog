@@ -1,7 +1,3 @@
-.blogIndex {
-  padding: 0 5%;
-}
-
 .blogIndex h1 {
   margin-bottom: 50px;
 }
@@ -63,16 +59,49 @@
 }
 
 .postPreview {
-  max-width: 600px;
-  margin: 10px auto;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+  margin-top: 50px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.9, 0.85, 0, 2.77);
+  &_thumb {
+    height: 300px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    background-color: #fcfcfc;
+    background-size: cover;
+    border-radius: 15px;
+  }
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  h3 a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }
+  &_grid {
+    padding-left: 15px;
+    padding-right: 15px;
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    gap: 20px;
+  }
+  &_info {
+    font-size: 0.8rem;
+    color: darkgrey;
+    text-align: right;
+  }
+  &_description {
+    color: gray;
+  }
 }
 
 .postPreview:last-child {
   border-bottom: none;
 }
 
-.postPreview h3,
 .post h1 {
   margin-bottom: 0;
 }

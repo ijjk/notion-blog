@@ -69,31 +69,46 @@ export default ({ posts = [], preview }) => {
           <p className={blogStyles.noPosts}>投稿がありません</p>
         )}
         {posts.map(post => {
+          let _postThumb = {
+            backgroundImage:
+              'url(' +
+              `/api/asset?assetUrl=${encodeURIComponent(
+                post.Thumbnail as any
+              )}&blockId=${post.id}` +
+              ')',
+          }
           return (
             <div className={blogStyles.postPreview} key={post.Slug}>
-              <h3>
-                <Link href="/news/[slug]" as={getBlogLink(post.Slug)}>
-                  <div className={blogStyles.titleContainer}>
-                    {!post.Published && (
-                      <span className={blogStyles.draftBadge}>Draft</span>
-                    )}
+              <Link href="/news/[slug]" as={getBlogLink(post.Slug)}>
+                <a>
+                  <div
+                    className={blogStyles.postPreview_thumb}
+                    style={_postThumb}
+                  ></div>
+                  <h3>
                     <a>{post.Page}</a>
+                  </h3>
+
+                  <div className={blogStyles.postPreview_grid}>
+                    {post.Description && (
+                      <div className={blogStyles.postPreview_description}>
+                        {post.Description}
+                      </div>
+                    )}
+                    <div className={blogStyles.postPreview_info}>
+                      {post.Date && (
+                        <div className="posted">{getDateStr(post.Date)}</div>
+                      )}
+                    </div>
                   </div>
-                </Link>
-              </h3>
-              {post.Authors.length > 0 && (
-                <div className="authors">By: {post.Authors.join(' ')}</div>
-              )}
-              {post.Date && (
-                <div className="posted">Posted: {getDateStr(post.Date)}</div>
-              )}
-              <p>
-                {(!post.preview || post.preview.length === 0) &&
-                  'No preview available'}
-                {(post.preview || []).map((block, idx) =>
-                  textBlock(block, true, `${post.Slug}${idx}`)
-                )}
-              </p>
+                  <p>
+                    {(!post.preview || post.preview.length === 0) && ''}
+                    {(post.preview || []).map((block, idx) =>
+                      textBlock(block, true, `${post.Slug}${idx}`)
+                    )}
+                  </p>
+                </a>
+              </Link>
             </div>
           )
         })}
