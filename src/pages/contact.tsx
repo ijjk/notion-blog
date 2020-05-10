@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Title from '../components/primary/title'
 import style from '../styles/page.module.scss'
 
@@ -5,7 +6,34 @@ import Message from '../components/sections/message'
 
 export default () => (
   <>
-    <Title title="お問い合わせ" description="🌍+❤️" imgSrc category />
+    <Head>
+      <title>お問い合わせ | アイカサ</title>
+      <meta property="og:image" content="https://i-kasa.com/ogp.jpg" />
+      <meta
+        property="description"
+        content="アイカサの環境保全に対する考えかた"
+      />
+      <meta
+        property="og:description"
+        content="アイカサの環境保全に対する考えかた"
+      />
+      <meta property="og:url" content="https://i-kasa.com" />
+      <meta property="og:type" content="website" />
+      <meta
+        data-hid="twitter:card"
+        name="twitter:card"
+        content="summary_large_image"
+      />
+      <meta data-hid="twitter:site" name="twitter:site" content="@ikasa1111" />
+      <meta
+        data-hid="og:site_name"
+        property="og:site_name"
+        content="アイカサ | カサのシェアリングサービス"
+      />
+      <meta data-hid="og:locale" property="og:locale" content="ja_JP" />
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    </Head>
+    <Title title="お問い合わせ" description imgSrc category />
     <div className={style.page}>
       <p>
         アイカサに興味を持っていただき、誠にありがとうございます。

@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import fetch from 'node-fetch'
 import { useRouter } from 'next/router'
@@ -140,9 +141,34 @@ const RenderPost = ({ post, redirect, preview }) => {
 
   return (
     <>
+      <Head>
+        <title>{post.Page || ''}</title>
+        <meta property="og:image" content="https://i-kasa.com/ogp.jpg" />
+        <meta property="description" content={post.Description} />
+        <meta property="og:description" content={post.Description} />
+        <meta property="og:url" content="https://i-kasa.com" />
+        <meta property="og:type" content="website" />
+        <meta
+          data-hid="twitter:card"
+          name="twitter:card"
+          content="summary_large_image"
+        />
+        <meta
+          data-hid="twitter:site"
+          name="twitter:site"
+          content="@ikasa1111"
+        />
+        <meta
+          data-hid="og:site_name"
+          property="og:site_name"
+          content="アイカサ | カサのシェアリングサービス"
+        />
+        <meta data-hid="og:locale" property="og:locale" content="ja_JP" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      </Head>
       <Title
         title={post.Page || ''}
-        description={getDateStr(post.Date)}
+        description={post.Description}
         imgSrc={
           post.Thumbnail
             ? `/api/asset?assetUrl=${encodeURIComponent(
@@ -418,6 +444,8 @@ const RenderPost = ({ post, redirect, preview }) => {
         {post.Authors.length > 0 && (
           <div className={blogStyles.authors}>
             編集者: {post.Authors.join(' ')}
+            <br />
+            掲載日： {getDateStr(post.Date)}
           </div>
         )}
       </div>

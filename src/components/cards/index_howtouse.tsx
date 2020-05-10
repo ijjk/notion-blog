@@ -6,6 +6,17 @@ function DescriCompo(props) {
         <div className="howtouse_card_text">
           <h3 className="a-title">{props.title}</h3>
           <p>{props.description}</p>
+          {props.number == '02' ? (
+            <small
+              style={{ display: 'block', paddingTop: '20px', color: 'gray' }}
+            >
+              ・福岡・水戸エリアでは現在かざしてかりる機能は利用することができません。
+              <br />
+              ・福岡・水戸エリアではエリアを跨いでカサを返却することはできません。
+            </small>
+          ) : (
+            ''
+          )}
         </div>
       </div>
     </div>

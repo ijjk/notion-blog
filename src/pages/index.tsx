@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import Header from '../components/header'
 import ExtLink from '../components/ext-link'
@@ -25,6 +26,33 @@ const regions = [
 
 export default () => (
   <>
+    <Head>
+      <title>アイカサ | カサのシェアリングサービス</title>
+      <meta property="og:image" content="https://i-kasa.com/ogp.jpg" />
+      <meta
+        property="description"
+        content="カサはシェアする時代へ。カサのシェアリングサービス「アイカサ」は使い捨てのような傘の在り方を一新します！"
+      />
+      <meta
+        property="og:description"
+        content="カサはシェアする時代へ。カサのシェアリングサービス「アイカサ」は使い捨てのような傘の在り方を一新します！"
+      />
+      <meta property="og:url" content="https://i-kasa.com" />
+      <meta property="og:type" content="website" />
+      <meta
+        data-hid="twitter:card"
+        name="twitter:card"
+        content="summary_large_image"
+      />
+      <meta data-hid="twitter:site" name="twitter:site" content="@ikasa1111" />
+      <meta
+        data-hid="og:site_name"
+        property="og:site_name"
+        content="アイカサ | カサのシェアリングサービス"
+      />
+      <meta data-hid="og:locale" property="og:locale" content="ja_JP" />
+      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    </Head>
     <First />
     <section
       className="separate gray"
@@ -45,7 +73,7 @@ export default () => (
           <NormalCard
             number="02"
             title="ビニール傘を買うより安い!"
-            description="ビニール傘よりも安くて、折りたたみ傘よりも丈夫で便利！"
+            description="24時間70円で使えるので、ビニール傘より安く、折りたたみ傘よりも丈夫で便利！"
             imgSrc="/assets/feature_2.svg"
           />
           <NormalCard
@@ -79,6 +107,9 @@ export default () => (
               </div>
             )
           })}
+          <p style={{ color: 'gray', fontSize: '80%' }}>
+            現在福岡・水戸エリアにつきましては、首都圏・福岡エリアとの互換性がありません。
+          </p>
         </div>
       </div>
     </section>

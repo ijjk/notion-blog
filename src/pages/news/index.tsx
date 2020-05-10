@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import Link from 'next/link'
 import Header from '../../components/header'
 
@@ -52,6 +53,37 @@ export async function getStaticProps({ preview }) {
 export default ({ posts = [], preview }) => {
   return (
     <>
+      <Head>
+        <title>ニュース | アイカサ</title>
+        <meta property="og:image" content="https://i-kasa.com/ogp.jpg" />
+        <meta
+          property="description"
+          content="アイカサの最新情報などをお伝えします"
+        />
+        <meta
+          property="og:description"
+          content="アイカサの最新情報などをお伝えします"
+        />
+        <meta property="og:url" content="https://i-kasa.com" />
+        <meta property="og:type" content="website" />
+        <meta
+          data-hid="twitter:card"
+          name="twitter:card"
+          content="summary_large_image"
+        />
+        <meta
+          data-hid="twitter:site"
+          name="twitter:site"
+          content="@ikasa1111"
+        />
+        <meta
+          data-hid="og:site_name"
+          property="og:site_name"
+          content="アイカサ | カサのシェアリングサービス"
+        />
+        <meta data-hid="og:locale" property="og:locale" content="ja_JP" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+      </Head>
       <Title title="ニュース" description imgSrc category />
       {preview && (
         <div className={blogStyles.previewAlertContainer}>
