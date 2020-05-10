@@ -6,7 +6,10 @@ import Link from 'next/link'
 const Links = [
   {
     title: 'アイカサ',
-    link: [{ title: 'サスティナビリティ', to: '/sustainability/' }],
+    link: [
+      { title: 'サスティナビリティ', to: '/sustainability/' },
+      { title: 'ニュース', to: '/news/' },
+    ],
   },
   {
     title: '企業様向け',
@@ -24,8 +27,8 @@ const Links = [
   {
     title: '企業情報',
     link: [
-      { title: '企業情報', to: '/company/' },
-      { title: 'ニュース', to: '/news/' },
+      { title: '会社情報', to: '/company/' },
+      { title: '特定商取引法に基づく表記', to: '/company/sct/' },
       { title: 'お問い合わせ', to: '/contact/' },
     ],
   },

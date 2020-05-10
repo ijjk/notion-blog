@@ -1,9 +1,8 @@
 import Head from 'next/head'
+import Title from '../../components/primary/title'
+import style from '../../styles/page.module.scss'
 
-import Title from '../components/primary/title'
-import style from '../styles/page.module.scss'
-
-import Message from '../components/sections/message'
+import Message from '../../components/sections/message'
 export default () => (
   <>
     <Head>
@@ -34,7 +33,7 @@ export default () => (
       <meta data-hid="og:locale" property="og:locale" content="ja_JP" />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     </Head>
-    <Title title="企業情報" description imgSrc category />
+    <Title title="会社情報" description imgSrc category />
     <div className={style.page} style={{ paddingBottom: 0 }}>
       <h2>アイカサの世界観</h2>
       <p>
