@@ -44,7 +44,7 @@ export default () => (
       <p>
         決してポジティブな感情ではなかったと思います。
         <br />
-        「雨か、仕方ないな：と思いながら家に5,6本もあるビニール傘。
+        「雨か、仕方ないな」と思いながら家に5,6本もあるビニール傘。
         <br />
         もったいないしなんか後悔のような悔しい気持ち。それにまた不要な傘が増えてしまう。
         <br />
@@ -106,7 +106,7 @@ export default () => (
 
       <h2>所在地</h2>
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.927226092165!2d139.70339211525814!3d35.65416458020054!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b5b6e402423%3A0xa98d5b2351d48ea2!2z44CSMTUwLTAwMDIg5p2x5Lqs6YO95riL6LC35Yy65riL6LC377yT5LiB55uu77yS77yW4oiS77yR77yW!5e0!3m2!1sja!2sjp!4v1588997571647!5m2!1sja!2sjp"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.784878702637!2d139.69369511525872!3d35.68229858019407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188ccc24247c75%3A0xe7742b03a3db602a!2z44CSMTUxLTAwNTMg5p2x5Lqs6YO95riL6LC35Yy65Luj44CF5pyo77yT5LiB55uu77yR4oiS77yR77yQIOS7o-OAheacqOS4reWkruODk-ODqw!5e0!3m2!1sja!2sjp!4v1589124551606!5m2!1sja!2sjp"
         width="100%"
         height="450"
         style={{ border: '0' }}
