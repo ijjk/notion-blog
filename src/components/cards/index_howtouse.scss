@@ -7,11 +7,10 @@
     margin-bottom: 50px;
 
     @media screen and (max-width: 769px) {
-      grid-template-columns: 1fr;
+      grid-template-columns: 0.5fr 1fr;
       grid-gap: 20px;
       margin-bottom: 50px;
       padding-bottom: 50px;
-      border-bottom: 1px solid #eaeaea;
       .element {
         &:nth-of-type(0) {
           order: 1;
@@ -28,9 +27,10 @@
     .grid {
       grid-template-columns: 1fr 300px;
       @media screen and (max-width: 769px) {
-        grid-template-columns: 1fr;
+        grid-template-columns: 0.5fr 1fr;
         grid-gap: 20px;
         margin-bottom: 100px;
+        padding-bottom: 0;
       }
     }
     .element {
@@ -70,11 +70,19 @@
     width: 100%;
     display: flex;
     align-items: baseline;
+    @media screen and (max-width: 769px) {
+      display: initial;
+    }
   }
   &_text {
     h3 {
       margin-top: 5px;
       margin-bottom: 15px;
+    }
+    p {
+      @media screen and (max-width: 769px) {
+        font-size: 0.9rem;
+      }
     }
   }
 }
