@@ -18,10 +18,13 @@
   &_img {
     margin-bottom: 30px;
     border-radius: 20px;
-    object-fit: cover;
-    height: 300px;
+    object-fit: contain;
+    height: 200px;
     width: 100%;
     background-color: #fafafa;
+    @media screen and (min-width: 769px) {
+      height: 180px;
+    }
   }
   &_number {
     color: #32487b;
