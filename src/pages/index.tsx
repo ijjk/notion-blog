@@ -28,6 +28,7 @@ export default () => (
   <>
     <Head>
       <title>アイカサ | カサのシェアリングサービス</title>
+      <meta property="og:title" content="アイカサ" />
       <meta property="og:image" content="https://i-kasa.com/ogp.jpg" />
       <meta
         property="description"

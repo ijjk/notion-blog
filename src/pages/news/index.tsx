@@ -55,6 +55,7 @@ export default ({ posts = [], preview }) => {
     <>
       <Head>
         <title>ニュース | アイカサ</title>
+        <meta property="og:title" content="ニュース" />
         <meta property="og:image" content="https://i-kasa.com/ogp.jpg" />
         <meta
           property="description"

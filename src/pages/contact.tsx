@@ -8,6 +8,7 @@ export default () => (
   <>
     <Head>
       <title>お問い合わせ | アイカサ</title>
+      <meta property="og:title" content="お問い合わせ" />
       <meta property="og:image" content="https://i-kasa.com/ogp.jpg" />
       <meta
         property="description"
