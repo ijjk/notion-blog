@@ -11,19 +11,19 @@ const Links = [
       { title: 'ニュース', to: '/news/' },
     ],
   },
-  {
-    title: '企業様向け',
-    link: [
-      {
-        title: 'オフィスプラン導入ご検討の方',
-        to: 'https://peraichi.com/landing_pages/view/t5sxy',
-      },
-      {
-        title: 'スポンサーご検討の方',
-        to: 'https://peraichi.com/landing_pages/view/hjtyl',
-      },
-    ],
-  },
+  // {
+  //   title: '企業様向け',
+  //   link: [
+  //     {
+  //       title: 'オフィスプラン導入ご検討の方',
+  //       to: 'https://peraichi.com/landing_pages/view/t5sxy',
+  //     },
+  //     {
+  //       title: 'スポンサーご検討の方',
+  //       to: 'https://peraichi.com/landing_pages/view/hjtyl',
+  //     },
+  //   ],
+  // },
   {
     title: '企業情報',
     link: [
