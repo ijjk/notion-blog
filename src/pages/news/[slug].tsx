@@ -144,10 +144,10 @@ const RenderPost = ({ post, redirect, preview }) => {
       <Head>
         <title>{post.Page || ''}</title>
         <meta property="og:title" content={post.Page || ''} />
-        <meta property="og:image" content="https://i-kasa.com/ogp.jpg" />
+        <meta property="og:image" content="https://www.i-kasa.com/ogp.jpg" />
         <meta property="description" content={post.Description} />
         <meta property="og:description" content={post.Description} />
-        <meta property="og:url" content="https://i-kasa.com" />
+        <meta property="og:url" content="https://www.i-kasa.com" />
         <meta property="og:type" content="website" />
         <meta
           data-hid="twitter:card"

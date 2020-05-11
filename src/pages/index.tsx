@@ -29,7 +29,7 @@ export default () => (
     <Head>
       <title>アイカサ | カサのシェアリングサービス</title>
       <meta property="og:title" content="アイカサ" />
-      <meta property="og:image" content="https://i-kasa.com/ogp.jpg" />
+      <meta property="og:image" content="https://www.i-kasa.com/ogp.jpg" />
       <meta
         property="description"
         content="カサはシェアする時代へ。カサのシェアリングサービス「アイカサ」は使い捨てのような傘の在り方を一新します！"
@@ -38,7 +38,7 @@ export default () => (
         property="og:description"
         content="カサはシェアする時代へ。カサのシェアリングサービス「アイカサ」は使い捨てのような傘の在り方を一新します！"
       />
-      <meta property="og:url" content="https://i-kasa.com" />
+      <meta property="og:url" content="https://www.i-kasa.com" />
       <meta property="og:type" content="website" />
       <meta
         data-hid="twitter:card"

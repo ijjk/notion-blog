@@ -8,7 +8,7 @@ export default () => (
     <Head>
       <title>会社情報 | アイカサ</title>
       <meta property="og:title" content="会社情報" />
-      <meta property="og:image" content="https://i-kasa.com/ogp.jpg" />
+      <meta property="og:image" content="https://www.i-kasa.com/ogp.jpg" />
       <meta
         property="description"
         content="アイカサの運営会社、株式会社Nature Innovation Groupに関する情報"
@@ -17,7 +17,7 @@ export default () => (
         property="og:description"
         content="アイカサの運営会社、株式会社Nature Innovation Groupに関する情報"
       />
-      <meta property="og:url" content="https://i-kasa.com" />
+      <meta property="og:url" content="https://www.i-kasa.com" />
       <meta property="og:type" content="website" />
       <meta
         data-hid="twitter:card"

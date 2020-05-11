@@ -7,10 +7,10 @@ export default () => (
     <Head>
       <title>特定商取引法に基づく記載 | アイカサ</title>
       <meta property="og:title" content="お問い合わせ" />
-      <meta property="og:image" content="https://i-kasa.com/ogp.jpg" />
+      <meta property="og:image" content="https://www.i-kasa.com/ogp.jpg" />
       <meta property="description" content="特定商取引法に基づく記載" />
       <meta property="og:description" content="特定商取引法に基づく記載" />
-      <meta property="og:url" content="https://i-kasa.com" />
+      <meta property="og:url" content="https://www.i-kasa.com" />
       <meta property="og:type" content="website" />
       <meta
         data-hid="twitter:card"

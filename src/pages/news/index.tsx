@@ -56,7 +56,7 @@ export default ({ posts = [], preview }) => {
       <Head>
         <title>ニュース | アイカサ</title>
         <meta property="og:title" content="ニュース" />
-        <meta property="og:image" content="https://i-kasa.com/ogp.jpg" />
+        <meta property="og:image" content="https://www.i-kasa.com/ogp.jpg" />
         <meta
           property="description"
           content="アイカサの最新情報などをお伝えします"
@@ -65,7 +65,7 @@ export default ({ posts = [], preview }) => {
           property="og:description"
           content="アイカサの最新情報などをお伝えします"
         />
-        <meta property="og:url" content="https://i-kasa.com" />
+        <meta property="og:url" content="https://www.i-kasa.com" />
         <meta property="og:type" content="website" />
         <meta
           data-hid="twitter:card"
