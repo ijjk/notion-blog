@@ -13,7 +13,7 @@ export default () => (
         src="/zeit-and-notion.png"
         height="85"
         width="250"
-        alt="ZEIT + Notion"
+        alt="Vercel + Notion"
       />
       <h1>My Notion Blog</h1>
       <h2>
@@ -34,7 +34,7 @@ export default () => (
           This is a statically generated{' '}
           <ExtLink href="https://nextjs.org">Next.js</ExtLink> site with a{' '}
           <ExtLink href="https://notion.so">Notion</ExtLink> powered blog that
-          is deployed with <ExtLink href="https://zeit.co">ZEIT</ExtLink>. It
+          is deployed with <ExtLink href="https://vercel.com">Vercel</ExtLink>. It
           leverages some upcoming features in Next.js like{' '}
           <ExtLink href="https://github.com/zeit/next.js/issues/9524">
             SSG support
