@@ -47,8 +47,26 @@ export default () => (
       </p>
 
       <hr />
+      <h3>ご利用者様お問い合わせ</h3>
+      <p>
+        お問い合わせにつきましては、アイカサお問い合わせLINE窓口からご連絡ください！
+      </p>
+      <div
+        style={{
+          width: '100%',
+          padding: '10px',
+          border: '2px solid whitesmoke',
+          textAlign: 'center',
+          borderRadius: '10px',
+          marginTop: '20px',
+        }}
+      >
+        <a href="https://lin.ee/ekNY9Zk">お問い合わせLINEアカウント</a>
+      </div>
 
-      <h3>メールアドレス</h3>
+      <hr />
+
+      <h3>法人様お問い合わせ</h3>
       <p>
         アイカサに関するお問い合わせは、下記のメールアドレスよりお願いいたします。
       </p>

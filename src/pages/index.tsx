@@ -18,7 +18,7 @@ import UsecaseCard from '../components/cards/index_usecase'
 const regions = [
   {
     name: '関東',
-    regions: ['東京', '神奈川', '千葉', '埼玉', '茨城'],
+    regions: ['東京', '神奈川', '埼玉', '茨城'],
   },
   { name: '九州', regions: ['福岡'] },
   { name: '中国・四国', regions: ['岡山'] },
@@ -93,7 +93,7 @@ export default () => (
       <div className="grid">
         <div
           className="section_right_region_map"
-          style={{ backgroundImage: "url('/assets/map.png')" }}
+          style={{ backgroundImage: "url('/assets/map.svg')" }}
         ></div>
         <div className="section_right_content">
           <h2>スポットは日本全国に拡大中</h2>
@@ -176,6 +176,16 @@ export default () => (
 お近くにアイカサスポットがあれば、カサを持って歩かなくても大丈夫!"
           imgSrc="/assets/return.png"
         />
+      </div>
+    </section>
+
+    <section
+      className="section_center separate gray"
+      style={{ backgroundColor: '#f8f8f8' }}
+    >
+      <div className="container" style={{ maxWidth: '1000px' }}>
+        <h2>利用料金</h2>
+        <img src="/assets/fee.png" alt="アイカサ利用料金" />
       </div>
     </section>
 
