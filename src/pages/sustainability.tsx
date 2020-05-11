@@ -35,7 +35,12 @@ export default () => (
       <meta data-hid="og:locale" property="og:locale" content="ja_JP" />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     </Head>
-    <Title title="サスティナビリティ" description="🌍+❤️" imgSrc category />
+    <Title
+      title="サスティナビリティ"
+      description="アイカサの環境保全に対する考えかた"
+      imgSrc
+      category
+    />
     <div className={style.page} style={{ paddingBottom: 0 }}>
       <h2>溢れる使い捨て傘</h2>
       <p>
