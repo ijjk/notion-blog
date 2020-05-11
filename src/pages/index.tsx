@@ -181,7 +181,7 @@ export default () => (
 
     <section
       className="section_center separate gray"
-      style={{ backgroundColor: '#f8f8f8' }}
+      style={{ backgroundColor: '#f8f8f8', paddingBottom: '0px' }}
     >
       <div className="container" style={{ maxWidth: '1000px' }}>
         <h2>利用料金</h2>
