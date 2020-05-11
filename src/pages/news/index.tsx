@@ -85,7 +85,12 @@ export default ({ posts = [], preview }) => {
         <meta data-hid="og:locale" property="og:locale" content="ja_JP" />
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </Head>
-      <Title title="ニュース" description imgSrc category />
+      <Title
+        title="ニュース"
+        description
+        imgSrc="/assets/ikasa_background.png"
+        category
+      />
       {preview && (
         <div className={blogStyles.previewAlertContainer}>
           <div className={blogStyles.previewAlert}>
@@ -102,21 +107,20 @@ export default ({ posts = [], preview }) => {
           <p className={blogStyles.noPosts}>投稿がありません</p>
         )}
         {posts.map(post => {
-          let _postThumb = {
-            backgroundImage:
-              'url(' +
-              `/api/asset?assetUrl=${encodeURIComponent(
-                post.Thumbnail as any
-              )}&blockId=${post.id}` +
-              ')',
-          }
           return (
             <div className={blogStyles.postPreview} key={post.Slug}>
               <Link href="/news/[slug]" as={getBlogLink(post.Slug)}>
                 <a>
                   <div
                     className={blogStyles.postPreview_thumb}
-                    style={_postThumb}
+                    style={{
+                      backgroundImage:
+                        'url(' +
+                        `https://www.i-kasa.com/api/asset?assetUrl=${encodeURIComponent(
+                          post.Thumbnail as any
+                        )}&blockId=${post.id}` +
+                        ')',
+                    }}
                   ></div>
                   <h3>
                     <a>{post.Page}</a>

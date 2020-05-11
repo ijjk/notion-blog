@@ -26,7 +26,12 @@ export default () => (
       <meta data-hid="og:locale" property="og:locale" content="ja_JP" />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     </Head>
-    <Title title="特定商取引法に基づく記載" description imgSrc category />
+    <Title
+      title="特定商取引法に基づく記載"
+      description
+      imgSrc="/assets/ikasa_background.png"
+      category
+    />
     <div className={style.page}>
       <table className="table">
         <tbody>

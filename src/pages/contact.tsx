@@ -34,7 +34,12 @@ export default () => (
       <meta data-hid="og:locale" property="og:locale" content="ja_JP" />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     </Head>
-    <Title title="お問い合わせ" description imgSrc category />
+    <Title
+      title="お問い合わせ"
+      description
+      imgSrc="/assets/ikasa_background.png"
+      category
+    />
     <div className={style.page}>
       <p>
         アイカサに興味を持っていただき、誠にありがとうございます。

@@ -38,7 +38,7 @@ export default () => (
     <Title
       title="サスティナビリティ"
       description="アイカサの環境保全に対する考えかた"
-      imgSrc
+      imgSrc="/assets/ikasa_background.png"
       category
     />
     <div className={style.page} style={{ paddingBottom: 0 }}>
