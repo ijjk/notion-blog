@@ -1,10 +1,25 @@
 .download {
-  p {
-    text-align: center;
+  display: grid;
+  gap: 100px;
+  grid-template-columns: 1fr 1fr;
+  @media screen and (max-width: 769px) {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  h3,
+  p.app {
+    text-align: left;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 2rem;
     color: white;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+    @media screen and (max-width: 769px) {
+      font-size: 1.7rem;
+    }
+  }
+  p.app {
+    font-weight: normal;
+    font-size: 1.3rem;
   }
   &_link {
     max-width: 535px;

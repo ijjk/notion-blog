@@ -8,6 +8,7 @@ const links = [
   { href: '/sustainability', title: 'サスティナビリティについて' },
   { href: '/news', title: 'ニュース' },
   { href: '/contact', title: 'お問い合わせ' },
+  { href: '/#start', title: 'アイカサを使ってみる' },
 ]
 
 interface IState {

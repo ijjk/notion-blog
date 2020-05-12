@@ -26,8 +26,20 @@ export default () => {
                 <img src="/assets/playstore.svg" height="65px" />
               </div>
             </div> */}
-
-            <div className={`${style.note}`}>
+            <div
+              className={`${style.note}`}
+              style={{ backgroundColor: 'rgba(241, 165, 0, 0.7)' }}
+            >
+              <div className={`${style.note_message}`}>
+                現在サービス入れ替えのため、横浜・東京・大宮でサービスを一時休止しています
+              </div>
+              <div className={`${style.note_button}`}>
+                <Link href="/news/service_suspension">
+                  <a>詳細を確認</a>
+                </Link>
+              </div>
+            </div>
+            <div className={`${style.note}`} style={{ marginTop: '10px' }}>
               <div className={`${style.note_message}`}>
                 現在クラウドファウンディング実施中!
               </div>
