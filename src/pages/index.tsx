@@ -27,7 +27,7 @@ const regions = [
 export default () => (
   <>
     <Head>
-      <title>アイカサ | カサのシェアリングサービス</title>
+      <title>アイカサ | 傘のシェアリングサービス</title>
       <meta property="og:title" content="アイカサ" />
       <meta property="og:image" content="https://www.i-kasa.com/ogp.jpg" />
       <meta
@@ -49,7 +49,7 @@ export default () => (
       <meta
         data-hid="og:site_name"
         property="og:site_name"
-        content="アイカサ | カサのシェアリングサービス"
+        content="アイカサ | 傘のシェアリングサービス"
       />
       <meta data-hid="og:locale" property="og:locale" content="ja_JP" />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />

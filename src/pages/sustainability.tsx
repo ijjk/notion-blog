@@ -30,7 +30,7 @@ export default () => (
       <meta
         data-hid="og:site_name"
         property="og:site_name"
-        content="アイカサ | カサのシェアリングサービス"
+        content="アイカサ | 傘のシェアリングサービス"
       />
       <meta data-hid="og:locale" property="og:locale" content="ja_JP" />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
