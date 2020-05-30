@@ -76,13 +76,18 @@
       @media screen and (max-width: 769px) {
         transform: scale(0.7);
       }
-      img {
-        height: 65px;
-        min-height: 65px;
-        width: initial;
-        margin-right: 20px;
-        &:last-of-type {
-          margin-right: 0px;
+      a {
+        &:first-child {
+          margin-right: 12px;
+        }
+        img {
+          height: 65px;
+          min-height: 65px;
+          width: initial;
+          margin-right: 20px;
+          &:last-of-type {
+            margin-right: 0px;
+          }
         }
       }
     }
