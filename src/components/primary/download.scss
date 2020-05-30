@@ -26,19 +26,8 @@
     margin-left: auto;
     margin-right: auto;
     display: grid;
-    grid-template-columns: 120px 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 30px;
-
-    // ストア配信まで変更中↓
-
-    max-width: 120px;
-    grid-template-columns: 120px;
-
-    // ここまで
-
-    @media screen and (max-width: 769px) {
-      grid-template-columns: 1fr;
-    }
     img.appicon {
       @media screen and (max-width: 769px) {
         width: 120px;
@@ -59,17 +48,22 @@
           @media screen and (max-width: 769px) {
             justify-content: center;
           }
-          img {
-            height: 60px;
-            min-height: 60px;
-            @media screen and (max-width: 769px) {
-              height: 53px;
-              min-height: 53px;
+          a {
+            &:first-child {
+              margin-right: 12px;
             }
-            width: initial;
-            margin-right: 20px;
-            &:last-of-type {
-              margin-right: 0px;
+            img {
+              height: 60px;
+              min-height: 60px;
+              @media screen and (max-width: 769px) {
+                height: 53px;
+                min-height: 53px;
+              }
+              width: initial;
+              margin-right: 20px;
+              &:last-of-type {
+                margin-right: 0px;
+              }
             }
           }
         }
@@ -77,7 +71,7 @@
       &_legal {
         font-size: 0.7rem;
         color: white;
-        line-height: 1.2;
+        line-height: 1.5;
         letter-spacing: 0;
       }
     }

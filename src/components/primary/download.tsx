@@ -7,43 +7,38 @@ export default () => {
     >
       <div className="container" style={{ maxWidth: '1000px' }}>
         <h2 className="center title_dark">アイカサを使ってみる!</h2>
-        <div style={{ marginBottom: '100px' }}>
-          <div className="download_link">
-            <img className="appicon" src="/assets/appicon.jpg" />
-          </div>
-          <p
-            style={{
-              marginTop: '20px',
-              color: 'white',
-              textAlign: 'center',
-              fontSize: '1.5rem',
-            }}
-          >
-            アイカサアプリは6月上旬配信予定!
-          </p>
-        </div>
         <div className="download">
           <div>
             <h3>横浜・東京・大宮エリア</h3>
-            <p className="app">
-              現在システム入れ替えのため、サービスを停止しています。
-            </p>
             <div className="download_link">
-              {/* <img className="appicon" src="/assets/appicon.jpg" /> */}
-              {/* <div className="download_link_store">
-              <div className="download_link_store_img">
-                <div>
-                  <img src="/assets/appstore.svg" height="65px" />
-                  <img src="/assets/playstore.svg" height="65px" />
+              <div className="download_link_store">
+                <div className="download_link_store_img">
+                  <div>
+                    <a
+                      href="#" // ここにAppStoreリンクを入れる
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mr-2"
+                    >
+                      <img src="/assets/appstore.svg" height="65px" />
+                    </a>
+
+                    <a
+                      href="#" // ここにGooglePlayリンクを入れる
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src="/assets/playstore.svg" height="65px" />
+                    </a>
+                  </div>
+                </div>
+                <div className="download_link_store_legal">
+                  Apple および Apple ロゴは米国その他の国で登録された Apple Inc.
+                  の商標です。App Store は Apple Inc. のサービスマークです。
+                  <br />
+                  Google Play および Google Play ロゴは Google LLC の商標です。
                 </div>
               </div>
-              <div className="download_link_store_legal">
-                Apple および Apple ロゴは米国その他の国で登録された Apple Inc.
-                の商標です。App Store は Apple Inc. のサービスマークです。
-                <br />
-                Google Play および Google Play ロゴは Google LLC の商標です。
-              </div>
-            </div> */}
             </div>
           </div>
           <div>
