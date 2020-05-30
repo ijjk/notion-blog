@@ -7,7 +7,7 @@ const Links = [
   {
     title: 'アイカサ',
     link: [
-      { title: 'サスティナビリティ', to: '/sustainability/' },
+      // { title: 'サスティナビリティ', to: '/sustainability/' },
       { title: 'ニュース', to: '/news/' },
     ],
   },
