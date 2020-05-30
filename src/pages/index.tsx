@@ -14,6 +14,8 @@ import HowToUseCard from '../components/cards/index_howtouse'
 import Keypoint from '../components/cards/index_keypoint'
 import UsecaseCard from '../components/cards/index_usecase'
 
+import ScrollAppbtns from '../components/sections/scroll_appbtns'
+
 //利用可能エリア
 const regions = [
   {
@@ -210,5 +212,28 @@ export default () => (
         </div>
       </div>
     </section>
+
+    <section
+      className="section_center separate gray"
+      style={{ backgroundColor: '#f8f8f8' }}
+    >
+      <div className="container" style={{ maxWidth: '1200px' }}>
+        <h2 className="center">メディア掲載事例</h2>
+        {/* ここに掲載事例を入れる */}
+      </div>
+    </section>
+
+    <section
+      className="section_center separate gray"
+      style={{ backgroundColor: '#f8f8f8' }}
+    >
+      <div className="container" style={{ maxWidth: '1200px' }}>
+        <h2 className="center">取材希望の方はこちら</h2>
+
+        <a href="#"></a>
+      </div>
+    </section>
+
+    <ScrollAppbtns />
   </>
 )
