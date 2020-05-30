@@ -115,7 +115,7 @@ export default () => (
       </div>
     </section>
     <iframe
-      src="https://ikasa-test.info/kasa_share_spot_corporate/index.html"
+      src="https://liff.i-kasa.com"
       style={{ width: '100%', height: '500px' }}
     ></iframe>
     <section
