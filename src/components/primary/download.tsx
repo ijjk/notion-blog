@@ -15,7 +15,7 @@ export default () => {
                 <div className="download_link_store_img">
                   <div>
                     <a
-                      href="#" // ここにAppStoreリンクを入れる
+                      href="https://mobile.i-kasa.com/download?no=3" // ここにAppStoreリンクを入れる
                       target="_blank"
                       rel="noopener noreferrer"
                       className="mr-2"
@@ -24,7 +24,7 @@ export default () => {
                     </a>
 
                     <a
-                      href="#" // ここにGooglePlayリンクを入れる
+                      href="https://mobile.i-kasa.com/download?no=3" // ここにGooglePlayリンクを入れる
                       target="_blank"
                       rel="noopener noreferrer"
                     >

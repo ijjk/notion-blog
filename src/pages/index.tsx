@@ -121,7 +121,7 @@ export default () => (
       src="https://liff.i-kasa.com?initScale=wide"
       style={{ width: '100%', height: '500px' }}
     ></iframe>
-    <section
+    {/* <section
       className="section_normal separate reverse"
       style={{
         backgroundColor: '#f8f8f8',
@@ -146,7 +146,7 @@ export default () => (
           />
         </div>
       </div>
-    </section>
+    </section> */}
 
     <section className="section_center separate gray">
       <div className="container">
@@ -225,7 +225,7 @@ export default () => (
       </div>
     </section>
 
-    <section
+    {/* <section
       className="section_center separate gray"
       style={{ backgroundColor: '#f8f8f8' }}
     >
@@ -236,19 +236,15 @@ export default () => (
           <br />
           鉄道会社・オフィスビル・大学・商業施設をはじめとする多くの企業様に、幅広く導入いただいております。
         </p>
-
-        {/* ここに掲載事例を入れる */}
       </div>
-    </section>
+    </section> */}
 
-    <section
+    {/* <section
       className="section_center separate gray"
       style={{ backgroundColor: '#f8f8f8' }}
     >
       <div className="container" style={{ maxWidth: '1200px' }}>
         <h2 className="center">メディア掲載事例</h2>
-        {/* ここに掲載事例を入れる */}
-
         <a
           className="button"
           href="/contact"
@@ -261,7 +257,7 @@ export default () => (
           導入希望の方はこちら
         </a>
       </div>
-    </section>
+    </section> */}
 
     <ScrollAppbtns />
   </>

@@ -32,14 +32,14 @@ export default () => {
         <div className={style.note}>
           <p>今すぐダウンロード!</p>
           <a
-            href="#" // ここにAppStoreリンクを入れる
+            href="https://mobile.i-kasa.com/download?no=3" // ここにAppStoreリンクを入れる
             target="_blank"
             rel="noopener noreferrer"
           >
             <img src="/assets/appstore.svg" height="65px" />
           </a>
           <a
-            href="#" // ここにGooglePlayリンクを入れる
+            href="https://mobile.i-kasa.com/download?no=3" // ここにGooglePlayリンクを入れる
             target="_blank"
             rel="noopener noreferrer"
           >

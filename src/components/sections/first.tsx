@@ -23,7 +23,7 @@ export default () => {
               </div>
               <div className={`${style.section_first_download_icon}`}>
                 <a
-                  href="#" // ここにAppStoreリンクを入れる
+                  href="https://mobile.i-kasa.com/download?no=3" // ここにAppStoreリンクを入れる
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mr-2"
@@ -31,7 +31,7 @@ export default () => {
                   <img src="/assets/appstore.svg" height="65px" />
                 </a>
                 <a
-                  href="#" // ここにGooglePlayリンクを入れる
+                  href="https://mobile.i-kasa.com/download?no=3" // ここにGooglePlayリンクを入れる
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -41,13 +41,13 @@ export default () => {
             </div>
             <div className={`${style.note}`} style={{ marginTop: '10px' }}>
               <div className={`${style.note_message}`}>
-                0円キャンペーン実施中!
+                7月31日まで0円キャンペーン実施中!
               </div>
-              <div className={`${style.note_button}`}>
+              {/* <div className={`${style.note_button}`}>
                 <a href="https://www.makuake.com/project/i-kasa/">
                   今すぐチェック!
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
