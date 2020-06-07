@@ -117,7 +117,8 @@ export default () => (
       </div>
     </section>
     <iframe
-      src="https://liff.i-kasa.com"
+      id="map"
+      src="https://liff.i-kasa.com?initScale=wide"
       style={{ width: '100%', height: '500px' }}
     ></iframe>
     <section
@@ -150,6 +151,17 @@ export default () => (
     <section className="section_center separate gray">
       <div className="container">
         <h2 className="center">アイカサのつかいかた!</h2>
+
+        <video
+          src="/assets/howtouse_movie.mp4"
+          controls
+          style={{
+            width: '100%',
+            display: 'block',
+            margin: '0 auto 64px auto',
+            borderRadius: '20px',
+          }}
+        />
 
         <HowToUseCard
           number="01"
@@ -218,7 +230,13 @@ export default () => (
       style={{ backgroundColor: '#f8f8f8' }}
     >
       <div className="container" style={{ maxWidth: '1200px' }}>
-        <h2 className="center">メディア掲載事例</h2>
+        <h2 className="center">導入企業</h2>
+        <p style={{ textAlign: 'center' }}>
+          アイカサの設置企業の一部をご紹介します。アイカサのビニール傘の廃棄物を減らす活動にご賛同いただいた
+          <br />
+          鉄道会社・オフィスビル・大学・商業施設をはじめとする多くの企業様に、幅広く導入いただいております。
+        </p>
+
         {/* ここに掲載事例を入れる */}
       </div>
     </section>
@@ -228,9 +246,20 @@ export default () => (
       style={{ backgroundColor: '#f8f8f8' }}
     >
       <div className="container" style={{ maxWidth: '1200px' }}>
-        <h2 className="center">取材希望の方はこちら</h2>
+        <h2 className="center">メディア掲載事例</h2>
+        {/* ここに掲載事例を入れる */}
 
-        <a href="#"></a>
+        <a
+          className="button"
+          href="/contact"
+          style={{
+            width: '210px',
+            display: 'block',
+            margin: 'auto',
+          }}
+        >
+          導入希望の方はこちら
+        </a>
       </div>
     </section>
 

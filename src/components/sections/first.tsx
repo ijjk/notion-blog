@@ -41,7 +41,7 @@ export default () => {
             </div>
             <div className={`${style.note}`} style={{ marginTop: '10px' }}>
               <div className={`${style.note_message}`}>
-                現在クラウドファウンディング実施中!
+                0円キャンペーン実施中!
               </div>
               <div className={`${style.note_button}`}>
                 <a href="https://www.makuake.com/project/i-kasa/">

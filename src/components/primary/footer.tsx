@@ -9,6 +9,7 @@ const Links = [
     link: [
       // { title: 'サスティナビリティ', to: '/sustainability/' },
       { title: 'ニュース', to: '/news/' },
+      { title: 'よくある質問', to: '/faq/' },
     ],
   },
   // {

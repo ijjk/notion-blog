@@ -7,6 +7,7 @@ import style from './navbar.module.scss'
 const links = [
   // { href: '/sustainability', title: 'サスティナビリティについて' },
   { href: '/news', title: 'ニュース' },
+  { href: '/faq', title: 'よくある質問' },
   { href: '/contact', title: 'お問い合わせ' },
   { href: '/#start', title: 'アイカサを使ってみる' },
 ]
