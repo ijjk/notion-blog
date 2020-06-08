@@ -16,7 +16,7 @@ export default () => (
         alt="Vercel + Notion"
       />
       <h1>My Notion Blog</h1>
-      <h2>
+<!--       <h2>
         Blazing Fast Notion Blog with Next.js'{' '}
         <ExtLink
           href="https://github.com/zeit/next.js/issues/9524"
@@ -61,7 +61,7 @@ export default () => (
           After finding your token and your blog's page id you should be good to
           go!
         </p>
-      </div>
+      </div> -->
     </div>
   </>
 )
