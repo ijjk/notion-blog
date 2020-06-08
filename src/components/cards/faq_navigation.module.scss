@@ -1,0 +1,28 @@
+.navbtn__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+.navbtn {
+  width: 19%;
+  color: #03abd8;
+  font-size: 16px;
+  font-weight: bold;
+  border: 1px solid #03abd8;
+  align-self: center;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 5px;
+  transition: 0.25s all;
+  @media screen and (max-width: 798px) {
+    width: 48%;
+    margin-bottom: 20px;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #03abd8;
+  }
+}

@@ -14,6 +14,8 @@ import HowToUseCard from '../components/cards/index_howtouse'
 import Keypoint from '../components/cards/index_keypoint'
 import UsecaseCard from '../components/cards/index_usecase'
 
+import ScrollAppbtns from '../components/sections/scroll_appbtns'
+
 //利用可能エリア
 const regions = [
   {
@@ -27,7 +29,7 @@ const regions = [
 export default () => (
   <>
     <Head>
-      <title>アイカサ | カサのシェアリングサービス</title>
+      <title>アイカサ | 傘のシェアリングサービス</title>
       <meta property="og:title" content="アイカサ" />
       <meta property="og:image" content="https://www.i-kasa.com/ogp.jpg" />
       <meta
@@ -49,7 +51,7 @@ export default () => (
       <meta
         data-hid="og:site_name"
         property="og:site_name"
-        content="アイカサ | カサのシェアリングサービス"
+        content="アイカサ | 傘のシェアリングサービス"
       />
       <meta data-hid="og:locale" property="og:locale" content="ja_JP" />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -115,10 +117,11 @@ export default () => (
       </div>
     </section>
     <iframe
-      src="https://ikasa-test.info/kasa_share_spot_corporate/index.html"
+      id="map"
+      src="https://liff.i-kasa.com?initScale=wide"
       style={{ width: '100%', height: '500px' }}
     ></iframe>
-    <section
+    {/* <section
       className="section_normal separate reverse"
       style={{
         backgroundColor: '#f8f8f8',
@@ -143,11 +146,22 @@ export default () => (
           />
         </div>
       </div>
-    </section>
+    </section> */}
 
     <section className="section_center separate gray">
       <div className="container">
         <h2 className="center">アイカサのつかいかた!</h2>
+
+        <video
+          src="/assets/howtouse_movie.mp4"
+          controls
+          style={{
+            width: '100%',
+            display: 'block',
+            margin: '0 auto 64px auto',
+            borderRadius: '20px',
+          }}
+        />
 
         <HowToUseCard
           number="01"
@@ -210,5 +224,41 @@ export default () => (
         </div>
       </div>
     </section>
+
+    {/* <section
+      className="section_center separate gray"
+      style={{ backgroundColor: '#f8f8f8' }}
+    >
+      <div className="container" style={{ maxWidth: '1200px' }}>
+        <h2 className="center">導入企業</h2>
+        <p style={{ textAlign: 'center' }}>
+          アイカサの設置企業の一部をご紹介します。アイカサのビニール傘の廃棄物を減らす活動にご賛同いただいた
+          <br />
+          鉄道会社・オフィスビル・大学・商業施設をはじめとする多くの企業様に、幅広く導入いただいております。
+        </p>
+      </div>
+    </section> */}
+
+    {/* <section
+      className="section_center separate gray"
+      style={{ backgroundColor: '#f8f8f8' }}
+    >
+      <div className="container" style={{ maxWidth: '1200px' }}>
+        <h2 className="center">メディア掲載事例</h2>
+        <a
+          className="button"
+          href="/contact"
+          style={{
+            width: '210px',
+            display: 'block',
+            margin: 'auto',
+          }}
+        >
+          導入希望の方はこちら
+        </a>
+      </div>
+    </section> */}
+
+    <ScrollAppbtns />
   </>
 )

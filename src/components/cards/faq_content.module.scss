@@ -1,0 +1,51 @@
+.faq_card {
+  margin-bottom: 24px;
+}
+
+.title_card {
+  width: 100%;
+  border: 1px solid #03abd8;
+  background-color: #03abd8;
+  padding: 12px 24px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: start;
+  transition: 0.25s all;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+  & > span {
+    color: #fff;
+    font-weight: bold;
+    align-self: center;
+    &:nth-child(1) {
+      font-size: 20px;
+      margin-right: 8px;
+    }
+    &:nth-child(3) {
+      margin-left: auto;
+    }
+  }
+}
+
+.content_card {
+  padding: 12px 24px;
+  border: 1px solid #ededed;
+  background-color: #fafafa;
+  border-radius: 0 0 5px 5px;
+  display: flex;
+  justify-content: start;
+  & > span {
+    color: #3b3b3b;
+    align-self: flex-start;
+    &:nth-child(1) {
+      font-size: 20px;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+    &:nth-child(2) {
+      padding: 3px 0;
+    }
+  }
+}
