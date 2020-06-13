@@ -28,3 +28,4 @@ yarn-error.log*
 .blog_index_data_previews
 
 .now
+.vercel
