@@ -28,7 +28,7 @@ export async function getStaticProps({ params: { slug }, preview }) {
         redirect: '/blog',
         preview: false,
       },
-      revalidate: 5,
+      unstable_revalidate: 5,
     }
   }
   const postData = await getPageData(post.id)
@@ -64,7 +64,7 @@ export async function getStaticProps({ params: { slug }, preview }) {
       post,
       preview: preview || false,
     },
-    revalidate: 10,
+    unstable_revalidate: 10,
   }
 }
 
@@ -238,6 +238,50 @@ const RenderPost = ({ post, redirect, preview }) => {
               }
               break
             case 'image':
+            case 'image':
+              const { format = {} } = value
+              const {
+                block_width,
+                block_height,
+                properties: image_properties,
+                block_aspect_ratio,
+              } = format
+              const baseBlockWidth = 768
+              const roundFactor = Math.pow(10, 2)
+              // calculate percentages
+              const width = block_width
+                ? `${Math.round(
+                    (block_width / baseBlockWidth) * 100 * roundFactor
+                  ) / roundFactor}%`
+                : block_height || '100%'
+
+              const useWrapper = block_aspect_ratio && !block_height
+
+              const childStyle: CSSProperties = useWrapper
+                ? {
+                    width: '100%',
+                    height: '100%',
+                    border: 'none',
+                    position: 'absolute',
+                    top: 0,
+                  }
+                : {
+                    width,
+                    border: 'none',
+                    height: block_height,
+                    display: 'block',
+                    maxWidth: '100%',
+                  }
+              return (
+                <img
+                  key={!useWrapper ? id : undefined}
+                  src={`/api/asset?assetUrl=${encodeURIComponent(
+                    value.properties.source[0][0] as string
+                  )}&blockId=${id}`}
+                  style={childStyle}
+                />
+              )
+
             case 'video':
             case 'embed': {
               const { format = {} } = value

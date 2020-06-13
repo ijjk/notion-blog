@@ -23,7 +23,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       props: {
         redirect: '/blog',
       },
-      revalidate: 5,
+      unstable_revalidate: 5,
     }
   }
 
