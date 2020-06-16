@@ -108,7 +108,7 @@
   width: 100%;
   padding: 15px;
   border-radius: 10px;
-  background-color: rgba(241, 222, 0, 0.7);
+  background-color: rgba(230, 32, 130, 0.4);
   backdrop-filter: blur(10px);
   margin-top: 50px;
 
@@ -116,6 +116,7 @@
   flex-wrap: nowrap;
   align-items: center;
   &_message {
+    color: #fff;
     font-weight: bold;
     width: 100%;
     text-align: left;
@@ -130,9 +131,12 @@
       border-radius: 5px;
       padding: 5px 8px;
       text-decoration: none;
-      color: #3b3b3b;
-      border: 2px solid #3b3b3b;
+      color: #fff;
+      border: 2px solid #fff;
       display: block;
+      &:hover {
+        color: #fff;
+      }
     }
   }
 }
