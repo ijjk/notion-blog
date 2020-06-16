@@ -10,9 +10,20 @@ function DescriCompo(props) {
             <small
               style={{ display: 'block', paddingTop: '20px', color: 'gray' }}
             >
-              ・福岡・水戸エリアでは現在かざしてかりる機能は利用することができません。
+              ・NFCタッチは現在準備中のため、QRコードスキャンをご利用ください。
+              {/* <br /> */}
+              {/* ・福岡・水戸エリアでは現在かざしてかりる機能は利用することができません。 */}
               <br />
               ・福岡・水戸エリアではエリアを跨いでカサを返却することはできません。
+            </small>
+          ) : (
+            ''
+          )}
+          {props.number == '04' ? (
+            <small
+              style={{ display: 'block', paddingTop: '20px', color: 'gray' }}
+            >
+              ・NFCタッチは現在準備中のため、QRコードスキャンをご利用ください。
             </small>
           ) : (
             ''
