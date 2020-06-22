@@ -35,35 +35,30 @@ const regions = [
 const companies = [
   {
     filepath: '/assets/logo_jr.webp',
-    link: 'https://www.jreast.co.jp/',
     alt: 'JR東日本',
     width: '34%',
     minWidth: '60px',
   },
   {
     filepath: '/assets/logo_seibu.svg',
-    link: 'https://www.seiburailway.jp/',
     alt: '西武鉄道',
     width: '50%',
     minWidth: '90px',
   },
   {
     filepath: '/assets/logo_marui.jpg',
-    link: 'https://www.0101maruigroup.co.jp/',
     alt: 'マルイグループ',
     width: '48%',
     minWidth: '90px',
   },
   {
     filepath: '/assets/logo_keikyu.png',
-    link: 'https://www.keikyu.co.jp/',
     alt: '京急電鉄',
     width: '48%',
     minWidth: '90px',
   },
   {
     filepath: '/assets/logo_nishitetsu.svg',
-    link: 'http://www.nishitetsu.jp/',
     alt: '西日本鉄道',
     width: '50%',
     minWidth: '90px',
@@ -301,10 +296,7 @@ export default () => (
         <div style={{ display: 'flex', flexWrap: 'wrap' }}>
           {companies.map((companyItem, companyIndex) => {
             return (
-              <a
-                href={companyItem.link}
-                target="_blank"
-                rel="noopener noreferrer"
+              <span
                 key={companyIndex}
                 style={{
                   width: '33%',
@@ -321,7 +313,7 @@ export default () => (
                     minWidth: companyItem.minWidth,
                   }}
                 />
-              </a>
+              </span>
             )
           })}
         </div>
