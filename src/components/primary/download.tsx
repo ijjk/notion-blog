@@ -9,7 +9,7 @@ export default () => {
         <h2 className="center title_dark">アイカサを使ってみる!</h2>
         <div className="download">
           <div>
-            <h3>横浜・東京・大宮エリア</h3>
+            <h3>横浜・東京・大宮・大阪・神戸エリア</h3>
             <div className="download_link">
               <div className="download_link_store">
                 <div className="download_link_store_img">
