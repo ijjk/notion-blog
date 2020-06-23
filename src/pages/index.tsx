@@ -15,8 +15,9 @@ import Keypoint from '../components/cards/index_keypoint'
 import UsecaseCard from '../components/cards/index_usecase'
 
 import ScrollAppbtns from '../components/sections/scroll_appbtns'
+import company from './company'
 
-//利用可能エリア
+// 利用可能エリア
 const regions = [
   {
     name: '関東',
@@ -28,6 +29,40 @@ const regions = [
   },
   { name: '九州', regions: ['福岡'] },
   { name: '中国・四国', regions: ['岡山'] },
+]
+
+// 導入企業
+const companies = [
+  {
+    filepath: '/assets/logo_jr.webp',
+    alt: 'JR東日本',
+    width: '34%',
+    minWidth: '60px',
+  },
+  {
+    filepath: '/assets/logo_seibu.svg',
+    alt: '西武鉄道',
+    width: '50%',
+    minWidth: '90px',
+  },
+  {
+    filepath: '/assets/logo_marui.jpg',
+    alt: 'マルイグループ',
+    width: '48%',
+    minWidth: '90px',
+  },
+  {
+    filepath: '/assets/logo_keikyu.png',
+    alt: '京急電鉄',
+    width: '48%',
+    minWidth: '90px',
+  },
+  {
+    filepath: '/assets/logo_nishitetsu.svg',
+    alt: '西日本鉄道',
+    width: '50%',
+    minWidth: '90px',
+  },
 ]
 
 export default () => (
@@ -194,6 +229,18 @@ export default () => (
 お近くにアイカサスポットがあれば、カサを持って歩かなくても大丈夫!"
           imgSrc="/assets/return.png"
         />
+
+        <a
+          className="button"
+          href="/faq"
+          style={{
+            width: '210px',
+            display: 'block',
+            margin: '64px auto 0 auto',
+          }}
+        >
+          よくある質問はこちら
+        </a>
       </div>
     </section>
 
@@ -229,19 +276,61 @@ export default () => (
       </div>
     </section>
 
-    {/* <section
-      className="section_center separate gray"
-      style={{ backgroundColor: '#f8f8f8' }}
+    <section
+      className="section_center separate"
+      style={{ backgroundColor: '#fff' }}
     >
       <div className="container" style={{ maxWidth: '1200px' }}>
         <h2 className="center">導入企業</h2>
-        <p style={{ textAlign: 'center' }}>
+        <p
+          style={{
+            textAlign: 'center',
+            marginBottom: '40px',
+          }}
+        >
           アイカサの設置企業の一部をご紹介します。アイカサのビニール傘の廃棄物を減らす活動にご賛同いただいた
           <br />
           鉄道会社・オフィスビル・大学・商業施設をはじめとする多くの企業様に、幅広く導入いただいております。
         </p>
+
+        <div style={{ display: 'flex', flexWrap: 'wrap' }}>
+          {companies.map((companyItem, companyIndex) => {
+            return (
+              <span
+                key={companyIndex}
+                style={{
+                  width: '33%',
+                  alignSelf: 'center',
+                  textAlign: 'center',
+                  padding: '20px 0',
+                }}
+              >
+                <img
+                  src={companyItem.filepath}
+                  alt={companyItem.alt}
+                  style={{
+                    width: companyItem.width,
+                    minWidth: companyItem.minWidth,
+                  }}
+                />
+              </span>
+            )
+          })}
+        </div>
+
+        <a
+          className="button"
+          href="/contact"
+          style={{
+            width: '210px',
+            display: 'block',
+            margin: '64px auto 0 auto',
+          }}
+        >
+          導入希望の方はこちら
+        </a>
       </div>
-    </section> */}
+    </section>
 
     {/* <section
       className="section_center separate gray"
@@ -249,17 +338,6 @@ export default () => (
     >
       <div className="container" style={{ maxWidth: '1200px' }}>
         <h2 className="center">メディア掲載事例</h2>
-        <a
-          className="button"
-          href="/contact"
-          style={{
-            width: '210px',
-            display: 'block',
-            margin: 'auto',
-          }}
-        >
-          導入希望の方はこちら
-        </a>
       </div>
     </section> */}
 

@@ -14,7 +14,6 @@ export default () => {
   }
 
   const watchCurrentPosition = () => {
-    console.log(scrollTop() > 800)
     setActive(scrollTop() > 800)
   }
 

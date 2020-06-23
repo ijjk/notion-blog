@@ -44,7 +44,7 @@ export default () => {
                 7月31日まで0円キャンペーン実施中!
               </div>
               <div className={`${style.note_button}`}>
-                <a href="/news/zerocampaign">今すぐチェック!</a>
+                <a href="/news/0yencampaign">今すぐチェック!</a>
               </div>
             </div>
           </div>
