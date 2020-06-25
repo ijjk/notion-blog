@@ -34,7 +34,7 @@ const regions = [
 // 導入企業
 const companies = [
   {
-    filepath: '/assets/logo_jr.webp',
+    filepath: '/assets/logo_jr.png',
     alt: 'JR東日本',
     width: '34%',
     minWidth: '60px',
