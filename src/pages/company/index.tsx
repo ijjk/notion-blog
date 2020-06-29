@@ -98,10 +98,6 @@ export default () => (
             </td>
           </tr>
           <tr>
-            <th>電話番号</th>
-            <td>050-3188-7642</td>
-          </tr>
-          <tr>
             <th>代表取締役</th>
             <td>丸川照司</td>
           </tr>

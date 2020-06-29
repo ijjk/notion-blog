@@ -254,9 +254,9 @@ export default () => (
       <div className="container">
         <h2>協力団体・個人一覧</h2>
         <p style={{ marginBottom: '48px' }}>
-          アイカサクラウドファンディングにて支援してくださった
+          アイカサクラウドファンディングにて支援してくださった方々です。(順不同)
           <br />
-          名簿一覧です。(順不同)
+          ご支援・ご協力ありがとうございました。
         </p>
 
         <div className={`${style.flex_wrapper} ${style.cooperation_wrapper}`}>
