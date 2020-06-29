@@ -90,6 +90,7 @@ export default ({ posts = [], preview }) => {
         description
         imgSrc="/assets/ikasa_background.png"
         category
+        grey={false}
       />
       {preview && (
         <div className={blogStyles.previewAlertContainer}>

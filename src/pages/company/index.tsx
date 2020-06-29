@@ -38,6 +38,7 @@ export default () => (
       description
       imgSrc="/assets/ikasa_background.png"
       category
+      grey={false}
     />
     <div className={style.page} style={{ paddingBottom: 0 }}>
       <h2>アイカサの世界観</h2>

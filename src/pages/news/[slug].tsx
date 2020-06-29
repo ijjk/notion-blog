@@ -191,6 +191,7 @@ const RenderPost = ({ post, redirect, preview }) => {
             <a>ニュース</a>
           </Link>
         }
+        grey={false}
       />
       {preview && (
         <div className={blogStyles.previewAlertContainer}>

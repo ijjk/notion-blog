@@ -1,9 +1,9 @@
 import style from './title.module.scss'
 
-export default ({ title, description, imgSrc, category }) => {
+export default ({ title, description, imgSrc, category, grey }) => {
   return (
     <>
-      <section className={`${style.title} separate`}>
+      <section className={`${style.title} separate ${grey ? 'grey' : null}`}>
         <div className={style.container}>
           <div className={style.category}>{category}</div>
           <h1 className={style.h1}>{title}</h1>
