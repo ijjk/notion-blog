@@ -116,7 +116,7 @@
 }
 
 .post :global(.underline) {
-  border-bottom: 1px solid black;
+  text-decoration: underline;
 }
 
 .postPreview :global(.posted) {
