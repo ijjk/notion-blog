@@ -10,7 +10,10 @@ function applyTags(tags = [], children, noPTag = false, key) {
 
     if (noPTag && tagName === 'p') tagName = React.Fragment
     if (tagName === 'c') tagName = 'code'
-
+    if (tagName === '_') {
+      tagName = 'span'
+      props.className = 'underline'
+    }
     if (tagName === 'a') {
       props.href = tag[1]
     }

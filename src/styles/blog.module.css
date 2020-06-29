@@ -115,6 +115,10 @@
   margin-left: 8px;
 }
 
+.post :global(.underline) {
+  text-decoration: underline;
+}
+
 .postPreview :global(.posted) {
   margin-bottom: 0.5em;
 }
