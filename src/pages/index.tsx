@@ -24,6 +24,10 @@ const regions = [
     regions: ['東京', '神奈川', '埼玉', '茨城'],
   },
   {
+    name: '中部',
+    regions: ['愛知'],
+  },
+  {
     name: '関西',
     regions: ['大阪', '兵庫'],
   },

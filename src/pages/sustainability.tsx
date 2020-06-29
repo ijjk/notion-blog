@@ -270,41 +270,41 @@ export default () => (
             <div className={style.cooperation_logo}>
               <img
                 src="/assets/sustainability_cooperation01.png"
-                alt="一般社団法人グッドラック"
+                alt="一般社団法人グッドラックさま"
                 className={style.cooperation_img}
               />
             </div>
-            一般社団法人グッドラック
+            一般社団法人グッドラックさま
           </a>
           <div className={style.flex_inner} style={{ textAlign: 'center' }}>
             <div className={style.cooperation_logo}>
               <img
                 src="/assets/sustainability_cooperation02.png"
-                alt="株式会社KAEN"
+                alt="株式会社KAENさま"
                 className={style.cooperation_img}
               />
             </div>
-            株式会社KAEN
+            株式会社KAENさま
           </div>
           <div className={style.flex_inner} style={{ textAlign: 'center' }}>
             <div className={style.cooperation_logo}>
               <img
                 src="/assets/appicon_white.png"
-                alt="yuzoshop"
+                alt="yuzoshopさま"
                 className={style.cooperation_img}
               />
             </div>
-            yuzoshop
+            yuzoshopさま
           </div>
           <div className={style.flex_inner} style={{ textAlign: 'center' }}>
             <div className={style.cooperation_logo}>
               <img
                 src="/assets/appicon_white.png"
-                alt="大塚　雄三"
+                alt="大塚　雄三さま"
                 className={style.cooperation_img}
               />
             </div>
-            大塚　雄三
+            大塚　雄三さま
           </div>
         </div>
 
@@ -313,21 +313,21 @@ export default () => (
             <div className={style.cooperation_logo}>
               <img
                 src="/assets/appicon_white.png"
-                alt="竹松友子"
+                alt="竹松友子さま"
                 className={style.cooperation_img}
               />
             </div>
-            竹松友子
+            竹松友子さま
           </div>
           <div className={style.flex_inner} style={{ textAlign: 'center' }}>
             <div className={style.cooperation_logo}>
               <img
                 src="/assets/appicon_white.png"
-                alt="ラジャアンパット合同会社"
+                alt="ラジャアンパット合同会社さま"
                 className={style.cooperation_img}
               />
             </div>
-            ラジャアンパット合同会社
+            ラジャアンパット合同会社さま
           </div>
           <a
             href="https://entertain.jp/"
@@ -339,11 +339,11 @@ export default () => (
             <div className={style.cooperation_logo}>
               <img
                 src="/assets/sustainability_cooperation03.png"
-                alt="株式会社エンターテイン"
+                alt="株式会社エンターテインさま"
                 className={style.cooperation_img}
               />
             </div>
-            株式会社エンターテイン
+            株式会社エンターテインさま
           </a>
           <a
             href="https://www.jlg.co.jp/"
@@ -355,11 +355,11 @@ export default () => (
             <div className={style.cooperation_logo}>
               <img
                 src="/assets/sustainability_cooperation04.png"
-                alt="株式会社　ジェイトップ"
+                alt="株式会社　ジェイトップさま"
                 className={style.cooperation_img}
               />
             </div>
-            株式会社　ジェイトップ
+            株式会社　ジェイトップさま
           </a>
         </div>
 
@@ -368,21 +368,21 @@ export default () => (
             <div className={style.cooperation_logo}>
               <img
                 src="/assets/appicon_white.png"
-                alt="鯵坂克哉"
+                alt="鯵坂克哉さま"
                 className={style.cooperation_img}
               />
             </div>
-            鯵坂克哉
+            鯵坂克哉さま
           </div>
           <div className={style.flex_inner} style={{ textAlign: 'center' }}>
             <div className={style.cooperation_logo}>
               <img
                 src="/assets/appicon_white.png"
-                alt="株式会社ミニマリスト"
+                alt="株式会社ミニマリストさま"
                 className={style.cooperation_img}
               />
             </div>
-            株式会社ミニマリスト
+            株式会社ミニマリストさま
           </div>
           <a
             href="https://tsfcm.jp"
@@ -398,9 +398,9 @@ export default () => (
                 className={style.cooperation_img}
               />
             </div>
-            Tech School for Change Makers「TSfCM」
+            Tech School for Change Makers「TSfCM」さま
             <br />
-            株式会社Fsharp
+            株式会社Fsharpさま
           </a>
           <a
             href="https://twitter.com/SNACK_Candy_o"
@@ -412,11 +412,11 @@ export default () => (
             <div className={style.cooperation_logo}>
               <img
                 src="/assets/sustainability_cooperation06.png"
-                alt="スナックキャンディ御徒町店"
+                alt="スナックキャンディ御徒町店さま"
                 className={style.cooperation_img}
               />
             </div>
-            スナックキャンディ御徒町店
+            スナックキャンディ御徒町店さま
           </a>
         </div>
 
@@ -428,21 +428,21 @@ export default () => (
             <div className={style.cooperation_logo}>
               <img
                 src="/assets/appicon_white.png"
-                alt="正木商店"
+                alt="正木商店さま"
                 className={style.cooperation_img}
               />
             </div>
-            正木商店
+            正木商店さま
           </div>
           <div className={style.flex_inner} style={{ textAlign: 'center' }}>
             <div className={style.cooperation_logo}>
               <img
                 src="/assets/appicon_white.png"
-                alt="R65不動産"
+                alt="R65不動産さま"
                 className={style.cooperation_img}
               />
             </div>
-            R65不動産
+            R65不動産さま
           </div>
         </div>
       </div>
