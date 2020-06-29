@@ -191,7 +191,7 @@ export default () => (
       </div>
     </section> */}
 
-    <section className="section_center separate gray">
+    <section className="section_center separate gray" id="howtouse">
       <div className="container">
         <h2 className="center">アイカサのつかいかた!</h2>
 
