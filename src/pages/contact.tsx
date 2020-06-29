@@ -44,7 +44,7 @@ export default () => (
 
       <div className={contactStyles.name}>
         JJ Kasper - Next.js Engineer @{' '}
-        <ExtLink href="https://zeit.co">ZEIT</ExtLink>
+        <ExtLink href="https://vercel.com">Vercel</ExtLink>
       </div>
 
       <div className={contactStyles.links}>
