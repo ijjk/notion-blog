@@ -44,10 +44,8 @@
       margin-right: auto;
     }
     &_store {
-      display: grid;
-      grid-template-rows: 65px 1fr;
-      grid-gap: 15px;
       &_img {
+        margin-bottom: 48px;
         div {
           display: flex;
           justify-content: center;
