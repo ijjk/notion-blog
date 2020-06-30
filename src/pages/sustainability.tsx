@@ -267,7 +267,9 @@ export default () => (
             className={style.flex_inner}
             style={{ textAlign: 'center' }}
           >
-            <div className={style.cooperation_logo}>
+            <div
+              className={`${style.cooperation_logo} ${style.is_registered_logo}`}
+            >
               <img
                 src="/assets/sustainability_cooperation01.png"
                 alt="一般社団法人グッドラックさま"
@@ -276,8 +278,16 @@ export default () => (
             </div>
             一般社団法人グッドラックさま
           </a>
-          <div className={style.flex_inner} style={{ textAlign: 'center' }}>
-            <div className={style.cooperation_logo}>
+          <a
+            href="https://note.com/yk1210/n/ncdb260697338"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={style.flex_inner}
+            style={{ textAlign: 'center' }}
+          >
+            <div
+              className={`${style.cooperation_logo} ${style.is_registered_logo}`}
+            >
               <img
                 src="/assets/sustainability_cooperation02.png"
                 alt="株式会社KAENさま"
@@ -285,7 +295,7 @@ export default () => (
               />
             </div>
             株式会社KAENさま
-          </div>
+          </a>
           <div className={style.flex_inner} style={{ textAlign: 'center' }}>
             <div className={style.cooperation_logo}>
               <img
@@ -336,7 +346,9 @@ export default () => (
             className={style.flex_inner}
             style={{ textAlign: 'center' }}
           >
-            <div className={style.cooperation_logo}>
+            <div
+              className={`${style.cooperation_logo} ${style.is_registered_logo}`}
+            >
               <img
                 src="/assets/sustainability_cooperation03.png"
                 alt="株式会社エンターテインさま"
@@ -352,7 +364,9 @@ export default () => (
             className={style.flex_inner}
             style={{ textAlign: 'center' }}
           >
-            <div className={style.cooperation_logo}>
+            <div
+              className={`${style.cooperation_logo} ${style.is_registered_logo}`}
+            >
               <img
                 src="/assets/sustainability_cooperation04.png"
                 alt="株式会社　ジェイトップさま"
@@ -391,7 +405,9 @@ export default () => (
             className={style.flex_inner}
             style={{ textAlign: 'center' }}
           >
-            <div className={style.cooperation_logo}>
+            <div
+              className={`${style.cooperation_logo} ${style.is_registered_logo}`}
+            >
               <img
                 src="/assets/sustainability_cooperation05.png"
                 alt="Tech School for Change Makers「TSfCM」"
@@ -409,7 +425,9 @@ export default () => (
             className={style.flex_inner}
             style={{ textAlign: 'center' }}
           >
-            <div className={style.cooperation_logo}>
+            <div
+              className={`${style.cooperation_logo} ${style.is_registered_logo}`}
+            >
               <img
                 src="/assets/sustainability_cooperation06.png"
                 alt="スナックキャンディ御徒町店さま"
@@ -448,6 +466,18 @@ export default () => (
       </div>
     </section>
 
-    <Message />
+    <Message title="身近なライフスタイルから始めよう" is_displayed_btn={true}>
+      <p>
+        地球のために、未来のために何かできないか？
+        <br />
+        そう考えている時は、
+        <br />
+        まず身近な傘から始めてみませんか？
+        <br />
+        アイカサは、私たちの豊かな生活を
+        <br />
+        守ることに貢献します。
+      </p>
+    </Message>
   </>
 )

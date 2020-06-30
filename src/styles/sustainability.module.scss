@@ -20,6 +20,9 @@
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 16px;
+  @media screen and (max-width: 798px) {
+    font-size: 22px;
+  }
   &_navy {
     color: #32497b;
   }
@@ -30,11 +33,13 @@
 
 .initiative_text {
   margin-left: 66px;
+  @media screen and (max-width: 798px) {
+    margin-left: 54px;
+  }
 }
 
 .cooperation_wrapper {
   min-height: 200px;
-  margin: auto;
   padding: 4px 0;
   margin-bottom: 20px;
   text-align: center;
@@ -67,6 +72,10 @@
   background-color: rgba($color: #03abd8, $alpha: 0.5);
   border-radius: 10px;
   margin: 0 12px 12px 12px;
+  &.is_registered_logo {
+    background-color: #fff;
+    border: 2px solid #03abd8;
+  }
   @media screen and (max-width: 798px) {
     margin: 0 0 12px 0;
   }
