@@ -23,6 +23,7 @@
       }
     }
     &_content {
+      padding-right: 84px;
       @media screen and (max-width: 1024px) {
         padding-left: 15px;
         padding-right: 15px;
@@ -52,7 +53,7 @@
             border-radius: 20px;
             background-color: white;
             padding: 4px 15px;
-            margin-right: 5px;
+            margin: 4px 4px;
           }
         }
       }
