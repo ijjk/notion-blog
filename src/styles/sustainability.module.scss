@@ -1,0 +1,88 @@
+.flex_wrapper {
+  display: flex;
+  align-content: center;
+  @media screen and (max-width: 798px) {
+    display: block;
+  }
+}
+
+.flex_inner {
+  width: 50%;
+  @media screen and (max-width: 798px) {
+    width: 100%;
+    &:first-child {
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  @media screen and (max-width: 798px) {
+    font-size: 22px;
+  }
+  &_navy {
+    color: #32497b;
+  }
+  &_blue {
+    color: #03abd8;
+  }
+}
+
+.initiative_text {
+  margin-left: 66px;
+  @media screen and (max-width: 798px) {
+    margin-left: 54px;
+  }
+}
+
+.cooperation_wrapper {
+  min-height: 200px;
+  padding: 4px 0;
+  margin-bottom: 20px;
+  text-align: center;
+  & > a {
+    color: #000;
+    transition: 0.25s all;
+    display: block;
+    &:hover {
+      opacity: 0.7;
+      text-decoration: underline;
+    }
+    @media screen and (max-width: 798px) {
+      margin-bottom: 24px;
+    }
+  }
+  & > div {
+    @media screen and (max-width: 798px) {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+}
+
+.cooperation_logo {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: rgba($color: #03abd8, $alpha: 0.5);
+  border-radius: 10px;
+  margin: 0 12px 12px 12px;
+  &.is_registered_logo {
+    background-color: #fff;
+    border: 2px solid #03abd8;
+  }
+  @media screen and (max-width: 798px) {
+    margin: 0 0 12px 0;
+  }
+}
+
+.cooperation_img {
+  max-width: 96px;
+  height: auto;
+  align-self: center;
+}

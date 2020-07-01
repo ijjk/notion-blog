@@ -1,11 +1,4 @@
 .download {
-  display: grid;
-  gap: 100px;
-  grid-template-columns: 1fr 1fr;
-  @media screen and (max-width: 769px) {
-    grid-template-columns: 1fr;
-    gap: 30px;
-  }
   h3,
   p.app {
     text-align: left;
@@ -20,6 +13,18 @@
   p.app {
     font-weight: normal;
     font-size: 1.3rem;
+  }
+  p.download_message {
+    width: 260px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    color: #000;
+    background-color: #fff;
+    border-radius: 60px;
+    display: block;
+    padding: 0 24px;
+    margin: 0 auto 24px auto;
   }
   &_link {
     max-width: 535px;
@@ -39,12 +44,11 @@
       margin-right: auto;
     }
     &_store {
-      display: grid;
-      grid-template-rows: 65px 1fr;
-      grid-gap: 15px;
       &_img {
+        margin-bottom: 48px;
         div {
           display: flex;
+          justify-content: center;
           @media screen and (max-width: 769px) {
             justify-content: center;
           }

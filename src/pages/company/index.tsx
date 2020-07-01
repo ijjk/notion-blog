@@ -38,6 +38,7 @@ export default () => (
       description
       imgSrc="/assets/ikasa_background.png"
       category
+      grey={false}
     />
     <div className={style.page} style={{ paddingBottom: 0 }}>
       <h2>アイカサの世界観</h2>
@@ -68,7 +69,20 @@ export default () => (
         より安くより便利に届けて移動を快適にしたい。
       </p>
     </div>
-    <Message />
+    <Message title="100年続く雨の日のインフラを" is_displayed_btn={false}>
+      <p>
+        アイカサは「傘」から現代の社会を変え、
+        <br />
+        未来に生まれてくる子供たちが快適になる社会や、地球環境を作っていきます。
+        <br />
+        <br />
+        数年後には、 『昔の人たちって傘を買ってたんだね』
+        <br />
+        という会話が生まれるくらい、
+        <br />
+        傘をシェアするという概念が当たり前であるという社会を創り出します。
+      </p>
+    </Message>
     <div className={style.page}>
       <div style={{ textAlign: 'center' }}>
         <h2>Mission</h2>
@@ -95,10 +109,6 @@ export default () => (
               <br />
               東京都渋谷区代々木３丁目１番１０号代々木中央ビル４０２
             </td>
-          </tr>
-          <tr>
-            <th>電話番号</th>
-            <td>050-3188-7642</td>
           </tr>
           <tr>
             <th>代表取締役</th>

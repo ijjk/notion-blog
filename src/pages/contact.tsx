@@ -39,6 +39,7 @@ export default () => (
       description
       imgSrc="/assets/ikasa_background.png"
       category
+      grey={false}
     />
     <div className={style.page}>
       <p>
@@ -52,9 +53,9 @@ export default () => (
       </p>
 
       <hr />
-      <h3>ご利用者様お問い合わせ</h3>
+      <h3>ユーザー様お問い合わせ</h3>
       <p>
-        お問い合わせにつきましては、アイカサお問い合わせLINE窓口からご連絡ください！
+        アイカサをご利用のユーザー様は、お問い合わせLINE窓口からご連絡ください。
       </p>
       <div
         style={{
@@ -71,9 +72,9 @@ export default () => (
 
       <hr />
 
-      <h3>法人様お問い合わせ</h3>
+      <h3>法人のお客様お問い合わせ</h3>
       <p>
-        アイカサに関するお問い合わせは、下記のメールアドレスよりお願いいたします。
+        アイカサに関する取材希望・設置希望などのお問い合わせは、下記のメールアドレスよりお願いいたします。
       </p>
       <div
         style={{

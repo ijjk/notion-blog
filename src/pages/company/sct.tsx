@@ -31,6 +31,7 @@ export default () => (
       description
       imgSrc="/assets/ikasa_background.png"
       category
+      grey={false}
     />
     <div className={style.page}>
       <table className="table">

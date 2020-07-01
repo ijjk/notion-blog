@@ -24,6 +24,10 @@ const regions = [
     regions: ['東京', '神奈川', '埼玉', '茨城'],
   },
   {
+    name: '中部',
+    regions: ['愛知'],
+  },
+  {
     name: '関西',
     regions: ['大阪', '兵庫'],
   },
@@ -149,8 +153,15 @@ export default () => (
               </div>
             )
           })}
-          <p style={{ color: 'gray', fontSize: '80%' }}>
-            現在福岡・水戸エリアにつきましては、首都圏・岡山エリアとの互換性がありません。
+          <p
+            style={{
+              color: 'gray',
+              fontSize: '80%',
+            }}
+          >
+            ※現在「福岡・水戸・岡山エリア（ダイヤル式カサ）」と「首都圏・関西・中部エリア（通信式カサ）」ではエリアをまたいでカサを返却することはできません。
+            <br />
+            レンタルは全エリア、アイカサの公式アプリよりレンタル可能です。
           </p>
         </div>
       </div>
@@ -187,7 +198,7 @@ export default () => (
       </div>
     </section> */}
 
-    <section className="section_center separate gray">
+    <section className="section_center separate gray" id="howtouse">
       <div className="container">
         <h2 className="center">アイカサのつかいかた!</h2>
 
