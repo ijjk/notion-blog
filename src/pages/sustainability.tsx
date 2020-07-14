@@ -63,27 +63,11 @@ export default () => (
             <p>
               私たち日本人の一人あたりの傘所有本数、ビニール傘消費本数は共に世界で1位だと言われています。
               <br />
-              毎年日本で消費される傘は年間約1.2億本～1.3億本。そのうちの6割にあたる約8,000万本(※)がビニール傘で
+              毎年日本で消費される傘は年間約1.2億本～1.3億本。そのうちの6割にあたる約8,000万本がビニール傘で
               <br />
               その多くは半年以内に地球に埋め捨てられ続けています。
               <br />
-              地球環境のためにも、毎年約8000万本の消費を続けていいとは到底思えません。
-            </p>
-            <p
-              style={{
-                marginTop: '16px',
-                fontSize: '14px',
-              }}
-            >
-              (※)参照元：ビニール傘.com (
-              <a
-                href="http://xn--idkp7e1c706t.com/concept.html"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                http://xn--idkp7e1c706t.com/concept.html
-              </a>
-              )
+              地球環境のためにも、一回しか使わないような使い捨て傘をなくしたいという想いで活動をしております。
             </p>
           </div>
         </div>
@@ -440,7 +424,7 @@ export default () => (
 
         <div
           className={`${style.flex_wrapper} ${style.cooperation_wrapper}`}
-          style={{ maxWidth: '500px' }}
+          style={{ maxWidth: '750px' }}
         >
           <div className={style.flex_inner} style={{ textAlign: 'center' }}>
             <div className={style.cooperation_logo}>
@@ -461,6 +445,18 @@ export default () => (
               />
             </div>
             R65不動産さま
+          </div>
+          <div className={style.flex_inner} style={{ textAlign: 'center' }}>
+            <div
+              className={`${style.cooperation_logo} ${style.is_registered_logo}`}
+            >
+              <img
+                src="/assets/sustainability_cooperation07.png"
+                alt="ラジャアンパット株式会社さま"
+                className={style.cooperation_img}
+              />
+            </div>
+            ラジャアンパット株式会社さま
           </div>
         </div>
       </div>
