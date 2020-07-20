@@ -17,6 +17,11 @@ function applyTags(tags = [], children, noPTag = false, key) {
     if (tagName === 'a') {
       props.href = tag[1]
     }
+    if (tagName === 'e') {
+      tagName = components.Equation
+      props.displayMode = false
+      child = tag[1]
+    }
 
     child = React.createElement(components[tagName] || tagName, props, child)
   }

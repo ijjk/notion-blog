@@ -396,6 +396,17 @@ const RenderPost = ({ post, redirect, preview }) => {
               }
               break
             }
+            case 'equation': {
+              if (properties && properties.title) {
+                const content = properties.title[0][0]
+                toRender.push(
+                  <components.Equation key={id} displayMode={true}>
+                    {content}
+                  </components.Equation>
+                )
+              }
+              break
+            }
             default:
               if (
                 process.env.NODE_ENV !== 'production' &&
