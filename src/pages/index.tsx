@@ -44,6 +44,12 @@ const companies = [
     minWidth: '60px',
   },
   {
+    filepath: '/assets/logo_odakyu.jpg',
+    alt: '小田急電鉄',
+    width: '50%',
+    minWidth: '90px',
+  },
+  {
     filepath: '/assets/logo_seibu.svg',
     alt: '西武鉄道',
     width: '50%',
