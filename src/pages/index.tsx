@@ -174,7 +174,7 @@ export default () => (
     </section>
     <iframe
       id="map"
-      src="https://liff.i-kasa.com?initScale=wide"
+      src="https://embedded-map.d3dkjj2c0wc191.amplifyapp.com?initScale=wide"
       style={{ width: '100%', height: '500px' }}
     ></iframe>
     {/* <section
