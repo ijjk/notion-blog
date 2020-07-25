@@ -12,4 +12,5 @@ export default {
 
   Code: dynamic(() => import('./code')),
   Counter: dynamic(() => import('./counter')),
+  Equation: dynamic(() => import('./equation')),
 }
