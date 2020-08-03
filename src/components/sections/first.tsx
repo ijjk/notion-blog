@@ -41,10 +41,10 @@ export default () => {
             </div>
             <div className={`${style.note}`} style={{ marginTop: '10px' }}>
               <div className={`${style.note_message}`}>
-                7月31日まで0円キャンペーン実施中!
+                新型コロナウイルス対策を行っております。
               </div>
               <div className={`${style.note_button}`}>
-                <a href="/news/0yencampaign">今すぐチェック!</a>
+                <a href="/news/staysafe">詳しく見る</a>
               </div>
             </div>
           </div>
