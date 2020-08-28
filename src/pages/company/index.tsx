@@ -1,38 +1,16 @@
-import Head from 'next/head'
 import Title from '../../components/primary/title'
 import style from '../../styles/page.module.scss'
 
 import Message from '../../components/sections/message'
+
+import DefaultHead from '../../components/heads/default'
+
 export default () => (
   <>
-    <Head>
-      <title>会社情報 | アイカサ</title>
-      <meta property="og:title" content="会社情報" />
-      <meta property="og:image" content="https://www.i-kasa.com/ogp.jpg" />
-      <meta
-        property="description"
-        content="アイカサの運営会社、株式会社Nature Innovation Groupに関する情報"
-      />
-      <meta
-        property="og:description"
-        content="アイカサの運営会社、株式会社Nature Innovation Groupに関する情報"
-      />
-      <meta property="og:url" content="https://www.i-kasa.com" />
-      <meta property="og:type" content="website" />
-      <meta
-        data-hid="twitter:card"
-        name="twitter:card"
-        content="summary_large_image"
-      />
-      <meta data-hid="twitter:site" name="twitter:site" content="@ikasa1111" />
-      <meta
-        data-hid="og:site_name"
-        property="og:site_name"
-        content="アイカサ | 傘のシェアリングサービス"
-      />
-      <meta data-hid="og:locale" property="og:locale" content="ja_JP" />
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    </Head>
+    <DefaultHead
+      titlePre="会社情報"
+      description="アイカサの運営会社、株式会社Nature Innovation Groupに関する情報"
+    ></DefaultHead>
     <Title
       title="会社情報"
       description

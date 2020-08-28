@@ -1,5 +1,5 @@
-import DefaultHead from '../components/heads/default'
-import { downloadUrl } from '../constants/urls'
+import DefaultHead from '../../components/heads/default'
+import { downloadUrl } from '../../constants/urls'
 
 export default () => {
   if (process.browser) {

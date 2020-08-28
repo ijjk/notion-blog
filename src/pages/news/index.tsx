@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Header from '../../components/header'
 
 import blogStyles from '../../styles/blog.module.scss'
 import sharedStyles from '../../styles/shared.module.css'
+
+import DefaultHead from '../../components/heads/default'
 
 import {
   getBlogLink,
@@ -53,38 +54,10 @@ export async function getStaticProps({ preview }) {
 export default ({ posts = [], preview }) => {
   return (
     <>
-      <Head>
-        <title>ニュース | アイカサ</title>
-        <meta property="og:title" content="ニュース" />
-        <meta property="og:image" content="https://www.i-kasa.com/ogp.jpg" />
-        <meta
-          property="description"
-          content="アイカサの最新情報などをお伝えします"
-        />
-        <meta
-          property="og:description"
-          content="アイカサの最新情報などをお伝えします"
-        />
-        <meta property="og:url" content="https://www.i-kasa.com" />
-        <meta property="og:type" content="website" />
-        <meta
-          data-hid="twitter:card"
-          name="twitter:card"
-          content="summary_large_image"
-        />
-        <meta
-          data-hid="twitter:site"
-          name="twitter:site"
-          content="@ikasa1111"
-        />
-        <meta
-          data-hid="og:site_name"
-          property="og:site_name"
-          content="アイカサ | 傘のシェアリングサービス"
-        />
-        <meta data-hid="og:locale" property="og:locale" content="ja_JP" />
-        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-      </Head>
+      <DefaultHead
+        titlePre="ニュース"
+        description="アイカサの最新情報などをお伝えします"
+      ></DefaultHead>
       <Title
         title="ニュース"
         description

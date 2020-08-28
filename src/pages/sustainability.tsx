@@ -1,40 +1,15 @@
-import Head from 'next/head'
-
 import Title from '../components/primary/title'
 import style from '../styles/sustainability.module.scss'
 
 import Message from '../components/sections/message'
+import DefaultHead from '../components/heads/default'
 
 export default () => (
   <>
-    <Head>
-      <title>サスティナビリティ | アイカサ</title>
-      <meta property="og:title" content="サスティナビリティ" />
-      <meta property="og:image" content="https://www.i-kasa.com/ogp.jpg" />
-      <meta
-        property="description"
-        content="アイカサの環境保全に対する考えかた"
-      />
-      <meta
-        property="og:description"
-        content="アイカサの環境保全に対する考えかた"
-      />
-      <meta property="og:url" content="https://www.i-kasa.com" />
-      <meta property="og:type" content="website" />
-      <meta
-        data-hid="twitter:card"
-        name="twitter:card"
-        content="summary_large_image"
-      />
-      <meta data-hid="twitter:site" name="twitter:site" content="@ikasa1111" />
-      <meta
-        data-hid="og:site_name"
-        property="og:site_name"
-        content="アイカサ | 傘のシェアリングサービス"
-      />
-      <meta data-hid="og:locale" property="og:locale" content="ja_JP" />
-      <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-    </Head>
+    <DefaultHead
+      titlePre="サスティナビリティ"
+      description="アイカサの環境保全に対する考えかた"
+    ></DefaultHead>
     <Title
       title="サスティナビリティ"
       description="アイカサの環境保全に対する考えかた"
