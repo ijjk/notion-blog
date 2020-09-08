@@ -65,6 +65,8 @@ export default () => (
               クレジットカード支払い　VISA/MASTER/AMEX/JCB
               <br />
               LINE Pay支払い
+              <br />
+              d払い
             </td>
           </tr>
           <tr>
@@ -72,7 +74,8 @@ export default () => (
             <td>
               利用料金は月末に一ヶ月分をまとめて、登録して頂いた
               <br />
-              クレジットカードまたはLINE Payに請求させて頂きます。
+              クレジットカード ・ LINE Pay ・ d払い
+              のいずれかにて、請求させて頂きます。
             </td>
           </tr>
           <tr>
