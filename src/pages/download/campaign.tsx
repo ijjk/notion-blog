@@ -9,7 +9,7 @@ export default () => {
 
   return (
     <DefaultHead
-      titlePre="リダイレクト"
+      titlePre="アイカサ"
       description="ダウンロードページへリダイレクト"
     ></DefaultHead>
   )
