@@ -76,3 +76,18 @@ To run the project locally you need to follow steps 1 and 2 of [deploying](#depl
 2. Expose `NOTION_TOKEN` and `BLOG_INDEX_ID` in your environment `export NOTION_TOKEN='<your-token>'`and `export BLOG_INDEX_ID='<your-blog-index-id>'` or `set NOTION_TOKEN="<your-token>" && set BLOG_INDEX_ID="<your-blog-index-id>"` for Windows
 3. Run next in development mode `yarn dev`
 4. Build and run in production mode `yarn build && yarn start`
+
+# ホームページの news が表示されてなかった時の対象方法
+
+おそらく vercel の環境変数が原因と思われる
+急に vercel の環境変数が消えたりする
+
+1. NOTION_TOKEN, BLOG_INDEX_ID を取得。[参照](https://blog.35d.jp/2020-05-23-notion-blog-1)
+2. 以下コマンドで vercel 環境変数を設定
+
+```sh
+> vercel secrets add blog-index-id-ikasa xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+> vercel secrets add notion-token-ikasa xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+3. 最新のコミットを redeploy する（[ダッシュボード](https://vercel.com/ikasa/homepage)で行う）
