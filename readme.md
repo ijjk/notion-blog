@@ -90,4 +90,4 @@ To run the project locally you need to follow steps 1 and 2 of [deploying](#depl
 > vercel secrets add notion-token-ikasa xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-3. 最新のコミットを redeploy する（[ダッシュボード](https://vercel.com/ikasa/homepage)で行う）
+3. 最新のコミットを redeploy する（[ダッシュボード](https://vercel.com/ikasa/homepage)で行う。`./redeploy.png`参照）
