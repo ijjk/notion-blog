@@ -1,1 +1,1 @@
-export const downloadUrl: string = 'https://mobile.i-kasa.com/download'
+export const downloadUrl: string = 'https://ikasa.onelink.me/IdAp/hp'

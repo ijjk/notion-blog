@@ -23,7 +23,7 @@ export default () => {
               </div>
               <div className={`${style.section_first_download_icon}`}>
                 <a
-                  href="https://ikasa.onelink.me/IdAp/hp" // ここにAppStoreリンクを入れる
+                  href="https://mobile.i-kasa.com/download?no=3" // ここにAppStoreリンクを入れる
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mr-2"
@@ -31,7 +31,7 @@ export default () => {
                   <img src="/assets/appstore.svg" height="65px" />
                 </a>
                 <a
-                  href="https://ikasa.onelink.me/IdAp/hp" // ここにGooglePlayリンクを入れる
+                  href="https://mobile.i-kasa.com/download?no=3" // ここにGooglePlayリンクを入れる
                   target="_blank"
                   rel="noopener noreferrer"
                 >
