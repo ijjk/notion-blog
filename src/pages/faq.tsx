@@ -151,7 +151,8 @@ export default () => (
 
         <FaqContent title="支払い方法は？">
           現在、クレジットカード（Visa / MasterCard / JCB / Diners Club Card /
-          American Express）、 LINE Payに対応しています。
+          American Express）、 LINE Pay、d払い、auかんたん決済
+          に対応しています。
           <br />
           その他の決済方法については、順次対応中です。
         </FaqContent>
