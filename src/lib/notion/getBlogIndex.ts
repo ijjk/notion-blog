@@ -82,13 +82,12 @@ export default async function getBlogIndex(
 
     if (!include_future_posts) {
       const nowDate = Date.now()
-      postsTable = Object.keys(postsTable)
-        .map(slug => {
-          const post = postsTable[slug]
-          if (post.Date > nowDate) return null
-          return post
-        })
-        .filter(Boolean)
+
+      Object.keys(postsTable).forEach(slug => {
+        if (postsTable[slug].Date > nowDate) {
+          delete postsTable[slug]
+        }
+      })
     }
 
     if (useCache) {
