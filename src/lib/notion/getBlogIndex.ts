@@ -6,7 +6,10 @@ import { getPostPreview } from './getPostPreview'
 import { readFile, writeFile } from '../fs-helpers'
 import { BLOG_INDEX_ID, BLOG_INDEX_CACHE } from './server-constants'
 
-export default async function getBlogIndex(previews = true) {
+export default async function getBlogIndex(
+  previews = true,
+  include_future_posts = false
+) {
   let postsTable: any = null
   const useCache = process.env.USE_CACHE === 'true'
   const cacheFile = `${BLOG_INDEX_CACHE}${previews ? '_previews' : ''}`
@@ -75,6 +78,17 @@ export default async function getBlogIndex(previews = true) {
             sema.release()
           })
       )
+    }
+
+    if (!include_future_posts) {
+      const nowDate = Date.now()
+      postsTable = Object.keys(postsTable)
+        .map(slug => {
+          const post = postsTable[slug]
+          if (post.Date > nowDate) return null
+          return post
+        })
+        .filter(Boolean)
     }
 
     if (useCache) {

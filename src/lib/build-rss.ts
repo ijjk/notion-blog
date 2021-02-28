@@ -71,7 +71,7 @@ function createRSS(blogPosts = []) {
 }
 
 async function main() {
-  const postsTable = await getBlogIndex(true)
+  const postsTable = await getBlogIndex(true, false)
   const neededAuthors = new Set<string>()
 
   const blogPosts = Object.keys(postsTable)
