@@ -42,7 +42,7 @@ const features = [
   },
 ]
 
-export default () => (
+const Features = () => (
   <div className="features">
     {features.map(({ text, icon: Icon }) => (
       <div className="feature" key={text}>
@@ -52,3 +52,5 @@ export default () => (
     ))}
   </div>
 )
+
+export default Features

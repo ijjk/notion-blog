@@ -13,7 +13,7 @@ const navItems: { label: string; page?: string; link?: string }[] = [
 
 const ogImageUrl = 'https://notion-blog.now.sh/og-image.png'
 
-export default ({ titlePre = '' }) => {
+const Header = ({ titlePre = '' }) => {
   const { pathname } = useRouter()
 
   return (
@@ -48,3 +48,5 @@ export default ({ titlePre = '' }) => {
     </header>
   )
 }
+
+export default Header

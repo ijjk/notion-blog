@@ -1,4 +1,4 @@
-export default props => (
+const Lighthouse = (props) => (
   <svg
     viewBox="0 0 24 24"
     width="24"
@@ -15,3 +15,5 @@ export default props => (
     <path d="M22 4L12 14.01l-3-3" />
   </svg>
 )
+
+export default Lighthouse

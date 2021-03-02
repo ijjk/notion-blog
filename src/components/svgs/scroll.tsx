@@ -1,4 +1,4 @@
-export default props => (
+const Scroll = (props) => (
   <svg
     viewBox="0 0 24 24"
     width="24"
@@ -18,3 +18,5 @@ export default props => (
     <path d="M10 9H8" />
   </svg>
 )
+
+export default Scroll
