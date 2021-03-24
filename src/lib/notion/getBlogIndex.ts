@@ -37,17 +37,8 @@ export default async function getBlogIndex(previews = true) {
       postsTable = await getTableData(tableBlock, true)
     } catch (err) {
       console.warn(
-        `Failed to load Notion posts, attempting to auto create table`
+        `Failed to load Notion posts, have you run the create-table script?`
       )
-      try {
-        await createTable()
-        console.log(`Successfully created table in Notion`)
-      } catch (err) {
-        console.error(
-          `Auto creating table failed, make sure you created a blank page and site the id with BLOG_INDEX_ID in your environment`,
-          err
-        )
-      }
       return {}
     }
 
@@ -66,7 +57,7 @@ export default async function getBlogIndex(previews = true) {
             const timeB = postB.Date
             return Math.sign(timeB - timeA)
           })
-          .map(async postKey => {
+          .map(async (postKey) => {
             await sema.acquire()
             const post = postsTable[postKey]
             post.preview = post.id
