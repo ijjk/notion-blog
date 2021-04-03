@@ -1,4 +1,3 @@
-const ExtLink = (props) => (
+export default props => (
   <a {...props} rel="noopener" target={props.target || '_blank'} />
 )
-export default ExtLink

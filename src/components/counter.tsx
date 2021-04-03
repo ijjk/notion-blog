@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Counter = ({ initialValue }) => {
+export default ({ initialValue }) => {
   const [clicks, setClicks] = useState(initialValue)
 
   return (
@@ -11,5 +11,3 @@ const Counter = ({ initialValue }) => {
     </div>
   )
 }
-
-export default Counter

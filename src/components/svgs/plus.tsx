@@ -1,4 +1,4 @@
-const Plus = (props) => (
+export default props => (
   <svg
     viewBox="0 0 24 24"
     width="24"
@@ -15,5 +15,3 @@ const Plus = (props) => (
     <path d="M17 6h6v6" />
   </svg>
 )
-
-export default Plus
