@@ -1,4 +1,4 @@
-export default props => (
+const Wifi = (props) => (
   <svg
     viewBox="0 0 24 24"
     stroke="currentColor"
@@ -15,3 +15,5 @@ export default props => (
     <path d="M12 20h.01" />
   </svg>
 )
+
+export default Wifi

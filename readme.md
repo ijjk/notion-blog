@@ -4,17 +4,17 @@ This is an example Next.js project that shows Next.js' upcoming SSG (static-site
 
 **Note**: This example uses the experimental SSG hooks only available in the Next.js canary branch! The APIs used within this example will change over time. Since it is using a private API and experimental features, use at your own risk as these things could change at any moment.
 
-**Live Example hosted on Vercel**: https://notion-blog.now.sh/
+**Live Example hosted on Vercel**: https://notion-blog.vercel.app/
 
 ## Getting Started
 
-To view the steps to setup Notion to work with this example view the post at https://notion-blog.now.sh/blog/my-first-post or follow the steps below.
+To view the steps to setup Notion to work with this example view the post at https://notion-blog.vercel.app/blog/my-first-post or follow the steps below.
 
 ## Deploy Your Own
 
 Deploy your own Notion blog with Vercel.
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/git?s=https://github.com/ijjk/notion-blog/tree/master&env=NOTION_TOKEN,BLOG_INDEX_ID&envDescription=Required+env+values+for+deploying&envLink=https://github.com/ijjk/notion-blog%23getting-blog-index-and-token)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/ijjk/notion-blog/tree/main&project-name=notion-blog&repository-name=notion-blog)
 
 or
 

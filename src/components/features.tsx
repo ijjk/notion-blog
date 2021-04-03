@@ -9,24 +9,40 @@ import Scroll from './svgs/scroll'
 
 const features = [
   {
-    text: 'Too many papers on his desk',
+    text: 'Blazing fast',
+    icon: Lightning,
+  },
+  {
+    text: 'JAMstack based',
     icon: Jamstack,
   },
   {
-    text: 'Spends too much time online',
-    icon: Plus,
-  },
-  {
-    text: 'May be a living WiFi hotspot',
+    text: 'Always available',
     icon: Wifi,
   },
   {
-    text: 'Accidentally shocks himself too often',
-    icon: Lightning,
+    text: 'Customizable',
+    icon: Edit,
+  },
+  {
+    text: 'Incremental SSG',
+    icon: Plus,
+  },
+  {
+    text: 'MIT Licensed',
+    icon: Scroll,
+  },
+  {
+    text: 'Edit via Notion',
+    icon: Notion,
+  },
+  {
+    text: 'Great scores',
+    icon: Lighthouse,
   },
 ]
 
-export default () => (
+const Features = () => (
   <div className="features">
     {features.map(({ text, icon: Icon }) => (
       <div className="feature" key={text}>
@@ -36,3 +52,5 @@ export default () => (
     ))}
   </div>
 )
+
+export default Features

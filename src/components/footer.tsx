@@ -1,60 +1,25 @@
 import ExtLink from './ext-link'
 
-import sharedStyles from '../styles/shared.module.css'
-import contactStyles from '../styles/contact.module.css'
-
-import GitHub from '../components/svgs/github'
-import Twitter from '../components/svgs/twitter'
-import Envelope from '../components/svgs/envelope'
-import LinkedIn from '../components/svgs/linkedin'
-import KeyBase from '../components/svgs/keybase'
-
-const contacts = [
-  {
-    Comp: Twitter,
-    alt: 'twitter icon',
-    link: 'https://twitter.com/imdilick',
-  },
-  {
-    Comp: GitHub,
-    alt: 'github icon',
-    link: 'https://github.com/ianmdilick',
-  },
-  {
-    Comp: LinkedIn,
-    alt: 'linkedin icon',
-    link: 'https://www.linkedin.com/in/imdilick/',
-  },
-  {
-    Comp: KeyBase,
-    alt: 'keybase icon',
-    link: 'https://keybase.io/imdilick',
-  },
-  {
-    Comp: Envelope,
-    alt: 'envelope icon',
-    link: 'mailto:ian@iandilick.com?subject=Notion Blog',
-  },
-]
-
-export default () => (
-  <>
-    <footer>
-      <div className={sharedStyles.layout}>
-        <div className={contactStyles.links}>
-          {contacts.map(({ Comp, link, alt }) => {
-            return (
-              <ExtLink key={link} href={link} aria-label={alt}>
-                <Comp height={32} />
-              </ExtLink>
-            )
-          })}
-        </div>
-        Made out of ☕ by Ian Dilick, based on{' '}
-        <ExtLink href="https://github.com/ijjk/notion-blog">
-          notion-blog.
+export default function Footer() {
+  return (
+    <>
+      <footer>
+        <span>Deploy your own!</span>
+        <ExtLink href="https://vercel.com/new/git/external?repository-url=https://github.com/ijjk/notion-blog/tree/main&project-name=notion-blog&repository-name=notion-blog">
+          <img
+            src="https://vercel.com/button"
+            height={46}
+            width={132}
+            alt="deploy to Vercel button"
+          />
         </ExtLink>
-      </div>
-    </footer>
-  </>
-)
+        <span>
+          or{' '}
+          <ExtLink href="https://github.com/ijjk/notion-blog">
+            view source
+          </ExtLink>
+        </span>
+      </footer>
+    </>
+  )
+}

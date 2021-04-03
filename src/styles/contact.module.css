@@ -24,7 +24,7 @@
 }
 
 .avatar img {
-  border-radius: 50%; /*the magic*/
+  height: 120px;
 }
 
 .name {
