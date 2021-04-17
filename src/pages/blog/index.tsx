@@ -18,7 +18,7 @@ export async function getStaticProps({ preview }) {
 
   const authorsToGet: Set<string> = new Set()
   const posts: any[] = Object.keys(postsTable)
-    .map(slug => {
+    .map((slug) => {
       const post = postsTable[slug]
       // remove draft posts in production
       if (!preview && !postIsPublished(post)) {
@@ -34,8 +34,8 @@ export async function getStaticProps({ preview }) {
 
   const { users } = await getNotionUsers([...authorsToGet])
 
-  posts.map(post => {
-    post.Authors = post.Authors.map(id => users[id].full_name)
+  posts.map((post) => {
+    post.Authors = post.Authors.map((id) => users[id].full_name)
   })
 
   return {
@@ -43,11 +43,11 @@ export async function getStaticProps({ preview }) {
       preview: preview || false,
       posts,
     },
-    unstable_revalidate: 10,
+    revalidate: 10,
   }
 }
 
-export default ({ posts = [], preview }) => {
+const Index = ({ posts = [], preview }) => {
   return (
     <>
       <Header titlePre="Blog" />
@@ -63,24 +63,22 @@ export default ({ posts = [], preview }) => {
         </div>
       )}
       <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
-        <h1>Ian? Writing Things Down?</h1>
+        <h1>My Notion Blog</h1>
         {posts.length === 0 && (
-          <p className={blogStyles.noPosts}>
-            I'm writing things right now! Be patient!
-          </p>
+          <p className={blogStyles.noPosts}>There are no posts yet</p>
         )}
-        {posts.map(post => {
+        {posts.map((post) => {
           return (
             <div className={blogStyles.postPreview} key={post.Slug}>
               <h3>
-                <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
-                  <div className={blogStyles.titleContainer}>
-                    {!post.Published && (
-                      <span className={blogStyles.draftBadge}>Draft</span>
-                    )}
+                <span className={blogStyles.titleContainer}>
+                  {!post.Published && (
+                    <span className={blogStyles.draftBadge}>Draft</span>
+                  )}
+                  <Link href="/blog/[slug]" as={getBlogLink(post.Slug)}>
                     <a>{post.Page}</a>
-                  </div>
-                </Link>
+                  </Link>
+                </span>
               </h3>
               {post.Authors.length > 0 && (
                 <div className="authors">By: {post.Authors.join(' ')}</div>
@@ -102,3 +100,5 @@ export default ({ posts = [], preview }) => {
     </>
   )
 }
+
+export default Index
