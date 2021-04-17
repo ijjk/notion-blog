@@ -9,36 +9,20 @@ import Scroll from './svgs/scroll'
 
 const features = [
   {
-    text: 'Blazing fast',
-    icon: Lightning,
-  },
-  {
-    text: 'JAMstack based',
+    text: 'Too many papers on his desk',
     icon: Jamstack,
   },
   {
-    text: 'Always available',
-    icon: Wifi,
-  },
-  {
-    text: 'Customizable',
-    icon: Edit,
-  },
-  {
-    text: 'Incremental SSG',
+    text: 'Spends too much time online',
     icon: Plus,
   },
   {
-    text: 'MIT Licensed',
-    icon: Scroll,
+    text: 'May be a living WiFi hotspot',
+    icon: Wifi,
   },
   {
-    text: 'Edit via Notion',
-    icon: Notion,
-  },
-  {
-    text: 'Great scores',
-    icon: Lighthouse,
+    text: 'Accidentally shocks himself too often',
+    icon: Lightning,
   },
 ]
 
