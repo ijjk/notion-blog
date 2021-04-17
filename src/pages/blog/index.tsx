@@ -63,9 +63,11 @@ const Index = ({ posts = [], preview }) => {
         </div>
       )}
       <div className={`${sharedStyles.layout} ${blogStyles.blogIndex}`}>
-        <h1>My Notion Blog</h1>
+        <h1>Ian? Writing Things Down?</h1>
         {posts.length === 0 && (
-          <p className={blogStyles.noPosts}>There are no posts yet</p>
+          <p className={blogStyles.noPosts}>
+          I'm writing things right now! Be patient!
+        </p>
         )}
         {posts.map((post) => {
           return (
