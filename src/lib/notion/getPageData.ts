@@ -1,13 +1,16 @@
 import rpc, { values } from './rpc'
 
 export default async function getPageData(pageId: string) {
-  const maximumChunckNumer = 1000_0 // a reasonable size limit for the largest blog post (100MB), as one chunk is about 10KB
+  // a reasonable size limit for the largest blog post (1MB),
+  // as one chunk is about 10KB
+  const maximumChunckNumer = 100
+
   try {
     var chunkNumber = 0
     var data = await loadPageChunk({ pageId, chunkNumber })
     var blocks = data.recordMap.block
 
-    while (data.cursor.stack.length != 0 && chunkNumber < maximumChunckNumer) {
+    while (data.cursor.stack.length !== 0 && chunkNumber < maximumChunckNumer) {
       chunkNumber = chunkNumber + 1
       data = await loadPageChunk({ pageId, chunkNumber, cursor: data.cursor })
       blocks = Object.assign(blocks, data.recordMap.block)
