@@ -15,23 +15,31 @@ export default () => (
       </div>
       <h1>Ian Dilick</h1>
       <h2>
-        Founder of{' '}
+        Founded{' '}
         <ExtLink
           href="https://eschaton.tech"
           className="dotted"
           style={{ color: 'inherit' }}
         >
-          Eschaton
-        </ExtLink>
+          Eschaton,
+        </ExtLink>{' '}
+        searching for a full-time PM role!
       </h2>
 
       <Features />
 
       <div className="explanation">
         <p>
-          Currently ✨building something new✨ at{' '}
-          <ExtLink href="https://eschaton.tech">Eschaton!</ExtLink> Also vibing
-          with{' '}
+          I'm currently looking to take the skills I learned as a founder and
+          apply them in a full-time PM role -- I am especially interested in
+          companies working on hard/deep-tech products! You can always get in
+          touch using any of the links below, or view my resume{' '}
+          <ExtLink href="https://imdilick.keybase.pub/IanDilickResume04192021.pdf?dl=1">
+            here!
+          </ExtLink>
+        </p>
+        <p>
+          I like to spend my time vibing with{' '}
           <ExtLink href="https://twitter.com/vikushavas">@vikushavas</ExtLink>{' '}
           and <ExtLink href="https://twitter.com/bhwags">@bhwags</ExtLink> at{' '}
           <ExtLink href="https://internetrevolution.co">
@@ -42,10 +50,12 @@ export default () => (
           <ExtLink href="https://twitter.com/chiefgayofficer">
             @chiefgayofficer
           </ExtLink>
-          's <ExtLink href="https://coupletcoffee.com">Couplet Coffee.</ExtLink>{' '}
+          's <ExtLink href="https://coupletcoffee.com">Couplet Coffee!</ExtLink>{' '}
         </p>
         <p>
           Previously at{' '}
+          <ExtLink href="https://eschaton.tech">Eschaton,</ExtLink> which I
+          founded to build a communication system for self-driving vehicles,{' '}
           <ExtLink href="https://itiswhatitis.fm">👁👄👁.fm,</ExtLink> where we
           raised $200k for charity in 48 hours,{' '}
           <ExtLink href="https://safestamp.com">SafeStamp,</ExtLink> solving the
