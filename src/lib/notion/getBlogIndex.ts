@@ -1,6 +1,5 @@
 import { Sema } from 'async-sema'
 import rpc, { values } from './rpc'
-import createTable from './createTable'
 import getTableData from './getTableData'
 import { getPostPreview } from './getPostPreview'
 import { readFile, writeFile } from '../fs-helpers'
