@@ -33,7 +33,7 @@ const contacts = [
   {
     Comp: Envelope,
     alt: 'envelope icon',
-    link: 'mailto:ian@iandilick.com?subject=Notion Blog',
+    link: 'mailto:ian@iandilick.com',
   },
 ]
 
