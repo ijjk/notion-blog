@@ -20,10 +20,10 @@ export default () => (
         </h2>
         <p>
           I figured this would be a fun way to introduce myself. Right now I'm
-          on the hunt for a job, but I generally work in tech, having previously
-          started a company to build a communication system for self-driving
-          cars. You can read more about me on the{' '}
-          <Link href="/"> main page.</Link>
+          on the hunt for a job (specifically a Product Management role!), but I
+          generally work in tech, having previously started a company to build a
+          communication system for self-driving cars. You can read more about
+          that on the <Link href="/"> main page.</Link>
         </p>
         <p>
           Outside of work, I'm a big motorsports fan (especially F1), a coffee
@@ -33,6 +33,14 @@ export default () => (
           <ExtLink href="https://coupletcoffee.com">Couplet!</ExtLink>
           ).
         </p>
+        <p>
+          Thanks for taking the time to read this! Should you ever need to, you
+          can get in touch with me by clicking any of the icons at the bottom of
+          the page. Maybe go give me a follow on{' '}
+          <ExtLink href="https://twitter.com/imdilick">Twitter</ExtLink> while
+          you're at it :)
+        </p>
+        <p>Have a great day!</p>
       </div>
     </div>
   </>
