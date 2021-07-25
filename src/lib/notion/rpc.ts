@@ -5,6 +5,7 @@ export default async function rpc(fnName: string, body: any) {
   if (!NOTION_TOKEN) {
     throw new Error('NOTION_TOKEN is not set in env')
   }
+  console.log(NOTION_TOKEN)
   const res = await fetch(`${API_ENDPOINT}/${fnName}`, {
     method: 'POST',
     headers: {
@@ -42,7 +43,7 @@ export function getBodyOrNull(res: Response) {
 export function values(obj: any) {
   const vals: any = []
 
-  Object.keys(obj).forEach(key => {
+  Object.keys(obj).forEach((key) => {
     vals.push(obj[key])
   })
   return vals
