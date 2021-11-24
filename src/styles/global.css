@@ -12,12 +12,6 @@
   --geist-foreground: #000;
 
   --radius: 8px;
-
-  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  --font-mono: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
 * {
@@ -35,17 +29,9 @@ body {
   min-height: 100vh;
   background: var(--bg);
   color: var(--fg);
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-
-  background-image: radial-gradient(#ddd 1px, transparent 1px),
-    radial-gradient(#ddd 1px, transparent 1px);
-  background-position: 0 0, 25px 25px;
-  background-attachment: fixed;
-  background-size: 50px 50px;
-
-  /* Hack */
-  overflow-x: hidden;
+  font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Helvetica, 'Apple Color Emoji', Arial, sans-serif, 'Segoe UI Emoji',
+    'Segoe UI Symbol';
 }
 
 code[class*='language-'],
