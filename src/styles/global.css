@@ -184,14 +184,6 @@ pre.dark[class*='language-'] {
   align-items: center;
 }
 
-.features {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 4rem auto;
-  width: 920px;
-  max-width: calc(100vw - var(--gap-double));
-}
-
 .feature {
   flex: 0 0 25%;
   align-items: center;
