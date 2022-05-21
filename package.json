@@ -15,7 +15,7 @@
     "github-slugger": "1.4.0",
     "katex": "0.12.0",
     "next": "12",
-    "prismjs": "1.17.1",
+    "prismjs": "1.28.0",
     "react": "18",
     "react-dom": "18",
     "uuid": "8.1.0"
