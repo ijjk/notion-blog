@@ -11,7 +11,6 @@
   "pre-commit": "lint-staged",
   "dependencies": {
     "@notionhq/client": "^1.0.4",
-    "@zeit/react-jsx-parser": "2.0.0",
     "async-sema": "3.1.1",
     "github-slugger": "1.2.1",
     "katex": "0.12.0",
