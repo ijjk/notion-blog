@@ -6,7 +6,7 @@ specifiers:
   '@types/node': 14.18.18
   '@types/react': '18'
   async-sema: 3.1.1
-  github-slugger: 1.2.1
+  github-slugger: 1.4.0
   katex: 0.12.0
   lint-staged: 10.5.4
   next: '12'
@@ -15,13 +15,13 @@ specifiers:
   prismjs: 1.17.1
   react: '18'
   react-dom: '18'
-  typescript: 4.4.4
+  typescript: 4.6.4
   uuid: 8.1.0
 
 dependencies:
   '@notionhq/client': registry.npmmirror.com/@notionhq/client/1.0.4
   async-sema: registry.npmmirror.com/async-sema/3.1.1
-  github-slugger: registry.npmmirror.com/github-slugger/1.2.1
+  github-slugger: registry.npmmirror.com/github-slugger/1.4.0
   katex: registry.npmmirror.com/katex/0.12.0
   next: registry.npmmirror.com/next/12.1.6_ef5jwxihqo6n7gxfmzogljlgcm
   prismjs: registry.npmmirror.com/prismjs/1.17.1
@@ -36,7 +36,7 @@ devDependencies:
   lint-staged: registry.npmmirror.com/lint-staged/10.5.4
   pre-commit: registry.npmmirror.com/pre-commit/1.2.2
   prettier: registry.npmmirror.com/prettier/2.6.2
-  typescript: registry.npmmirror.com/typescript/4.4.4
+  typescript: registry.npmmirror.com/typescript/4.6.4
 
 packages:
 
@@ -573,12 +573,6 @@ packages:
     dev: false
     optional: true
 
-  registry.npmmirror.com/emoji-regex/6.1.1:
-    resolution: {integrity: sha512-WfVwM9e+M9B/4Qjh9SRnPX2A74Tom3WlVfWF9QWJ8f2BPa1u+/q4aEp1tizZ3vBKAZTg7B6yxn3t9iMjT+dv4w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/emoji-regex/-/emoji-regex-6.1.1.tgz}
-    name: emoji-regex
-    version: 6.1.1
-    dev: false
-
   registry.npmmirror.com/emoji-regex/8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/emoji-regex/-/emoji-regex-8.0.0.tgz}
     name: emoji-regex
@@ -669,12 +663,10 @@ packages:
       pump: registry.npmmirror.com/pump/3.0.0
     dev: true
 
-  registry.npmmirror.com/github-slugger/1.2.1:
-    resolution: {integrity: sha512-SsZUjg/P03KPzQBt7OxJPasGw6NRO5uOgiZ5RGXVud5iSIZ0eNZeNp5rTwCxtavrRUa/A77j8mePVc5lEvk0KQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/github-slugger/-/github-slugger-1.2.1.tgz}
+  registry.npmmirror.com/github-slugger/1.4.0:
+    resolution: {integrity: sha512-w0dzqw/nt51xMVmlaV1+JRzN+oCa1KfcgGEWhxUG16wbdA+Xnt/yoFO8Z8x/V82ZcZ0wy6ln9QDup5avbhiDhQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/github-slugger/-/github-slugger-1.4.0.tgz}
     name: github-slugger
-    version: 1.2.1
-    dependencies:
-      emoji-regex: registry.npmmirror.com/emoji-regex/6.1.1
+    version: 1.4.0
     dev: false
 
   registry.npmmirror.com/good-listener/1.2.2:
@@ -1475,10 +1467,10 @@ packages:
     version: 0.0.6
     dev: true
 
-  registry.npmmirror.com/typescript/4.4.4:
-    resolution: {integrity: sha512-DqGhF5IKoBl8WNf8C1gu8q0xZSInh9j1kJJMqT3a94w1JzVaBU4EXOSMrz9yDqMT0xt3selp83fuFMQ0uzv6qA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/typescript/-/typescript-4.4.4.tgz}
+  registry.npmmirror.com/typescript/4.6.4:
+    resolution: {integrity: sha512-9ia/jWHIEbo49HfjrLGfKbZSuWo9iTMwXO+Ca3pRsSpbsMbc7/IU8NKdCZVRRBafVPGnoJeFL76ZOAA84I9fEg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/typescript/-/typescript-4.6.4.tgz}
     name: typescript
-    version: 4.4.4
+    version: 4.6.4
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
