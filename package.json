@@ -10,6 +10,7 @@
   },
   "pre-commit": "lint-staged",
   "dependencies": {
+    "@notionhq/client": "^1.0.4",
     "@zeit/react-jsx-parser": "2.0.0",
     "async-sema": "3.1.0",
     "github-slugger": "1.2.1",
