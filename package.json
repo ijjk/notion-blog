@@ -27,7 +27,7 @@
     "@types/react": "18",
     "lint-staged": "10.5.4",
     "pre-commit": "1.2.2",
-    "prettier": "2.2.1",
+    "prettier": "2.6.2",
     "typescript": "4.4.4"
   }
 }
