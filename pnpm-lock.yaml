@@ -2,12 +2,12 @@ lockfileVersion: 5.4
 
 specifiers:
   '@notionhq/client': ^1.0.4
-  '@types/katex': 0.11.0
+  '@types/katex': 0.14.0
   '@types/node': 14.18.18
   '@types/react': '18'
   async-sema: 3.1.1
   github-slugger: 1.4.0
-  katex: 0.12.0
+  katex: 0.15.6
   lint-staged: 10.5.4
   next: '12'
   pre-commit: 1.2.2
@@ -22,7 +22,7 @@ dependencies:
   '@notionhq/client': registry.npmmirror.com/@notionhq/client/1.0.4
   async-sema: registry.npmmirror.com/async-sema/3.1.1
   github-slugger: registry.npmmirror.com/github-slugger/1.4.0
-  katex: registry.npmmirror.com/katex/0.12.0
+  katex: 0.15.6
   next: registry.npmmirror.com/next/12.1.6_ef5jwxihqo6n7gxfmzogljlgcm
   prismjs: 1.28.0
   react: registry.npmmirror.com/react/18.1.0
@@ -30,7 +30,7 @@ dependencies:
   uuid: registry.npmmirror.com/uuid/8.1.0
 
 devDependencies:
-  '@types/katex': registry.npmmirror.com/@types/katex/0.11.0
+  '@types/katex': 0.14.0
   '@types/node': registry.npmmirror.com/@types/node/14.18.18
   '@types/react': registry.npmmirror.com/@types/react/18.0.9
   lint-staged: registry.npmmirror.com/lint-staged/10.5.4
@@ -148,6 +148,22 @@ packages:
     dev: false
     optional: true
 
+  /@types/katex/0.14.0:
+    resolution: {integrity: sha512-+2FW2CcT0K3P+JMR8YG846bmDwplKUTsWgT2ENwdQ1UdVfRk3GQrh6Mi4sTopy30gI8Uau5CEqHTDZ6YvWIUPA==}
+    dev: true
+
+  /commander/8.3.0:
+    resolution: {integrity: sha512-OkTL9umf+He2DZkUq8f8J9of7yL6RJKI24dVITBmNfZBmri9zYZQrKkuXiKhyfPSu8tUhnVBB1iKXevvnlR4Ww==}
+    engines: {node: '>= 12'}
+    dev: false
+
+  /katex/0.15.6:
+    resolution: {integrity: sha512-UpzJy4yrnqnhXvRPhjEuLA4lcPn6eRngixW7Q3TJErjg3Aw2PuLFBzTkdUb89UtumxjhHTqL3a5GDGETMSwgJA==}
+    hasBin: true
+    dependencies:
+      commander: 8.3.0
+    dev: false
+
   /prismjs/1.28.0:
     resolution: {integrity: sha512-8aaXdYvl1F7iC7Xm1spqSaY/OJBpYW3v+KJ+F17iYxvdc8sfjW194COK5wVhMZX45tGteiBQgdvD/nhxcRwylw==}
     engines: {node: '>=6'}
@@ -195,12 +211,6 @@ packages:
       '@types/node-fetch': registry.npmmirror.com/@types/node-fetch/2.6.1
       node-fetch: registry.npmmirror.com/node-fetch/2.6.1
     dev: false
-
-  registry.npmmirror.com/@types/katex/0.11.0:
-    resolution: {integrity: sha512-27BfE8zASRLYfSBNMk5/+KIjr2CBBrH0i5lhsO04fca4TGirIIMay73v3zNkzqmsaeIa/Mi5kejWDcxPLAmkvA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/katex/-/katex-0.11.0.tgz}
-    name: '@types/katex'
-    version: 0.11.0
-    dev: true
 
   registry.npmmirror.com/@types/node-fetch/2.6.1:
     resolution: {integrity: sha512-oMqjURCaxoSIsHSr1E47QHzbmzNR5rK8McHuNb11BOM9cHcIK3Avy0s/b2JlXHoQGTYS3NsvWzV1M0iK7l0wbA==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node-fetch/-/node-fetch-2.6.1.tgz}
@@ -431,12 +441,6 @@ packages:
     engines: {node: '>= 0.8'}
     dependencies:
       delayed-stream: registry.npmmirror.com/delayed-stream/1.0.0
-    dev: false
-
-  registry.npmmirror.com/commander/2.20.3:
-    resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/commander/-/commander-2.20.3.tgz}
-    name: commander
-    version: 2.20.3
     dev: false
 
   registry.npmmirror.com/commander/6.2.1:
@@ -741,15 +745,6 @@ packages:
     name: json-parse-even-better-errors
     version: 2.3.1
     dev: true
-
-  registry.npmmirror.com/katex/0.12.0:
-    resolution: {integrity: sha512-y+8btoc/CK70XqcHqjxiGWBOeIL8upbS0peTPXTvgrh21n1RiWWcIpSWM+4uXq+IAgNh9YYQWdc7LVDPDAEEAg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/katex/-/katex-0.12.0.tgz}
-    name: katex
-    version: 0.12.0
-    hasBin: true
-    dependencies:
-      commander: registry.npmmirror.com/commander/2.20.3
-    dev: false
 
   registry.npmmirror.com/lines-and-columns/1.2.4:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/lines-and-columns/-/lines-and-columns-1.2.4.tgz}
