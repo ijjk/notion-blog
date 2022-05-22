@@ -16,7 +16,7 @@ specifiers:
   react: '18'
   react-dom: '18'
   typescript: 4.6.4
-  uuid: 8.1.0
+  uuid: 8.3.2
 
 dependencies:
   '@notionhq/client': registry.npmmirror.com/@notionhq/client/1.0.4
@@ -27,7 +27,7 @@ dependencies:
   prismjs: 1.28.0
   react: registry.npmmirror.com/react/18.1.0
   react-dom: registry.npmmirror.com/react-dom/18.1.0_react@18.1.0
-  uuid: registry.npmmirror.com/uuid/8.1.0
+  uuid: 8.3.2
 
 devDependencies:
   '@types/katex': 0.14.0
@@ -611,6 +611,11 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
+  /uuid/8.3.2:
+    resolution: {integrity: sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==}
+    hasBin: true
+    dev: false
+
   /which/2.0.2:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
     engines: {node: '>= 8'}
@@ -1080,13 +1085,6 @@ packages:
     name: util-deprecate
     version: 1.0.2
     dev: true
-
-  registry.npmmirror.com/uuid/8.1.0:
-    resolution: {integrity: sha512-CI18flHDznR0lq54xBycOVmphdCYnQLKn8abKn7PXUiKUGdEd+/l9LWNJmugXel4hXq7S+RMNl34ecyC9TntWg==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/uuid/-/uuid-8.1.0.tgz}
-    name: uuid
-    version: 8.1.0
-    hasBin: true
-    dev: false
 
   registry.npmmirror.com/which/1.2.14:
     resolution: {integrity: sha512-16uPglFkRPzgiUXYMi1Jf8Z5EzN1iB4V0ZtMXcHZnwsBtQhhHeCqoWw7tsUY42hJGNDWtUsVLTjakIa5BgAxCw==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/which/-/which-1.2.14.tgz}
