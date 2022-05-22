@@ -374,3 +374,7 @@ footer span:nth-child(3) {
 footer span:nth-child(3) a {
   color: inherit;
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

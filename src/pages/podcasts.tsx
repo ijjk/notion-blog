@@ -9,8 +9,8 @@ type Podcast = {
 export const database_id = process.env.PODCAST_INDEX_ID
 
 export default function PodcastList({ podcastTable }: { podcastTable: Podcast[] }) {
-  return <ul>{podcastTable.map(({ description, title }) => {
-    return <li key={title}> {title} - {description}</li>
+  return <ul className="flex bg-teal-50">{podcastTable.map(({ description, title }) => {
+    return <li key={title} className="text-3xl font-bold underline"> {title} - {description}</li>
   })}</ul>
 }
 
