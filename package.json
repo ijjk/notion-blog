@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@types/katex": "0.14.0",
-    "@types/node": "14.18.18",
+    "@types/node": "16.11.36",
     "@types/react": "18",
     "lint-staged": "12.4.1",
     "pre-commit": "1.2.2",

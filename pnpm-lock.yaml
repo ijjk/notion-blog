@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@notionhq/client': ^1.0.4
   '@types/katex': 0.14.0
-  '@types/node': 14.18.18
+  '@types/node': 16.11.36
   '@types/react': '18'
   async-sema: 3.1.1
   github-slugger: 1.4.0
@@ -31,7 +31,7 @@ dependencies:
 
 devDependencies:
   '@types/katex': 0.14.0
-  '@types/node': registry.npmmirror.com/@types/node/14.18.18
+  '@types/node': 16.11.36
   '@types/react': registry.npmmirror.com/@types/react/18.0.9
   lint-staged: 12.4.1
   pre-commit: registry.npmmirror.com/pre-commit/1.2.2
@@ -151,6 +151,9 @@ packages:
   /@types/katex/0.14.0:
     resolution: {integrity: sha512-+2FW2CcT0K3P+JMR8YG846bmDwplKUTsWgT2ENwdQ1UdVfRk3GQrh6Mi4sTopy30gI8Uau5CEqHTDZ6YvWIUPA==}
     dev: true
+
+  /@types/node/16.11.36:
+    resolution: {integrity: sha512-FR5QJe+TaoZ2GsMHkjuwoNabr+UrJNRr2HNOo+r/7vhcuntM6Ee/pRPOnRhhL2XE9OOvX9VLEq+BcXl3VjNoWA==}
 
   /aggregate-error/3.1.0:
     resolution: {integrity: sha512-4I7Td01quW/RpocfNayFdFVk1qSuoh0E7JrbRJ16nH01HhKFQ88INq9Sd+nd72zqRySlr9BmDA8xlEJ6vJMrYA==}
@@ -663,14 +666,9 @@ packages:
     name: '@types/node-fetch'
     version: 2.6.1
     dependencies:
-      '@types/node': registry.npmmirror.com/@types/node/14.18.18
+      '@types/node': 16.11.36
       form-data: registry.npmmirror.com/form-data/3.0.1
     dev: false
-
-  registry.npmmirror.com/@types/node/14.18.18:
-    resolution: {integrity: sha512-B9EoJFjhqcQ9OmQrNorItO+OwEOORNn3S31WuiHvZY/dm9ajkB7AKD/8toessEtHHNL+58jofbq7hMMY9v4yig==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/node/-/node-14.18.18.tgz}
-    name: '@types/node'
-    version: 14.18.18
 
   registry.npmmirror.com/@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==, registry: https://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/prop-types/-/prop-types-15.7.5.tgz}
