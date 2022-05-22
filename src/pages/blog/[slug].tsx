@@ -32,7 +32,7 @@ export async function getStaticProps({ params: { slug }, preview }) {
   }
   const postData = await getPageData(post.id)
   post.content = postData.blocks
-
+ 
   for (let i = 0; i < postData.blocks.length; i++) {
     const { value } = postData.blocks[i]
     const { type, properties } = value
