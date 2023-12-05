@@ -9,7 +9,7 @@ export default async function rpc(fnName: string, body: any) {
     method: 'POST',
     headers: {
       'content-type': 'application/json',
-      cookie: `token_v2=${NOTION_TOKEN}`,
+      authorization: `Bearer ${NOTION_TOKEN}`,
     },
     body: JSON.stringify(body),
   })
@@ -42,7 +42,7 @@ export function getBodyOrNull(res: Response) {
 export function values(obj: any) {
   const vals: any = []
 
-  Object.keys(obj).forEach(key => {
+  Object.keys(obj).forEach((key) => {
     vals.push(obj[key])
   })
   return vals
